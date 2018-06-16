@@ -1,0 +1,90 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{nty/global/}
+  \entry{notcited:book}{book}{}
+    \name{author}{1}{}{%
+      {{hash=CC}{%
+         family={Cane},
+         familyi={C\bibinitperiod},
+         given={Carlino},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \name{editor}{1}{}{%
+      {{hash=LA}{%
+         family={Leggoo},
+         familyi={L\bibinitperiod},
+         given={Anche},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {O'Reilly}%
+    }
+    \keyw{non-citato}
+    \strng{namehash}{CC1}
+    \strng{fullhash}{CC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{edition}{first edition}
+    \field{title}{{No one cited me}}
+    \verb{url}
+    \verb http://bar.com/
+    \endverb
+    \field{year}{2009}
+  \endentry
+
+  \entry{famous:paper}{article}{}
+    \name{author}{2}{}{%
+      {{hash=VD}{%
+         family={Vader},
+         familyi={V\bibinitperiod},
+         given={Darth},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=CN}{%
+         family={Cortex},
+         familyi={C\bibinitperiod},
+         given={Neo},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \keyw{important}
+    \strng{namehash}{VDCN1}
+    \strng{fullhash}{VDCN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{V}
+    \field{sortinithash}{V}
+    \verb{doi}
+    \verb 10.1145/1327452.1327492
+    \endverb
+    \field{pages}{107\bibrangedash 113}
+    \field{title}{{Hell yeah! I'm a super important paper!}}
+    \verb{url}
+    \verb http://www.foo.com
+    \endverb
+    \field{volume}{51}
+    \field{journaltitle}{Stampo Solo}
+    \field{year}{2008}
+  \endentry
+\endsortlist
+\endinput
