@@ -133,6 +133,7 @@ chap_0,%
 chap_1,%
 chap_2,%
 app_a,%
+app_b,%
 }
 
 % FILE DI BIBLIOGRAFIA
@@ -149,7 +150,7 @@ app_a,%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %INTERLINEA - DEFAULT 1 - NON ESAGERATE, NON SUPERATE MAI 1.3 ;)
-%\interlinea{1.2}
+\interlinea{1.3}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -170,7 +171,15 @@ Da inserire qui tutte le dediche della mia tesi...
 
 % ABSTRACT - PERSONALIZZARE
 \sommario
-Qui inserire il sommario...
+Esistono, e sono sempre esistiti, particolari temi, detti \textit{controversi}, per i quali ognuno di noi si schiera come sostenitore o come oppositore. L'effetto quasi immediato è la divisione della popolazione in due gruppi che hanno visioni opposte sull'argomento \textit{controverso} in considerazione e che difficilmente scambiano tra loro informazioni e punti di vista, non facendo altro che acutizzare la loro inconciliabilità di opinione: gruppi di individui di questo genere sono anche detti \textit{echo chambers}. Gli invidui facenti parte della stessa \textit{echo chamber} hanno quindi le stesse credenze e lo stesso parere riguardo all'argomento \textit{controverso}: essi rinforzano a vicenda le proprie opinioni e non sono esposti a punti di vista opposti ai propri (i.e. le opinioni che caratterizzano l'altra \textit{echo chamber}). Non è immune da tale fenomeno il mondo dei \textit{social media}. In particolare, \textit{Twitter} identifica un particolare \textit{topic} mediante un \textit{hashtag} e la discussione riguardo a tale \textit{topic} (e.g.\textit{\#novax}) viene descritta mediante un \textit{endorsement graph}, ovvero un \textit{grafo diretto} in cui ciascun nodo rappresenta un utente che partecipa alla discussione e vi è un arco diretto da un nodo \textit{x} ad un nodo \textit{y} se e solo se l'utente \textit{x} approva l'opinione dell'utente \textit{y}. Quando il \textit{topic} in considerazione è \textit{controverso}, la struttura dell'\textit{endorsement graph} mette in luce la presenza di gruppi di utenti molto connessi al loro interno ma che comunicano poco tra loro: la distanza di opinione di tali gruppi viene quantificata mediante il così detto \textit{indice di controversia} del grafo, che viene misurato, nel lavoro di tesi proposto, da una metrica basata sui \textit{random walks}. \textit{Endorsement graphs} con elevati \textit{indici di controversia} sono costituiti da \textit{echo chambers} molto divise tra loro, in ciascuna delle quali è amplificata una visione univoca ed acritica sull'argomento \textit{controverso} considerato. \\L'obiettivo di questa tesi è quello di implementare un \textit{edge-recommendation system} il quale, dopo aver analizzato un dato \textit{endorsement graph} di un particolare \textit{topic controverso} presente nella \textit{social network} di \textit{Twitter} ed averne individuato le \textit{echo chambers}, permetta di individuare i \textit{k} archi diretti (\textit{k} fornito in \textit{input}) che, se aggiunti al grafo, producono il più alto decremento del \textit{grado di controversia}. Poiché gli \textit{endorsement graph} di questo tipo sono generalmente costituiti da un numero molto elevato di nodi (indicato con \textit{n}), risolvere tale problema di ottimizzazione considerando tutte le possibili combinazioni di archi (\textit{O}${n^2\choose k}$) è evidentemente molto costoso dal punto di vista computazionale e molto inefficiente anche per quanto riguarda i tempi. Pertanto l'approccio seguito è quello adottato nell'articolo \cite{famous:paper}, ossia considerare solo un sottoinsieme degli archi possibili ed estrarre da questo sottoinsieme i \textit{k} più promettenti. Chiaramente questa soluzione restituisce archi meno efficaci per quanto riguarda la riduzione del \textit{grado di controversia} rispetto a quelli proposti dall'approccio \textit{brute force} ma è molto più efficiente; in particolare, la scelta dell'euristica che permette di definire il sottoinsieme degli archi da considerare è cruciale. In particolare l'euristica utilizzata nell'articolo \cite{famous:paper}
+consiste nel considerare solo gli archi tra vertici di grado alto di ciascuna comunità (o \textit{echo chamber}). 
+
+
+
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -200,7 +209,7 @@ Qui inserire il sommario...
 \appendix
 % INCLUSIONE APPENDICI - - PERSONALIZZARE - TENERE COERENTE CON LISTA IN ALTO
 \include{app_a}
-
+\include{app_b}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % BIBLIOGRAFIA

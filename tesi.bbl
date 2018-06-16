@@ -53,38 +53,35 @@
   \endentry
 
   \entry{famous:paper}{article}{}
-    \name{author}{2}{}{%
-      {{hash=VD}{%
-         family={Vader},
-         familyi={V\bibinitperiod},
-         given={Darth},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=CN}{%
-         family={Cortex},
-         familyi={C\bibinitperiod},
-         given={Neo},
-         giveni={N\bibinitperiod},
+    \name{author}{1}{}{%
+      {{hash=KGAGMMGDFM}{%
+         family={Kiran\bibnamedelima Garimella},
+         familyi={K\bibinitperiod\bibinitdelim G\bibinitperiod},
+         suffix={Gianmarco De Francisci\bibnamedelima Morales},
+         suffixi={G\bibinitperiod\bibinitdelim D\bibinitperiod
+  F\bibinitperiod\bibinitdelim M\bibinitperiod},
+         given={Aristides Gionis Michael\bibnamedelima Mathioudakis},
+         giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod
+  M\bibinitperiod\bibinitdelim M\bibinitperiod},
       }}%
     }
     \keyw{important}
-    \strng{namehash}{VDCN1}
-    \strng{fullhash}{VDCN1}
+    \strng{namehash}{KGGDFMAGMM1}
+    \strng{fullhash}{KGGDFMAGMM1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{sortinit}{V}
-    \field{sortinithash}{V}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
     \verb{doi}
-    \verb 10.1145/1327452.1327492
+    \verb 10.1145/3018661.3018703
     \endverb
-    \field{pages}{107\bibrangedash 113}
-    \field{title}{{Hell yeah! I'm a super important paper!}}
+    \field{pages}{1\bibrangedash 10}
+    \field{title}{{Reducing Controversy by Connecting Opposing Views}}
     \verb{url}
-    \verb http://www.foo.com
+    \verb https://melmeric.files.wordpress.com/2010/05/reducing-controversy-by-
+    \verb connecting-opposing-views.pdf
     \endverb
-    \field{volume}{51}
-    \field{journaltitle}{Stampo Solo}
-    \field{year}{2008}
+    \field{year}{2017}
   \endentry
 \endsortlist
 \endinput

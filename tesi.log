@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  16 JUN 2018 12:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  16 JUN 2018 19:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1341,38 +1341,38 @@ File: english.lbx 2016/09/17 v3.6 biblatex localization (PK/JW/AB)
 Package biblatex Warning: Patching footnotes failed.
 (biblatex)                Footnote detection will not work.
 
-(./tesi.aux (./chap_0.aux) (./chap_1.aux) (./chap_2.aux) (./app_a.aux))
+(./tesi.aux (./chap_0.aux) (./chap_1.aux) (./chap_2.aux) (./app_a.aux)
+(./app_b.aux))
 \openout1 = `tesi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 145.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 145.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 146.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 146.
 
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 145.
-LaTeX Font Info:    ... okay on input line 145.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 145.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 146.
+LaTeX Font Info:    ... okay on input line 146.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 146.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \it@ocap on input line 145.
-LaTeX Info: Redefining \it@ccap on input line 145.
+LaTeX Info: Redefining \it@ocap on input line 146.
+LaTeX Info: Redefining \it@ccap on input line 146.
 
 (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1450,7 +1450,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-Package hyperref Info: Link coloring ON on input line 145.
+Package hyperref Info: Link coloring ON on input line 146.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1461,15 +1461,15 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 \c@section@level=\count377
 LaTeX Info: Redefining \Ref on input line 515.
 )
-LaTeX Info: Redefining \ref on input line 145.
-LaTeX Info: Redefining \pageref on input line 145.
-LaTeX Info: Redefining \nameref on input line 145.
+LaTeX Info: Redefining \ref on input line 146.
+LaTeX Info: Redefining \pageref on input line 146.
+LaTeX Info: Redefining \nameref on input line 146.
 
 (./tesi.out) (./tesi.out)
 \@outlinefile=\write5
 \openout5 = `tesi.out'.
 
-LaTeX Info: Redefining \Ref on input line 145.
+LaTeX Info: Redefining \Ref on input line 146.
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -1481,62 +1481,62 @@ Package biblatex Info: Data encoding 'utf8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'tesi.bbl' found.
  (./tesi.bbl)
-Package biblatex Info: Reference section=0 on input line 145.
-Package biblatex Info: Reference segment=0 on input line 145.
+Package biblatex Info: Reference section=0 on input line 146.
+Package biblatex Info: Reference segment=0 on input line 146.
 
-<images/Logo-Uni-Tor-Vergata.png, id=31, 770.88pt x 770.88pt>
+<images/Logo-Uni-Tor-Vergata.png, id=35, 770.88pt x 770.88pt>
 File: images/Logo-Uni-Tor-Vergata.png Graphic file (type png)
 
 <use images/Logo-Uni-Tor-Vergata.png>
-Package pdftex.def Info: images/Logo-Uni-Tor-Vergata.png used on input line 147
+Package pdftex.def Info: images/Logo-Uni-Tor-Vergata.png used on input line 148
 .
 (pdftex.def)             Requested size: 85.3499pt x 85.35826pt.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 147.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 148.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 147.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 148.
 
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 147
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 148
 .
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 147
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 148
 .
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 147.
+(Font)              <10> on input line 148.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 147.
+(Font)              <7> on input line 148.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 147.
-LaTeX Font Info:    Try loading font information for U+msa on input line 147.
+(Font)              <5> on input line 148.
+LaTeX Font Info:    Try loading font information for U+msa on input line 148.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 147.
+LaTeX Font Info:    Try loading font information for U+msb on input line 148.
 
 (/usr/local/texlive/2016/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 147.
+(Font)              <12> on input line 148.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 147.
+(Font)              <8> on input line 148.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 147.
+(Font)              <6> on input line 148.
 
 Overfull \vbox (12.29298pt too high) has occurred while \output is active []
 
@@ -1549,45 +1549,55 @@ Overfull \vbox (12.29298pt too high) has occurred while \output is active []
 e same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.167 \cleardoublepage
+l.168 \cleardoublepage
                        [1
 
 
-] [2
+]
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 174.
 
 
-] (./tesi.toc)
+Underfull \vbox (badness 3579) has occurred while \output is active []
+
+ [2
+
+
+]
+[3] (./tesi.toc)
 \tf@toc=\write6
 \openout6 = `tesi.toc'.
 
- [3
+ [4
 
 ] (./tesi.lof)
 \tf@lof=\write7
 \openout7 = `tesi.lof'.
 
- [4
+ [5
 
 
 ] (./tesi.lot)
 \tf@lot=\write8
 \openout8 = `tesi.lot'.
 
-
-[5
+ [6
 
 
 ] (./tesi.lol)
 \tf@lol=\write9
 \openout9 = `tesi.lol'.
 
- [6
+ [7
 
 
 ]
 \openout2 = `chap_0.aux'.
 
- (./chap_0.tex
+
+(./chap_0.tex
 Capitolo 1.
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 9.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
@@ -1599,10 +1609,6 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <9> not available
 (/usr/local/texlive/2016/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 18.
-
 
 Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 18.
@@ -1628,13 +1634,17 @@ Package blindtext Warning: italian not defined, using English instead.
 Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 18.
 
-<images/doge.png, id=105, 421.575pt x 421.575pt>
+
+Package blindtext Warning: italian not defined, using English instead.
+(blindtext)                 on input line 18.
+
+<images/doge.png, id=120, 421.575pt x 421.575pt>
 File: images/doge.png Graphic file (type png)
  <use images/doge.png>
 Package pdftex.def Info: images/doge.png used on input line 21.
 (pdftex.def)             Requested size: 213.39568pt x 213.39865pt.
 )
-[2 <./images/doge.png>]
+[2] [3 <./images/doge.png>]
 \openout2 = `chap_1.aux'.
 
  (./chap_1.tex
@@ -1642,33 +1652,34 @@ Capitolo 2.
 )
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 197.
+(blindtext)                 on input line 206.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 197.
+(blindtext)                 on input line 206.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 197.
+(blindtext)                 on input line 206.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 197.
+(blindtext)                 on input line 206.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 197.
+(blindtext)                 on input line 206.
 
+[4
+
+
+
+]
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 197.
+(blindtext)                 on input line 206.
 
-[3
-
-
-
-] [4]
+[5]
 \openout2 = `chap_2.aux'.
 
  (./chap_2.tex
@@ -1676,33 +1687,34 @@ Capitolo 3.
 )
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 198.
+(blindtext)                 on input line 207.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 198.
+(blindtext)                 on input line 207.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 198.
+(blindtext)                 on input line 207.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 198.
+(blindtext)                 on input line 207.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 198.
+(blindtext)                 on input line 207.
 
+[6
+
+
+
+]
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 198.
+(blindtext)                 on input line 207.
 
-[5
-
-
-
-] [6]
+[7]
 \openout2 = `app_a.aux'.
 
  (./app_a.tex
@@ -1710,73 +1722,114 @@ Appendice A.
 )
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 202.
+(blindtext)                 on input line 211.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 202.
+(blindtext)                 on input line 211.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 202.
+(blindtext)                 on input line 211.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 202.
+(blindtext)                 on input line 211.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 202.
+(blindtext)                 on input line 211.
 
+[8
 
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 202.
-
-[7
-
-
-
-] [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 211.
- [9
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 211.
- (./tesi.aux (./chap_0.aux) (./chap_1.aux) (./chap_2.aux)
-(./app_a.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 211.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 211.
+
+Package blindtext Warning: italian not defined, using English instead.
+(blindtext)                 on input line 211.
+
+[9]
+\openout2 = `app_b.aux'.
+
+ (./app_b.tex
+Appendice B.
+)
+
+Package blindtext Warning: italian not defined, using English instead.
+(blindtext)                 on input line 212.
+
+
+Package blindtext Warning: italian not defined, using English instead.
+(blindtext)                 on input line 212.
+
+
+Package blindtext Warning: italian not defined, using English instead.
+(blindtext)                 on input line 212.
+
+
+Package blindtext Warning: italian not defined, using English instead.
+(blindtext)                 on input line 212.
+
+
+Package blindtext Warning: italian not defined, using English instead.
+(blindtext)                 on input line 212.
+
+[10
+
+
+
+]
+
+Package blindtext Warning: italian not defined, using English instead.
+(blindtext)                 on input line 212.
+
+[11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 220.
+ [12
+
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 220.
+ (./tesi.aux (./chap_0.aux) (./chap_1.aux) (./chap_2.aux) (./app_a.aux) (./app_
+b.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 220.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 220.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 42E41E4026C9BE70C832B8FF7FA4BFBF;326.
+(rerunfilecheck)             Checksum: 36C3B734C2748640F550FC4A67D8D1F5;381.
 Package logreq Info: Writing requests to 'tesi.run.xml'.
 \openout1 = `tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19365 strings out of 493013
- 303308 string characters out of 6133327
- 616607 words of memory out of 5000000
- 22506 multiletter control sequences out of 15000+600000
+ 19380 strings out of 493013
+ 303447 string characters out of 6133327
+ 616613 words of memory out of 5000000
+ 22509 multiletter control sequences out of 15000+600000
  78879 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,14n,45p,1149b,1286s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/public/lm/lmcsc10.pfb></usr/local/texlive/2016/texmf-dist/fonts
-/type1/public/lm/lmr10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/publ
-ic/lm/lmr12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr17
-.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/lm/lmro8.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2016/texmf-dist/fo
-nts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/
-public/lm/lmtt9.pfb>
-Output written on tesi.pdf (16 pages, 685554 bytes).
+ 44i,14n,45p,3672b,1286s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
+texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2016/t
+exmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2016/texmf-dist/
+fonts/enc/dvips/lm/lm-mathex.enc}</usr/local/texlive/2016/texmf-dist/fonts/type
+1/public/lm/lmbx10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/l
+m/lmbx12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmcsc10.
+pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/
+local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2016/tex
+mf-dist/fonts/type1/public/lm/lmr12.pfb></usr/local/texlive/2016/texmf-dist/fon
+ts/type1/public/lm/lmr17.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
+blic/lm/lmr5.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr8
+.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr
+/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmro8.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/local/texlive/2016/t
+exmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2016/texmf-dist/
+fonts/type1/public/lm/lmtt9.pfb>
+Output written on tesi.pdf (20 pages, 726665 bytes).
 PDF statistics:
- 201 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
- 39 named destinations out of 1000 (max. 500000)
- 67 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 243 PDF objects out of 1000 (max. 8388607)
+ 200 compressed objects within 2 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 75 words of extra memory for PDF output out of 10000 (max. 10000000)
 
