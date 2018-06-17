@@ -1,25 +1,30 @@
 \chapter{Introduzione}
 \label{chap:introduzione}
 
-\section{Quaraquaraqua}
-\label{sec:quaqaraqua}
+Il fenomeno della polarizzazione degli utenti attorno a \textit{topic controversi} che si propongono nei \textit{social media} è ben noto ed il suo studio è già stato affrontato in alcuni articoli scientifici (tra cui \cite{musco:paper}\cite{morales:paper}). Molto spesso i \textit{social media}, mediante algoritmi di \textit{recommendation}, espongono gli utenti a contenuti che si addicono e sono conformi alle loro opinioni e, pertanto, non fanno altro che aggravare il loro stato di polarizzazione. \\Il \textit{framework} sviluppato acquisisce ed elabora \textit{endorsement graphs} di \textit{topic controversi}, ne analizza la struttura estraendone le \textit{echo chambers} ed infine implementa un \textit{edge-recommendation system} che permette di ridurre il \textit{grado di controversia} creando connessioni (\textit{bridges}) tra utenti che hanno punti di vista opposti (appartengono a \textit{echo chambers} distinte). Infatti la naturale propensione degli individui a dare credito a notizie e contenuti che si addicono al proprio parere fa sì che, in assenza di un intervento esterno di \textit{edge-recommendation}, essi rafforzino sempre più la propria convinzione, anche qualora questa fosse sbagliata o acritica. I \textit{tests} dell'\textit{edge-recommendation system} implementato sono stati effettuati su \textit{endorsement graphs} di \textit{Twitter}, ma nulla vieta di considerare grafi di \textit{topic controversi} di altre \textit{social networks}. 
+\\Ora descriviamo la struttura degli \textit{endorsement graphs}, i quali, nel particolare ambiente di \textit{Twitter}, prendono anche il nome di \textit{retweet graphs}. Dato un \textit{hashtag} controverso, viene a formarsi naturalmente una discussione a riguardo nella quale gli utenti esprimono una propria opinione e possono approvare il punto di vista delle così dette \textit{autorità}: nel caso particolare di \textit{Twitter} questo si realizza mediante lo strumento del \textit{retweet}, ossia se l'utente \textit{u} fa \textit{retweet} di un \textit{tweet} prodotto dall'utente \textit{v} allora ne approva l'opinione. Ne deriva la formazione di un grafo diretto costituito da \textit{n} nodi (gli utenti che partecipano alla discussione) ed i cui archi (\textit{retweets}) esprimono relazioni di condivisione di opinione (un arco da \textit{u} a \textit{v} sta a significare che \textit{u} approva ciò che esprime \textit{v}): data questa struttura dei \textit{retweet graphs}, non è sorprendente che esistano \textit{echo chambers}. \\L'\textit{edge-recommendation system} proposto utilizza una metrica basata sul concetto di \textit{random walk} per misurare il \textit{grado di controversia} associato al \textit{topic} analizzato (attorno al quale si svolge la discussione nella \textit{social network} di \textit{Twitter}): l'obiettivo è quello di trovare i \textit{k} archi (che farebbero da \textit{bridges} tra le due \textit{echo chambers}) in grado di minimizzare questo indice. In pratica, per ridurre la \textit{controversia}, si propone ad un certo utente il contenuto (i.e. un \textit{tweet}) di un altro utente che ha posizioni opposte rispetto alle sue sull'argomento, sperando che possa accettarne il punto di vista mediante un \textit{retweet}: ciò provocherebbe la formazione di un arco tra le due comunità (\textit{echo chambers}) con l'effetto di ridurre il \textit{grado di controversia} dell'intero \textit{retweet graph}.  
 
-This is a reference to a chapter \ref{chap:quo}. This is a reference to a figure \ref{fig:doge}. This is a reference to some code \ref{lst:hello}. This is a citation \cite{famous:paper}.
 
-\lstinputlisting[label=lst:hello, firstline=2, lastline=4, caption={I directly included a portion of a file}]{code/hello.py}
+%\section{Quaraquaraqua}
+%\label{sec:quaqaraqua}
 
-\begin{lstlisting}[language=Java, label=lst:java, caption={Some code in another language than the default one}]
-public void prepare(AClass foo) {
-        AnotherClass bar = new AnotherClass(foo)
-}
-\end{lstlisting}
+%This is a reference to a chapter \ref{chap:quo}. This is a reference to a figure \ref{fig:doge}. This is a reference to some code \ref{lst:hello}. This is a citation %\cite{famous:paper}.
 
-\Blindtext
 
-\begin{figure}
-\begin{center}
-\includegraphics[width=0.5\columnwidth]{images/doge.png}
-\end{center}
-\caption{This is not a figure. It's a caption.}
-\label{fig:doge}
-\end{figure}
+%\lstinputlisting[label=lst:hello, firstline=2, lastline=4, caption={I directly included a portion of a file}]{code/hello.py}
+
+%\begin{lstlisting}[language=Java, label=lst:java, caption={Some code in another language than the default one}]
+%public void prepare(AClass foo) {
+%        AnotherClass bar = new AnotherClass(foo)
+%}
+%\end{lstlisting}
+
+%\Blindtext
+
+%\begin{figure}
+%\begin{center}
+%\includegraphics[width=0.5\columnwidth]{images/doge.png}
+%\end{center}
+%\caption{This is not a figure. It's a caption.}
+%\label{fig:doge}
+%\end{figure}

@@ -17,42 +17,67 @@
 \endgroup
 
 \sortlist[entry]{nty/global/}
-  \entry{notcited:book}{book}{}
+  \entry{morales:paper}{article}{}
     \name{author}{1}{}{%
-      {{hash=CC}{%
-         family={Cane},
-         familyi={C\bibinitperiod},
-         given={Carlino},
-         giveni={C\bibinitperiod},
+      {{hash=AJMJCLRMBJB}{%
+         family={A.\bibnamedelima J.\bibnamedelima Morales},
+         familyi={A\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+         suffix={J.\bibnamedelima Borondo},
+         suffixi={J\bibinitperiod\bibinitdelim B\bibinitperiod},
+         given={J.\bibnamedelima C. Losada R. M.\bibnamedelima Benito},
+         giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod L\bibinitperiod
+  R\bibinitperiod M\bibinitperiod\bibinitdelim B\bibinitperiod},
       }}%
     }
-    \name{editor}{1}{}{%
-      {{hash=LA}{%
-         family={Leggoo},
-         familyi={L\bibinitperiod},
-         given={Anche},
-         giveni={A\bibinitperiod},
+    \keyw{important}
+    \strng{namehash}{AJMJBJCLRMB1}
+    \strng{fullhash}{AJMJBJCLRMB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{A}
+    \field{sortinithash}{A}
+    \verb{doi}
+    \verb 10.1063/1.4913758
+    \endverb
+    \field{pages}{1\bibrangedash 10}
+    \field{title}{{Measuring Political Polarization: Twitter shows the two
+  sides of Venezuela}}
+    \verb{url}
+    \verb https://arxiv.org/pdf/1505.04095.pdf
+    \endverb
+    \field{year}{2015}
+  \endentry
+
+  \entry{musco:paper}{article}{}
+    \name{author}{1}{}{%
+      {{hash=CMCETCM}{%
+         family={Cameron\bibnamedelima Musco},
+         familyi={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+         suffix={Christopher\bibnamedelima Musco},
+         suffixi={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+         given={Charalampos E.\bibnamedelima Tsourakakis},
+         giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim
+  T\bibinitperiod},
       }}%
     }
-    \list{publisher}{1}{%
-      {O'Reilly}%
-    }
-    \keyw{non-citato}
-    \strng{namehash}{CC1}
-    \strng{fullhash}{CC1}
+    \keyw{important}
+    \strng{namehash}{CMCMCET1}
+    \strng{fullhash}{CMCMCET1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{sortinit}{C}
     \field{sortinithash}{C}
-    \field{edition}{first edition}
-    \field{title}{{No one cited me}}
+    \field{pages}{1\bibrangedash 19}
+    \field{title}{{Minimizing Polarization and Disagreement in Social
+  Networks}}
     \verb{url}
-    \verb http://bar.com/
+    \verb https://arxiv.org/pdf/1712.09948.pdf
     \endverb
-    \field{year}{2009}
+    \field{year}{2017}
   \endentry
 
-  \entry{famous:paper}{article}{}
+  \entry{garimella:paper}{article}{}
     \name{author}{1}{}{%
       {{hash=KGAGMMGDFM}{%
          family={Kiran\bibnamedelima Garimella},
