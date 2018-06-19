@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  19 JUN 2018 13:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  19 JUN 2018 23:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1563,16 +1563,16 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 180.
+(amsmath)                 on input line 182.
 
 [3]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 183.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 185.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 187.
+(Font)              <5> on input line 189.
  [4] [5]
 (./tesi.toc)
 \tf@toc=\write6
@@ -1608,12 +1608,22 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (./chap_0.tex
 Capitolo 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--11
+Underfull \hbox (badness 10000) in paragraph at lines 4--12
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--11
+Underfull \hbox (badness 10000) in paragraph at lines 4--12
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--12
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--12
 
  []
 
@@ -1627,8 +1637,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [2])
-[3]
+ [2]
+[3]) [4]
 \openout2 = `chap_1.aux'.
 
  (./chap_1.tex
@@ -1636,37 +1646,37 @@ Capitolo 2.
 )
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 213.
+(blindtext)                 on input line 215.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 213.
+(blindtext)                 on input line 215.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 213.
+(blindtext)                 on input line 215.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 213.
+(blindtext)                 on input line 215.
 
 
 Underfull \vbox (badness 5260) has occurred while \output is active []
 
- [4
+ [5
 
 
 
 ]
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 213.
+(blindtext)                 on input line 215.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 213.
+(blindtext)                 on input line 215.
 
-[5]
+[6]
 \openout2 = `chap_2.aux'.
 
  (./chap_2.tex
@@ -1674,37 +1684,37 @@ Capitolo 3.
 )
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 214.
+(blindtext)                 on input line 216.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 214.
+(blindtext)                 on input line 216.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 214.
+(blindtext)                 on input line 216.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 214.
+(blindtext)                 on input line 216.
 
 
 Underfull \vbox (badness 5260) has occurred while \output is active []
 
- [6
+ [7
 
 
 
 ]
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 214.
+(blindtext)                 on input line 216.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 214.
+(blindtext)                 on input line 216.
 
-[7]
+[8]
 \openout2 = `app_a.aux'.
 
  (./app_a.tex
@@ -1712,37 +1722,37 @@ Appendice A.
 )
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 218.
+(blindtext)                 on input line 220.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 218.
+(blindtext)                 on input line 220.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 218.
+(blindtext)                 on input line 220.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 218.
+(blindtext)                 on input line 220.
 
 
 Underfull \vbox (badness 5260) has occurred while \output is active []
 
- [8
+ [9
 
 
 
 ]
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 218.
+(blindtext)                 on input line 220.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 218.
+(blindtext)                 on input line 220.
 
-[9]
+[10]
 \openout2 = `app_b.aux'.
 
  (./app_b.tex
@@ -1750,53 +1760,53 @@ Appendice B.
 )
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 219.
+(blindtext)                 on input line 221.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 219.
+(blindtext)                 on input line 221.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 219.
+(blindtext)                 on input line 221.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 219.
+(blindtext)                 on input line 221.
 
 
 Underfull \vbox (badness 5260) has occurred while \output is active []
 
- [10
+ [11
 
 
 
 ]
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 219.
+(blindtext)                 on input line 221.
 
 
 Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 219.
+(blindtext)                 on input line 221.
 
-[11]
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 225.
+[12]
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 227.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 227.
- [12
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 229.
+ [13
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 227.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 229.
 
 (./tesi.aux (./chap_0.aux) (./chap_1.aux) (./chap_2.aux) (./app_a.aux)
 (./app_b.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 227.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 227.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 229.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 229.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
 (rerunfilecheck)             Checksum: 423B9B72A6B94BB446D3B57E7CB6534B;332.
 Package logreq Info: Writing requests to 'tesi.run.xml'.
@@ -1804,13 +1814,13 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18951 strings out of 493013
- 300165 string characters out of 6133327
+ 18958 strings out of 493013
+ 300215 string characters out of 6133327
  617641 words of memory out of 5000000
- 22084 multiletter control sequences out of 15000+600000
- 92713 words of font info for 74 fonts, out of 8000000 for 9000
+ 22085 multiletter control sequences out of 15000+600000
+ 96981 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,14n,45p,2577b,1286s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,14n,45p,2532b,1286s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2016/t
 exmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2016/texmf-dist/
@@ -1831,10 +1841,10 @@ s/type1/public/lm/lmri12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
 blic/lm/lmri8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr
 o10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></
 usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on tesi.pdf (22 pages, 385776 bytes).
+Output written on tesi.pdf (23 pages, 390704 bytes).
 PDF statistics:
- 252 PDF objects out of 1000 (max. 8388607)
- 206 compressed objects within 3 object streams
- 41 named destinations out of 1000 (max. 500000)
+ 262 PDF objects out of 1000 (max. 8388607)
+ 215 compressed objects within 3 object streams
+ 47 named destinations out of 1000 (max. 500000)
  62 words of extra memory for PDF output out of 10000 (max. 10000000)
 
