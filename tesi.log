@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  18 JUN 2018 17:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  19 JUN 2018 13:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1608,14 +1608,27 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (./chap_0.tex
 Capitolo 1.
 
+Underfull \hbox (badness 10000) in paragraph at lines 4--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--11
+
+ []
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [1
 
 
 
-])
-[2]
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2])
+[3]
 \openout2 = `chap_1.aux'.
 
  (./chap_1.tex
@@ -1640,7 +1653,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 5260) has occurred while \output is active []
 
- [3
+ [4
 
 
 
@@ -1653,7 +1666,7 @@ Package blindtext Warning: italian not defined, using English instead.
 Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 213.
 
-[4]
+[5]
 \openout2 = `chap_2.aux'.
 
  (./chap_2.tex
@@ -1678,7 +1691,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 5260) has occurred while \output is active []
 
- [5
+ [6
 
 
 
@@ -1691,7 +1704,7 @@ Package blindtext Warning: italian not defined, using English instead.
 Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 214.
 
-[6]
+[7]
 \openout2 = `app_a.aux'.
 
  (./app_a.tex
@@ -1716,7 +1729,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 5260) has occurred while \output is active []
 
- [7
+ [8
 
 
 
@@ -1729,7 +1742,7 @@ Package blindtext Warning: italian not defined, using English instead.
 Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 218.
 
-[8]
+[9]
 \openout2 = `app_b.aux'.
 
  (./app_b.tex
@@ -1754,7 +1767,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 5260) has occurred while \output is active []
 
- [9
+ [10
 
 
 
@@ -1767,14 +1780,14 @@ Package blindtext Warning: italian not defined, using English instead.
 Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 219.
 
-[10]
+[11]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 225.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 227.
- [11
+ [12
 
 
 ]
@@ -1791,11 +1804,11 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18944 strings out of 493013
- 300097 string characters out of 6133327
- 615641 words of memory out of 5000000
- 22081 multiletter control sequences out of 15000+600000
- 81193 words of font info for 71 fonts, out of 8000000 for 9000
+ 18951 strings out of 493013
+ 300165 string characters out of 6133327
+ 617641 words of memory out of 5000000
+ 22084 multiletter control sequences out of 15000+600000
+ 92713 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,14n,45p,2577b,1286s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
@@ -1815,12 +1828,13 @@ local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texliv
 e/2016/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2016/texmf
 -dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/2016/texmf-dist/font
 s/type1/public/lm/lmri12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
-blic/lm/lmro10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lm
-sy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on tesi.pdf (21 pages, 368629 bytes).
+blic/lm/lmri8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr
+o10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></
+usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
+Output written on tesi.pdf (22 pages, 385776 bytes).
 PDF statistics:
- 243 PDF objects out of 1000 (max. 8388607)
- 200 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
+ 252 PDF objects out of 1000 (max. 8388607)
+ 206 compressed objects within 3 object streams
+ 41 named destinations out of 1000 (max. 500000)
  62 words of extra memory for PDF output out of 10000 (max. 10000000)
 
