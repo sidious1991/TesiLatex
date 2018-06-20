@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  19 JUN 2018 23:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  20 JUN 2018 13:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1484,7 +1484,7 @@ Package biblatex Info: ... file 'tesi.bbl' found.
 Package biblatex Info: Reference section=0 on input line 145.
 Package biblatex Info: Reference segment=0 on input line 145.
 
-<images/Logo-Uni-Tor-Vergata.png, id=31, 770.88pt x 770.88pt>
+<images/Logo-Uni-Tor-Vergata.png, id=35, 770.88pt x 770.88pt>
 File: images/Logo-Uni-Tor-Vergata.png Graphic file (type png)
 
 <use images/Logo-Uni-Tor-Vergata.png>
@@ -1608,22 +1608,37 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (./chap_0.tex
 Capitolo 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--12
+Underfull \hbox (badness 10000) in paragraph at lines 4--13
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--12
+Underfull \hbox (badness 10000) in paragraph at lines 4--13
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--12
+Underfull \hbox (badness 10000) in paragraph at lines 4--13
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--12
+Underfull \hbox (badness 10000) in paragraph at lines 4--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--13
 
  []
 
@@ -1638,7 +1653,36 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-[3]) [4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+Underfull \hbox (badness 10000) in paragraph at lines 33--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--41
+
+ []
+
+
+Overfull \hbox (7.19669pt too wide) in paragraph at lines 33--41
+\T1/lmr/m/it/12 Fissato co-me obiet-ti-vo il de-cre-men-to del gra-do di con-tr
+o-ver-sia di una quan-ti-tà $\OT1/lmr/m/n/12 ^^A\OML/lmm/m/it/12 RWC$\T1/lmr/m/
+it/12 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--41
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--41
+
+ []
+
+[4]) [5]
 \openout2 = `chap_1.aux'.
 
  (./chap_1.tex
@@ -1663,7 +1707,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 5260) has occurred while \output is active []
 
- [5
+ [6
 
 
 
@@ -1676,7 +1720,7 @@ Package blindtext Warning: italian not defined, using English instead.
 Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 215.
 
-[6]
+[7]
 \openout2 = `chap_2.aux'.
 
  (./chap_2.tex
@@ -1701,7 +1745,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 5260) has occurred while \output is active []
 
- [7
+ [8
 
 
 
@@ -1714,7 +1758,7 @@ Package blindtext Warning: italian not defined, using English instead.
 Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 216.
 
-[8]
+[9]
 \openout2 = `app_a.aux'.
 
  (./app_a.tex
@@ -1739,7 +1783,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 5260) has occurred while \output is active []
 
- [9
+ [10
 
 
 
@@ -1752,7 +1796,7 @@ Package blindtext Warning: italian not defined, using English instead.
 Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 220.
 
-[10]
+[11]
 \openout2 = `app_b.aux'.
 
  (./app_b.tex
@@ -1777,7 +1821,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 5260) has occurred while \output is active []
 
- [11
+ [12
 
 
 
@@ -1790,14 +1834,14 @@ Package blindtext Warning: italian not defined, using English instead.
 Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 221.
 
-[12]
+[13]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 227.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 229.
- [13
+ [14
 
 
 ]
@@ -1808,17 +1852,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 229.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 229.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 229.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 423B9B72A6B94BB446D3B57E7CB6534B;332.
+(rerunfilecheck)             Checksum: DCAF37C0643005FA0C3B2FAF8E8006FF;402.
 Package logreq Info: Writing requests to 'tesi.run.xml'.
 \openout1 = `tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 18958 strings out of 493013
- 300215 string characters out of 6133327
- 617641 words of memory out of 5000000
- 22085 multiletter control sequences out of 15000+600000
- 96981 words of font info for 75 fonts, out of 8000000 for 9000
+ 18963 strings out of 493013
+ 300283 string characters out of 6133327
+ 618641 words of memory out of 5000000
+ 22088 multiletter control sequences out of 15000+600000
+ 99979 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,14n,45p,2532b,1286s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
@@ -1841,10 +1885,10 @@ s/type1/public/lm/lmri12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/pu
 blic/lm/lmri8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmr
 o10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></
 usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on tesi.pdf (23 pages, 390704 bytes).
+Output written on tesi.pdf (24 pages, 395497 bytes).
 PDF statistics:
- 262 PDF objects out of 1000 (max. 8388607)
- 215 compressed objects within 3 object streams
- 47 named destinations out of 1000 (max. 500000)
- 62 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 273 PDF objects out of 1000 (max. 8388607)
+ 225 compressed objects within 3 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 70 words of extra memory for PDF output out of 10000 (max. 10000000)
 
