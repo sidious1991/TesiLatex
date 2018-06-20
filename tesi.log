@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  20 JUN 2018 17:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  20 JUN 2018 21:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1654,7 +1654,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1655) has occurred while \output is active []
 
  [3]
 Underfull \hbox (badness 10000) in paragraph at lines 33--41
@@ -1683,7 +1683,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--41
 
  []
 
-[4] [5]) [6]
+[4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5])
+[6]
 \openout2 = `chap_1.aux'.
 
  (./chap_1.tex
@@ -1956,13 +1960,13 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19012 strings out of 493013
- 300841 string characters out of 6133327
- 618662 words of memory out of 5000000
+ 19014 strings out of 493013
+ 300863 string characters out of 6133327
+ 620662 words of memory out of 5000000
  22102 multiletter control sequences out of 15000+600000
  108521 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,14n,45p,2532b,1286s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,14n,45p,2532b,1390s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2016/t
 exmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2016/texmf-dist/
@@ -1984,10 +1988,10 @@ ublic/lm/lmri12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/l
 mri8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmro10.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local
 /texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on tesi.pdf (33 pages, 425692 bytes).
+Output written on tesi.pdf (33 pages, 433997 bytes).
 PDF statistics:
- 334 PDF objects out of 1000 (max. 8388607)
- 276 compressed objects within 3 object streams
- 62 named destinations out of 1000 (max. 500000)
+ 339 PDF objects out of 1000 (max. 8388607)
+ 281 compressed objects within 3 object streams
+ 64 named destinations out of 1000 (max. 500000)
  94 words of extra memory for PDF output out of 10000 (max. 10000000)
 
