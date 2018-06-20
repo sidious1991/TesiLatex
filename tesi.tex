@@ -131,6 +131,9 @@
 chap_0,%
 chap_1,%
 chap_2,%
+chap_3,%
+chap_4,%
+chap_5,%
 app_a,%
 app_b,%
 }
@@ -179,7 +182,7 @@ Esistono, e sono sempre esistiti, particolari temi, detti \textit{controversi}, 
 \item offre un \textit{tool} di visualizzazione degli archi individuati all'interno del grafo.
 \end{enumerate}
 Con riferimento al punto \textit{3}, il problema di ottimizzazione che si vorrebbe risolvere sarebbe quello di trovare il \textit{set} di \textit{k} archi diretti che, se aggiunti al grafo, minimizzano il \textit{grado di controversia}.
-Poiché gli \textit{endorsement graphs} delle \textit{social networks} sono generalmente costituiti da un numero molto elevato di nodi (indicato con \textit{n}), risolvere tale problema di ottimizzazione considerando tutte le possibili combinazioni degli archi a gruppi di \textit{k} (complessità \textit{O}${n^2\choose k}$) (approccio \textit{brute force}) è evidentemente molto costoso dal punto di vista computazionale e molto inefficiente anche per quanto riguarda i tempi di esecuzione. Pertanto l'approccio seguito è quello adottato nell'articolo \cite{garimella:paper}, che consiste nel considerare solo un sottoinsieme degli archi possibili (i.e. un sottoinsieme degli archi non ancora materializzati nell'\textit{endorsement graph}) ed estrarre da questo sottoinsieme i \textit{k} più promettenti. Chiaramente questa soluzione potrebbe restituire archi meno efficaci, per quanto riguarda la riduzione del \textit{grado di controversia} che consentono, rispetto a quelli restituiti dall'approccio \textit{brute force} ma apporta un miglioramento in termini di efficienza computazionale; in particolare, l'euristica che specifica la modalità di scelta del sottoinsieme degli archi candidati è cruciale. L'euristica utilizzata in questo lavoro di tesi è quella proposta nell'articolo \cite{garimella:paper}, la quale
+Poiché gli \textit{endorsement graphs} delle \textit{social networks} sono generalmente costituiti da un numero molto elevato di nodi (indicato con \textit{n}), risolvere tale problema di ottimizzazione considerando tutte le possibili combinazioni degli archi a gruppi di \textit{k} (complessità \textit{O}${n^2\choose k}$) (approccio \textit{brute force}) è evidentemente molto costoso dal punto di vista computazionale e molto inefficiente anche per quanto riguarda i tempi di esecuzione. Pertanto l'approccio seguito è quello adottato nell'articolo \textit{"Reducing controversy by connecting opposing views"}\cite{garimella:paper}, che consiste nel considerare solo un sottoinsieme degli archi possibili (i.e. un sottoinsieme degli archi non ancora materializzati nell'\textit{endorsement graph}) ed estrarre da questo sottoinsieme i \textit{k} più promettenti. Chiaramente questa soluzione potrebbe restituire archi meno efficaci, per quanto riguarda la riduzione del \textit{grado di controversia} che consentono, rispetto a quelli restituiti dall'approccio \textit{brute force} ma apporta un miglioramento in termini di efficienza computazionale; in particolare, l'euristica che specifica la modalità di scelta del sottoinsieme degli archi candidati è cruciale. L'euristica utilizzata in questo lavoro di tesi è quella proposta nell'articolo \cite{garimella:paper}, la quale
 consiste nel considerare solo gli archi diretti che permettono di connettere i vertici di grado alto della prima comunità (o \textit{echo chamber}) con i vertici di grado alto della seconda comunità e viceversa: da questo sottoinsieme di archi vengono estratti i \textit{k} più promettenti in termini di riduzione del \textit{grado di controversia} che consentono.\\La bontà di tale euristica è stata valutata considerando due algoritmi alternativi, utilizzati per estrarre i \textit{k} archi più promettenti dal sottoinsieme considerato: 
 \begin{itemize}
 \item \textit{non-greedy}: vengono scelti in un solo \textit{step} i \textit{k} archi che porterebbero al \textit{grado di controversia} più basso qualora venissero aggiunti al grafo \textit{individualmente};
@@ -214,6 +217,9 @@ Nel lavoro di tesi verranno descritte le modalità di implementazione di tali al
 \include{chap_0}
 \include{chap_1}
 \include{chap_2}
+\include{chap_3}
+\include{chap_4}
+\include{chap_5}
 
 \appendix
 % INCLUSIONE APPENDICI - - PERSONALIZZARE - TENERE COERENTE CON LISTA IN ALTO

@@ -12,12 +12,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Organizzazione della tesi}{5}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Quo}{6}{chapter.2}
+\contentsline {chapter}{\numberline {2}Lo stato dell'arte}{7}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Qua}{8}{chapter.3}
+\contentsline {chapter}{\numberline {3}Teoria alla base del problema ed algoritmi per la risoluzione}{8}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}An appendix}{10}{appendix.Alph1}
+\contentsline {chapter}{\numberline {4}Tecnologie utilizzate ed implementazione}{11}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Another appendix}{12}{appendix.Alph2}
+\contentsline {chapter}{\numberline {5}Test dell\IeC {\textquoteright }\textit {edge-recommendation system} in modalit\IeC {\`a} \textit {greedy e non}}{14}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Riferimenti bibliografici}{14}{appendix.Alph2}
+\contentsline {chapter}{\numberline {6}Conclusioni e sviluppi futuri}{17}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}An appendix}{19}{appendix.Alph1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Another appendix}{21}{appendix.Alph2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Riferimenti bibliografici}{23}{appendix.Alph2}

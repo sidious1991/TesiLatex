@@ -108,5 +108,29 @@
     \endverb
     \field{year}{2017}
   \endentry
+
+  \entry{liao:paper}{article}{}
+    \name{author}{1}{}{%
+      {{hash=QVLWTF}{%
+         family={Q.\bibnamedelima V.\bibnamedelima Liao},
+         familyi={Q\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim
+  L\bibinitperiod},
+         given={W.-T.\bibnamedelima Fu},
+         giveni={W\bibinitperiod-T\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+    }
+    \keyw{important}
+    \strng{namehash}{QVLWTF1}
+    \strng{fullhash}{QVLWTF1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{Q}
+    \field{sortinithash}{Q}
+    \field{pages}{2359–2368}
+    \field{title}{{Beyond the filter bubble: interactive effects of perceived
+  threat and topic involvement on selective exposure to information. In
+  Proceedings of the SIGCHI Conference on Human Factors in Computing Systems}}
+    \field{year}{2013}
+  \endentry
 \endsortlist
 \endinput
