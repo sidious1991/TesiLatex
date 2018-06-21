@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  21 JUN 2018 12:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  21 JUN 2018 19:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1574,32 +1574,35 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 192.
- [4] [5]
-(./tesi.toc)
+ [4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+[6] (./tesi.toc)
 \tf@toc=\write6
 \openout6 = `tesi.toc'.
 
- [6
+ [7
 
 ] (./tesi.lof)
 \tf@lof=\write7
 \openout7 = `tesi.lof'.
 
- [7
+ [8
 
 
 ] (./tesi.lot)
 \tf@lot=\write8
 \openout8 = `tesi.lot'.
 
- [8
+ [9
 
 
 ] (./tesi.lol)
 \tf@lol=\write9
 \openout9 = `tesi.lol'.
 
- [9
+ [10
 
 
 ]
@@ -1664,17 +1667,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--20
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3977) has occurred while \output is active []
 
  [1
 
 
 
 ]
-[2]
-Underfull \vbox (badness 4156) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3]
+
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[3]
+Underfull \vbox (badness 1275) has occurred while \output is active []
+
+
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
 [4]
 Underfull \hbox (badness 10000) in paragraph at lines 41--49
 
@@ -1702,7 +1721,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--49
 
  []
 
-[5] [6]) [7]
+
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[6])
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[7]
 \openout2 = `chap_1.aux'.
 
  (./chap_1.tex
@@ -1720,7 +1754,36 @@ Capitolo 3.
 
 
 
-]) [10]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 12--15
+
+ []
+
+
+Underfull \vbox (badness 1221) has occurred while \output is active []
+
+
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[10]
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 33--36
+
+ []
+
+
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[12])
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[13]
 \openout2 = `chap_3.aux'.
 
  (./chap_3.tex
@@ -1739,9 +1802,9 @@ Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 220.
 
 
-Underfull \vbox (badness 4013) has occurred while \output is active []
+Underfull \vbox (badness 1043) has occurred while \output is active []
 
- [11
+ [14
 
 
 
@@ -1761,8 +1824,15 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [12]
-[13]
+
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[15]
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[16]
 \openout2 = `chap_4.aux'.
 
  (./chap_4.tex
@@ -1781,9 +1851,9 @@ Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 221.
 
 
-Underfull \vbox (badness 4013) has occurred while \output is active []
+Underfull \vbox (badness 1043) has occurred while \output is active []
 
- [14
+ [17
 
 
 
@@ -1803,8 +1873,15 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15]
-[16]
+
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[18]
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[19]
 \openout2 = `chap_5.aux'.
 
  (./chap_5.tex
@@ -1823,13 +1900,9 @@ Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 222.
 
 
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 222.
+Underfull \vbox (badness 1681) has occurred while \output is active []
 
-
-Underfull \vbox (badness 5260) has occurred while \output is active []
-
- [17
+ [20
 
 
 
@@ -1842,7 +1915,22 @@ Package blindtext Warning: italian not defined, using English instead.
 Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 222.
 
-[18]
+
+Package blindtext Warning: italian not defined, using English instead.
+(blindtext)                 on input line 222.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[21]
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[22]
 \openout2 = `app_a.aux'.
 
  (./app_a.tex
@@ -1861,13 +1949,9 @@ Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 226.
 
 
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 226.
+Underfull \vbox (badness 1681) has occurred while \output is active []
 
-
-Underfull \vbox (badness 5260) has occurred while \output is active []
-
- [19
+ [23
 
 
 
@@ -1880,7 +1964,22 @@ Package blindtext Warning: italian not defined, using English instead.
 Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 226.
 
-[20]
+
+Package blindtext Warning: italian not defined, using English instead.
+(blindtext)                 on input line 226.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[24]
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[25]
 \openout2 = `app_b.aux'.
 
  (./app_b.tex
@@ -1899,13 +1998,9 @@ Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 227.
 
 
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 227.
+Underfull \vbox (badness 1681) has occurred while \output is active []
 
-
-Underfull \vbox (badness 5260) has occurred while \output is active []
-
- [21
+ [26
 
 
 
@@ -1918,14 +2013,29 @@ Package blindtext Warning: italian not defined, using English instead.
 Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 227.
 
-[22]
+
+Package blindtext Warning: italian not defined, using English instead.
+(blindtext)                 on input line 227.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[27]
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[28]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 233.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 235.
- [23
+ [29
 
 
 ]
@@ -1942,10 +2052,10 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19026 strings out of 493013
- 300984 string characters out of 6133327
+ 19044 strings out of 493013
+ 301224 string characters out of 6133327
  621662 words of memory out of 5000000
- 22106 multiletter control sequences out of 15000+600000
+ 22109 multiletter control sequences out of 15000+600000
  108521 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,14n,45p,2595b,1390s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1970,10 +2080,10 @@ ublic/lm/lmri12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/l
 mri8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmro10.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local
 /texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on tesi.pdf (33 pages, 438629 bytes).
+Output written on tesi.pdf (40 pages, 457408 bytes).
 PDF statistics:
- 362 PDF objects out of 1000 (max. 8388607)
- 303 compressed objects within 4 object streams
- 72 named destinations out of 1000 (max. 500000)
+ 412 PDF objects out of 1000 (max. 8388607)
+ 346 compressed objects within 4 object streams
+ 87 named destinations out of 1000 (max. 500000)
  118 words of extra memory for PDF output out of 10000 (max. 10000000)
 
