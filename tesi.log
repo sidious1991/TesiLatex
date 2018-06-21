@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  21 JUN 2018 11:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  21 JUN 2018 12:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1485,7 +1485,7 @@ Package biblatex Info: ... file 'tesi.bbl' found.
 Package biblatex Info: Reference section=0 on input line 148.
 Package biblatex Info: Reference segment=0 on input line 148.
 
-<images/Logo-Uni-Tor-Vergata.png, id=47, 770.88pt x 770.88pt>
+<images/Logo-Uni-Tor-Vergata.png, id=59, 770.88pt x 770.88pt>
 File: images/Logo-Uni-Tor-Vergata.png Graphic file (type png)
 
 <use images/Logo-Uni-Tor-Vergata.png>
@@ -1716,44 +1716,11 @@ Capitolo 2.
 
  (./chap_2.tex
 Capitolo 3.
-)
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 219.
-
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 219.
-
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 219.
-
-
-Underfull \vbox (badness 4013) has occurred while \output is active []
-
- [9
+[9
 
 
 
-]
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 219.
-
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 219.
-
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 219.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10]
-[11]
+]) [10]
 \openout2 = `chap_3.aux'.
 
  (./chap_3.tex
@@ -1774,7 +1741,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 4013) has occurred while \output is active []
 
- [12
+ [11
 
 
 
@@ -1794,8 +1761,8 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [13]
-[14]
+ [12]
+[13]
 \openout2 = `chap_4.aux'.
 
  (./chap_4.tex
@@ -1816,7 +1783,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 4013) has occurred while \output is active []
 
- [15
+ [14
 
 
 
@@ -1836,8 +1803,8 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [16]
-[17]
+ [15]
+[16]
 \openout2 = `chap_5.aux'.
 
  (./chap_5.tex
@@ -1862,7 +1829,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 5260) has occurred while \output is active []
 
- [18
+ [17
 
 
 
@@ -1875,7 +1842,7 @@ Package blindtext Warning: italian not defined, using English instead.
 Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 222.
 
-[19]
+[18]
 \openout2 = `app_a.aux'.
 
  (./app_a.tex
@@ -1900,7 +1867,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 5260) has occurred while \output is active []
 
- [20
+ [19
 
 
 
@@ -1913,7 +1880,7 @@ Package blindtext Warning: italian not defined, using English instead.
 Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 226.
 
-[21]
+[20]
 \openout2 = `app_b.aux'.
 
  (./app_b.tex
@@ -1938,7 +1905,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 5260) has occurred while \output is active []
 
- [22
+ [21
 
 
 
@@ -1951,14 +1918,14 @@ Package blindtext Warning: italian not defined, using English instead.
 Package blindtext Warning: italian not defined, using English instead.
 (blindtext)                 on input line 227.
 
-[23]
+[22]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 233.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 235.
- [24
+ [23
 
 
 ]
@@ -1969,20 +1936,16 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 235.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 235.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 235.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 69B675A66D9EF6F28EB61A610D30934D;715.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(rerunfilecheck)             Checksum: 19F2EBCD2CDEE55F3997AEC0585895D6;1001.
 Package logreq Info: Writing requests to 'tesi.run.xml'.
 \openout1 = `tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19016 strings out of 493013
- 300881 string characters out of 6133327
+ 19026 strings out of 493013
+ 300984 string characters out of 6133327
  621662 words of memory out of 5000000
- 22102 multiletter control sequences out of 15000+600000
+ 22106 multiletter control sequences out of 15000+600000
  108521 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,14n,45p,2595b,1390s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2007,10 +1970,10 @@ ublic/lm/lmri12.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/l
 mri8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmro10.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local
 /texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on tesi.pdf (34 pages, 437246 bytes).
+Output written on tesi.pdf (33 pages, 438629 bytes).
 PDF statistics:
- 345 PDF objects out of 1000 (max. 8388607)
- 286 compressed objects within 3 object streams
- 66 named destinations out of 1000 (max. 500000)
- 94 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 362 PDF objects out of 1000 (max. 8388607)
+ 303 compressed objects within 4 object streams
+ 72 named destinations out of 1000 (max. 500000)
+ 118 words of extra memory for PDF output out of 10000 (max. 10000000)
 

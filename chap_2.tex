@@ -1,3 +1,17 @@
 \chapter{Teoria alla base del problema ed algoritmi per la risoluzione}
 \label{chap:teoria}
-\Blindtext
+\section{Misura del grado di controversia}
+Prima di dare una definizione formale del \textit{random-walk controversy score}, elenchiamo ed illustriamo i passi necessari per calcolarlo.
+\begin{enumerate}
+\item Fissato il \textit{topic t} per il quale si vuole quantificare il grado di controversia, è possibile descrivere la discussione mediante l'\textit{endorsement graph G(V,E)}. Nell'ambiente di \textit{Twitter}, il \textit{topic t} è identificato da un \textit{hashtag} (e.g.\textit{\#hashtag}) ed i nodi del grafo rappresentano gli utenti che hanno preso parte alla discussione utilizzando almeno una volta tale \textit{hashtag} nei loro \textit{tweets}; gli archi del grafo identificano i \textit{retweets} tra gli utenti, che esprimono relazioni di condivisione di opinione riguardo il \textit{topic}.
+\item Ipotizzando che il \textit{topic t} sia controverso, è possibile partizionare i nodi del grafo \textit{G(V,E)} in due insiemi \textit{X},\textit{Y} ben separati tra loro (i.e. vi sono pochi archi che li interconnettono). Tali insiemi quindi soddisfano le seguenti proprietà:
+\begin{enumerate}
+\item $\textit{X}\cup\textit{Y} = \textit{V}$;
+\item $\textit{X}\cap\textit{Y} = \emptyset$.
+\end{enumerate}
+Gli insiemi \textit{X} ed \textit{Y} rappresentano i due lati della controversia (i.e. le \textit{echo-chambers}).
+\\Per identificare le \textit{echo-chambers}, nell'implementazione proposta è stato utilizzato l'algoritmo di \textit{graph-partitioning} di \textit{Girvan-Newman}. Tale algoritmo agisce rimuovendo progressivamente archi dal grafo originario: l'esecuzione viene arrestata quando la rimozione degli archi ha portato ad individuare due comunità distinte che non comunicano (i.e. non sono collegate da nessun arco). La metrica utilizzata da \textit{Girvan-Newman} per identificare l'arco da rimuovere ad ogni passo è la così detta \textit{edge-betweenness centrality}: dato un arco \textit{e}, essa è definita come \textit{il numero di cammini di costo minimo tra coppie di nodi del grafo che passano attraverso l'arco e}. Nel caso in cui vi sia più di un percorso di costo minimo tra una coppia di nodi, a ciascun percorso viene assegnato uguale peso in modo tale che il peso totale di tutti i percorsi sia uguale all'unità. 
+\end{enumerate}
+
+\section{Definizione formale degli algoritmi per la risoluzione}
+\section{Calcolo del decremento della controversia associato ad un arco}

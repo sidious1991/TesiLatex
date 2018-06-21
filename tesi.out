@@ -3,9 +3,12 @@
 \BOOKMARK [1][]{section.1.1}{Organizzazione della tesi}{chapter.1}% 3
 \BOOKMARK [0][]{chapter.2}{Lo stato dell'arte}{}% 4
 \BOOKMARK [0][]{chapter.3}{Teoria alla base del problema ed algoritmi per la risoluzione}{}% 5
-\BOOKMARK [0][]{chapter.4}{Tecnologie utilizzate ed implementazione}{}% 6
-\BOOKMARK [0][]{chapter.5}{Test dell\220edge-recommendation system in modalit\340 greedy e non}{}% 7
-\BOOKMARK [0][]{chapter.6}{Conclusioni e sviluppi futuri}{}% 8
-\BOOKMARK [0][]{appendix.Alph1}{An appendix}{}% 9
-\BOOKMARK [0][]{appendix.Alph2}{Another appendix}{}% 10
-\BOOKMARK [0][]{appendix.Alph2}{Riferimenti bibliografici}{}% 11
+\BOOKMARK [1][]{section.3.1}{Misura del grado di controversia}{chapter.3}% 6
+\BOOKMARK [1][]{section.3.2}{Definizione formale degli algoritmi per la risoluzione}{chapter.3}% 7
+\BOOKMARK [1][]{section.3.3}{Calcolo del decremento della controversia associato ad un arco}{chapter.3}% 8
+\BOOKMARK [0][]{chapter.4}{Tecnologie utilizzate ed implementazione}{}% 9
+\BOOKMARK [0][]{chapter.5}{Test dell\220edge-recommendation system in modalit\340 greedy e non}{}% 10
+\BOOKMARK [0][]{chapter.6}{Conclusioni e sviluppi futuri}{}% 11
+\BOOKMARK [0][]{appendix.Alph1}{An appendix}{}% 12
+\BOOKMARK [0][]{appendix.Alph2}{Another appendix}{}% 13
+\BOOKMARK [0][]{appendix.Alph2}{Riferimenti bibliografici}{}% 14
