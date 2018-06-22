@@ -56,7 +56,7 @@ RWC(G,X,Y) = (1 - \alpha)(c_x - c_y)\textsuperscript{T}(M_x\textsuperscript{-1}e
 Dove \textit{M\textsubscript{x} = (I - $\alpha$P\textsubscript{x})} e \textit{M\textsubscript{y} = (I - $\alpha$P\textsubscript{y})}. Quest'ultima è la formula utilizzata nell'implementazione del sistema proposto. Ad ogni modo, riferendosi all'equazione (3.4) è possibile fare le seguenti osservazioni:
 \begin{enumerate}
 \item Innanzitutto occorre precisare che \textit{r\textsubscript{x}} è una \textit{distribuzione stazionaria di probabilità} del \textit{random walk} associato all'esecuzione di \textit{PageRank page\textsubscript{x}}: ognuno dei suoi elementi \textit{r\textsubscript{x}[i]} ($\forall \textit{i = 0,...,n-1}$) rappresenta la probabilità che il \textit{random walk} si trovi nel nodo \textit{i} all'equilibrio. Simili considerazioni valgono per \textit{r\textsubscript{y}};
-\item Qualora le due comunità (\textit{echo-chambers}) \textit{X e Y} fossero molto divise tra loro (i.e. pochissimi archi diretti che le connettono), ci si aspetterebbe un \textit{r\textsubscript{x}} con valori pressoché nulli nelle coordinate corrispondenti ai nodi di \textit{Y} e non nulli altrove e, viceversa, parlando di \textit{r\textsubscript{y}}\footnote{Ricordare che, essendo \textit{distribuzioni di probabilità}, vale: $\sum_{i=0}^{n-1} r_x[i] = 1$ e $\sum_{i=0}^{n-1} r_y[i] = 1$.}. In tal caso l'espressione $(c_x - c_y)\textsuperscript{T}(r_x - r_y)$ assume il valore massimo, indice di un'elevata \textit{controversia} nella rete.
+\item Qualora le due comunità (\textit{echo-chambers}) \textit{X e Y} fossero molto divise tra loro (i.e. pochissimi archi diretti che le connettono), ci si aspetterebbe un \textit{r\textsubscript{x}} con valori pressoché nulli nelle coordinate corrispondenti ai nodi di \textit{Y} e non nulli altrove e, viceversa, parlando di \textit{r\textsubscript{y}}\footnote{Ricordare che, essendo \textit{distribuzioni di probabilità}, vale: $\sum_{i=0}^{n-1} r_x[i] = 1$ e $\sum_{j=0}^{n-1} r_y[j] = 1$.}. In tal caso l'espressione $(c_x - c_y)\textsuperscript{T}(r_x - r_y)$ assume il valore massimo, indice di un'elevata \textit{controversia} nella rete.
 \item Qualora le due comunità fossero invece sufficientemente connesse tra loro, ci si aspetterebbe un vettore \textit{r\textsubscript{x}} con valori abbastanza uniformi su tutte le sue coordinate; la stessa considerazione varrebbe per \textit{r\textsubscript{y}}. In tal caso il grafo non presenterebbe un'elevata controversia (\textit{RWC(G,X,Y)} assume valori bassi), e questo risultato sarebbe confermato dal fatto che le due comunità sono sufficientemente esposte l'una a l'altra.
 \end{enumerate}
 \end{enumerate}
@@ -81,8 +81,38 @@ Ovvero, formalmente:
 \\
 Risolvere tale problema, così come si presenta, richiederebbe di considerare tutti le possibili combinazioni degli archi ancora non presenti nel grafo presi a gruppi di \textit{k}: queste combinazioni sono pari a \textit{O}($n^2 \choose k$), dove con \textit{n} indichiamo il numero di nodi del grafo.
 \\Come è facile immaginare, un algoritmo che considera tutte queste combinazioni di archi è molto inefficiente dal punto di vista computazionale, soprattutto alla luce del fatto che gli \textit{endorsement graphs} delle reti sociali come quella di \textit{Twitter} sono costituiti da alcune migliaia di nodi e migliaia di archi.
-\\Si propone, pertanto, di restringere il dominio degli archi candidati: seguendo l'approccio dell'articolo \cite{garimella:paper} è possibile considerare solo gli archi tra vertici con \textit{in-degree} alto di ciascuna \textit{echo-chamber}. La scelta di questa euristica, come osservano gli autori dell'articolo \cite{garimella:paper}, è giustificata dal fatto che la struttura degli \textit{endorsement graph} spesso mette in luce la presenza di un piccolo numero di nodi \textit{leader} (i.e. utenti popolari) ed un gran numero di nodi \textit{non leader} (i.e. utenti seguaci): i nodi \textit{leader} ricevono molti archi in ingresso (ossia hanno alto \textit{in-degree}) in quanto i loro \textit{tweet} vengono \textit{retweettati} massivamente. 
+\\Si propone, pertanto, di restringere il dominio degli archi candidati: seguendo l'approccio dell'articolo \cite{garimella:paper} è possibile considerare solo gli archi tra vertici con \textit{in-degree} alto di ciascuna \textit{echo-chamber}. La scelta di questa euristica, come osservano gli autori dell'articolo \cite{garimella:paper}, è giustificata dal fatto che la struttura degli \textit{endorsement graph} spesso mette in luce la presenza di un piccolo numero di nodi \textit{leader} (i.e. utenti popolari) ed un gran numero di nodi \textit{non leader} (i.e. utenti seguaci): i nodi \textit{leader} ricevono molti archi in ingresso (ossia hanno alto \textit{in-degree}) in quanto i loro \textit{tweet} vengono \textit{retweettati} da molti nodi \textit{non leader} (ossia ricevono molta \textit{approvazione} dai loro seguaci, i quali si fidano della loro opinione). Intuitivamente, qualora si riuscisse a convincere i nodi \textit{leader} ad approvare contenuti che esprimono opinioni sul \textit{topic controverso} opposte alla propria, i nodi \textit{non leader} (i seguaci) sarebbero spinti a fare altrettanto.
+Questa osservazione suggerisce che gli archi tra vertici con \textit{in-degree} alto di ciascuna \textit{echo-chamber} sono buoni candidati per ottenere un abbassamento del \textit{random-walk controversy score}\footnote{Si rimanda alla lettura del \textit{Teorema 1.} dell'articolo \cite{garimella:paper}.}. 
+\\Mediante questo ridimensionamento del dominio degli archi candidati, ci si propone di ridurre l'\textit{RWC} esponendo alcuni nodi \textit{leader} di ciascuna \textit{echo-chamber} ai contenuti di alcuni nodi \textit{leader} dell'\textit{echo-chamber} opposta. 
+\\Ora, con l'obiettivo di effettuare la scelta dei \textit{k} archi migliori appartenenti al dominio così definito, vengono proposti due algoritmi: un \textit{algoritmo non greedy} (indicato di seguito come \textit{Algorithm 1}) ed un \textit{algoritmo greedy}.
+\\L'algoritmo \textit{non greedy} ha un tempo di esecuzione pari a \textit{O($k_1 \cdot k_2$)}, che costituisce un ottimo \textit{speedup} rispetto all'algoritmo \textit{brute-force}, che considera invece tutte le combinazioni di archi. \textit{Algorithm 1} si limita a scegliere dal dominio degli archi, ridimensionato come appena detto, i \textit{k} archi migliori in termini del decremento dell'\textit{RWC} che ciascuno consente se aggiunto \textit{individualmente}. Tuttavia il \textit{decremento dell'RWC} che un qualsiasi arco \textit{"e"} consente individualmente (\textit{$\delta$RWC\textsubscript{e}}) si rivelerebbe tale solo se tale arco fosse aggiunto per primo al grafo; più precisamente $\forall E' \supseteq E, \forall e \in V \times V \setminus E'$ vale l'espressione (3.6). Ovvero la somma dei \textit{$\delta$RWC} dei \textit{k} archi scelti dall'algoritmo \textit{non greedy} non corrisponde al decremento \textit{reale} dell'\textit{RWC} che si osserverebbe se tali archi apparissero nel grafo, ma ne è un \textit{upper-bound}.
 
+\begin{equation}
+\resizebox{1 \textwidth}{!} 
+{
+    $ RWC(G(V,E),X,Y) - RWC(G(V, E \cup \{e\}),X,Y) \geq RWC(G(V,E'),X,Y) - RWC(G(V, E' \cup \{e\}),X,Y)$
+} 
+\end{equation}
 
+\begin{algorithm}
+\caption{Algoritmo \textit{non greedy} per la scelta dei \textit{k} archi}
+\begin{algorithmic} 
+\REQUIRE Il grafo \textit{G} e le comunità \textit{X,Y}; il numero di archi da proporre \textit{k}; i \textit{k\textsubscript{1} e k\textsubscript{2}} vertici con \textit{in-degree} più alto in \textit{X e Y}, rispettivamente 
+\ENSURE La lista dei \textit{k} archi migliori, in termini del decremento dell'\textit{RWC} che consentono se aggiunti individualmente
+\STATE Initialization : Output $\leftarrow$ lista vuota;
+\FOR{\textit{i = 1:k\textsubscript{1}}} 
+\STATE nodo $u = X[i]$;
+\FOR{\textit{j = 1:k\textsubscript{2}}}
+\STATE nodo $v = Y[j]$;
+\STATE Calcola il decremento dell'\textit{RWC $\delta$RWC\textsubscript{u $\rightarrow$ v}} che si otterrebbe qualora l'arco \textit{(u,v)} venisse aggiunto al grafo;
+\STATE Aggiungi \textit{$\delta$RWC\textsubscript{u $\rightarrow$ v}} alla lista \textit{Output};
+\STATE Calcola il decremento dell'\textit{RWC $\delta$RWC\textsubscript{v $\rightarrow$ u}} che si otterrebbe qualora l'arco \textit{(v,u)} venisse aggiunto al grafo;
+\STATE Aggiungi \textit{$\delta$RWC\textsubscript{v $\rightarrow$ u}} alla lista \textit{Output};
+\ENDFOR
+\ENDFOR
+\STATE Lista \textit{Output} ordinata $\leftarrow$ Ordina la lista \textit{Output} secondo i \textit{$\delta$RWC} (presi in modulo) in ordine decrescente;
+\RETURN I migliori \textit{k} dalla lista \textit{Output} ordinata;
+\end{algorithmic}
+\end{algorithm}
 
 \section{Calcolo del decremento della controversia associato ad un arco}
