@@ -25,7 +25,7 @@ Dove \textit{$\sigma\textsubscript{st}$} è il numero totale di percorsi di cost
 \\Per il calcolo dell'\textit{RWC} vengono utilizzate due esecuzioni distinte dell'algoritmo di \textit{PageRank}, indicate con \textit{page\textsubscript{x} e page\textsubscript{y}}, ognuna delle quali opera sul \textit{retweet graph} corrispondente al \textit{topic t} in input ma inizia il suo \textit{random-walk} partendo, rispettivamente, da uno dei nodi della \textit{comunità X} e da uno dei nodi della \textit{comunità Y} (\textit{comunità = echo-chamber}). Inoltre, \textit{page\textsubscript{x} e page\textsubscript{y}} ad ogni passo possono decidere di continuare il \textit{random-walk} (potendo sceglie con uguale probabilità uno degli archi in uscita dal nodo in cui si trovano attualmente) o di ricominciare il proprio cammino (\textit{restart}), tornando, rispettivamente, in uno dei nodi della \textit{comunità X} ed in uno dei nodi della \textit{comunità Y}: la seconda scelta viene compiuta con una probabilità detta di \textit{restart} e, chiaramente, la prima con una probabilità che ne è il complementare (i.e. la somma delle probabilità deve restituire \textit{1}).
 \\Scendendo più nel dettaglio, siano:
 \begin{itemize}
-\item \textit{P} la \textit{matrice delle probabilità di transizione per colonna}\footnote{Se il \textit{retweet graph} in considerazione ha \textit{N} nodi, tale matrice ha dimensione \textit{NxN} ed ogni suo elemento \textit{P[i][j]} è la probabilità di passare dal nodo \textit{j} al nodo \textit{i} in un solo passo, sapendo di essere attualmente nel nodo \textit{j}.} associata al \textit{retweet graph} considerato;
+\item \textit{P} la \textit{matrice delle probabilità di transizione per colonna}\footnote{Se il \textit{retweet graph} in considerazione ha \textit{N} nodi, tale matrice ha dimensione $N \times N$ ed ogni suo elemento \textit{P[i][j]} è la probabilità di passare dal nodo \textit{j} al nodo \textit{i} in un solo passo, sapendo di essere attualmente nel nodo \textit{j}.} associata al \textit{retweet graph} considerato;
 \item \textit{X\textsuperscript{*} e Y\textsuperscript{*}} rispettivamente gli insiemi dei \textit{k\textsubscript{1} e k\textsubscript{2}} nodi con \textit{in-degree} più alto delle due comunità \textit{X e Y}. Inoltre sia \textit{c\textsubscript{x}} un vettore di dimensione \textit{n} avente valore \textit{1} nelle coordinate corrispondenti ai nodi dell'insieme \textit{X\textsuperscript{*}} e \textit{0} altrove; similmente viene definito \textit{c\textsubscript{y}};
 \item \textit{r\textsubscript{x}} il vettore di \textit{PageRank} personalizzato per il \textit{random walk} che parte dalla comunità \textit{X}. Sia inoltre $(1-\alpha)$ la probabilità di \textit{restart} di tale \textit{random walk} (e dunque $\alpha$ è la probabilità di continuare) e sia $\textit{e\textsubscript{x} = Uniform(X)}$ il suo vettore di \textit{restart}: ossia il \textit{random walk}, ad ogni passo, decide di ricominciare il proprio cammino con probabilità $(1-\alpha)$ e tra tutti i nodi della \textit{comunità X}, con eguale probabilità, sceglie il nodo da cui ricominciare.
 \\Simili considerazioni valgono per \textit{r\textsubscript{y}}.
@@ -42,10 +42,47 @@ r_y = \alpha P_yr_y + (1-\alpha)e_y
 \\
 Per il calcolo dei vettori di \textit{PageRank} personalizzati (\textit{r\textsubscript{x} e r\textsubscript{y}}), quindi, bisogna imporre una situazione di \textit{stazionarietà} dei rispettivi \textit{random walks}. 
 \\Possiamo finalmente definire il \textit{random-walk controversy score}:
+\\
 \begin{equation}
 RWC(G,X,Y) = (c_x - c_y)\textsuperscript{T}(r_x - r_y)
 \end{equation}
+\\
+Sostituendo le equazioni (3.2) e (3.3) nell'espressione (3.4) si ottiene:
+\\
+\begin{equation}
+RWC(G,X,Y) = (1 - \alpha)(c_x - c_y)\textsuperscript{T}(M_x\textsuperscript{-1}e_x - M_y\textsuperscript{-1}e_y)
+\end{equation}
+\\
+Dove \textit{M\textsubscript{x} = (I - $\alpha$P\textsubscript{x})} e \textit{M\textsubscript{y} = (I - $\alpha$P\textsubscript{y})}. Quest'ultima è la formula utilizzata nell'implementazione del sistema proposto. Ad ogni modo, riferendosi all'equazione (3.4) è possibile fare le seguenti osservazioni:
+\begin{enumerate}
+\item Innanzitutto occorre precisare che \textit{r\textsubscript{x}} è una \textit{distribuzione stazionaria di probabilità} del \textit{random walk} associato all'esecuzione di \textit{PageRank page\textsubscript{x}}: ognuno dei suoi elementi \textit{r\textsubscript{x}[i]} ($\forall \textit{i = 0,...,n-1}$) rappresenta la probabilità che il \textit{random walk} si trovi nel nodo \textit{i} all'equilibrio. Simili considerazioni valgono per \textit{r\textsubscript{y}};
+\item Qualora le due comunità (\textit{echo-chambers}) \textit{X e Y} fossero molto divise tra loro (i.e. pochissimi archi diretti che le connettono), ci si aspetterebbe un \textit{r\textsubscript{x}} con valori pressoché nulli nelle coordinate corrispondenti ai nodi di \textit{Y} e non nulli altrove e, viceversa, parlando di \textit{r\textsubscript{y}}\footnote{Ricordare che, essendo \textit{distribuzioni di probabilità}, vale: $\sum_{i=0}^{n-1} r_x[i] = 1$ e $\sum_{i=0}^{n-1} r_y[i] = 1$.}. In tal caso l'espressione $(c_x - c_y)\textsuperscript{T}(r_x - r_y)$ assume il valore massimo, indice di un'elevata \textit{controversia} nella rete.
+\item Qualora le due comunità fossero invece sufficientemente connesse tra loro, ci si aspetterebbe un vettore \textit{r\textsubscript{x}} con valori abbastanza uniformi su tutte le sue coordinate; la stessa considerazione varrebbe per \textit{r\textsubscript{y}}. In tal caso il grafo non presenterebbe un'elevata controversia (\textit{RWC(G,X,Y)} assume valori bassi), e questo risultato sarebbe confermato dal fatto che le due comunità sono sufficientemente esposte l'una a l'altra.
 \end{enumerate}
+\end{enumerate}
+Per terminare, si può affermare che l'indice \textit{RWC(G,X,Y)} riesce a descrivere perfettamente il grado di controversia della discussione in atto, in funzione del livello di esposizione reciproca delle due comunità (ossia i due punti di vista opposti): qualora tale livello fosse molto basso, l'indice di controversia sarebbe molto elevato e, pertanto, la scelta più efficace per attenuarlo sarebbe quella di cercare di esporre gli utenti a visioni opposte alle proprie. 
+\\Nel prossimo paragrafo saranno illustrati gli algoritmi utilizzati nel sistema proposto, i quali hanno come obiettivo proprio quello di esporre reciprocamente, \textit{nel modo più efficace possibile}, i due lati della controversia. 
 
 \section{Definizione formale degli algoritmi per la risoluzione}
+Il problema che si vorrebbe risolvere è il seguente: 
+\\\\
+\textit{Dato un endorsement graph G(V,E) che descrive una discussione riguardo ad un certo topic controverso t, trovare l'insieme di k archi diretti non ancora presenti nel grafo che, qualora si materializzassero, minimizzerebbero il suo RWC(G,X,Y).}
+\\\\
+Ovvero, formalmente:
+\\
+\begin{equation*}
+\begin{aligned}
+& \underset{E\textsubscript{k}}{\text{minimize}}
+& & RWC(G(V, E \cup E\textsubscript{k}),X,Y) \\
+& \text{subject to}
+& & E\textsubscript{k} \subseteq V \times V \setminus E, \left|{E\textsubscript{k}}\right| = k
+\end{aligned}
+\end{equation*}
+\\
+Risolvere tale problema, così come si presenta, richiederebbe di considerare tutti le possibili combinazioni degli archi ancora non presenti nel grafo presi a gruppi di \textit{k}: queste combinazioni sono pari a \textit{O}($n^2 \choose k$), dove con \textit{n} indichiamo il numero di nodi del grafo.
+\\Come è facile immaginare, un algoritmo che considera tutte queste combinazioni di archi è molto inefficiente dal punto di vista computazionale, soprattutto alla luce del fatto che gli \textit{endorsement graphs} delle reti sociali come quella di \textit{Twitter} sono costituiti da alcune migliaia di nodi e migliaia di archi.
+\\Si propone, pertanto, di restringere il dominio degli archi candidati: seguendo l'approccio dell'articolo \cite{garimella:paper} è possibile considerare solo gli archi tra vertici con \textit{in-degree} alto di ciascuna \textit{echo-chamber}. La scelta di questa euristica, come osservano gli autori dell'articolo \cite{garimella:paper}, è giustificata dal fatto che la struttura degli \textit{endorsement graph} spesso mette in luce la presenza di un piccolo numero di nodi \textit{leader} (i.e. utenti popolari) ed un gran numero di nodi \textit{non leader} (i.e. utenti seguaci): i nodi \textit{leader} ricevono molti archi in ingresso (ossia hanno alto \textit{in-degree}) in quanto i loro \textit{tweet} vengono \textit{retweettati} massivamente. 
+
+
+
 \section{Calcolo del decremento della controversia associato ad un arco}

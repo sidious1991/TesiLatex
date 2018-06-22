@@ -15,14 +15,14 @@ Lo scopo di questa tesi è quello di sviluppare un sistema in grado far comunica
 \\\\
 $\textit{RWC(G,X,Y) = (c\textsubscript{x} - c\textsubscript{y})\textsuperscript{T}(r\textsubscript{x} - r\textsubscript{y})}$\footnote{La definizione del \textit{Random-walk controversy score} è tratta dall'articolo \cite{garimella:paper}.}
 \\\\Dove \textit{c\textsubscript{x}} è un vettore di dimensione \textit{n} (numero di vertici dell'\textit{endorsement graph}) che ha valore \textit{1} nelle coordinate corrispondenti ai vertici di grado alto dell'\textit{echo-chamber X} e \textit{0} altrove; similmente viene definito \textit{c\textsubscript{y}}. Infine \textit{r\textsubscript{x}} è il vettore di \textit{PageRank} personalizzato per un \textit{random walk} che parte dai nodi dell'\textit{echo-chamber X}; similmente viene definito \textit{r\textsubscript{y}}. Valori alti di \textit{RWC(G,X,Y)} indicano che, all'equilibrio del \textit{random walk}, è bassa la probabilità di essere nell'\textit{echo-chamber} opposta a quella di partenza: questo è indice di elevata \textit{controversia}. 
-\\\\La terza fase ha lo scopo di ridurre il \textit{grado di controversia} rilevato nella fase precedente mediante l'esecuzione di un \textit{edge-recommendation system}. In particolare, il sistema implementato permette, utilizzando in alternativa un algoritmo \textit{greedy} o uno \textit{non-greedy}, di proporre \textit{k} archi (che farebbero da \textit{bridges} tra le due \textit{echo chambers}) in grado di ridurre questo indice; l'\textit{edge-recommendation system} proposto restituisce archi la cui efficacia approssima quella degli archi che sono soluzione del problema di ottimizzazione originario che, come detto precedentemente, ha una complessità di un livello troppo elevato (\textit{O}${n^2\choose k}$) per essere risolto in tempi accettabili. Di seguito la definizione del problema di ottimizzazione originario:
+\\\\La terza fase ha lo scopo di ridurre il \textit{grado di controversia} rilevato nella fase precedente mediante l'esecuzione di un \textit{edge-recommendation system}. In particolare, il sistema implementato permette, utilizzando in alternativa un algoritmo \textit{greedy} o uno \textit{non-greedy}, di proporre \textit{k} archi (che farebbero da \textit{bridges} tra le due \textit{echo chambers}) in grado di ridurre questo indice; l'\textit{edge-recommendation system} proposto restituisce archi la cui efficacia approssima quella degli archi che sono soluzione del problema di ottimizzazione originario che, come detto precedentemente, ha una complessità di un livello troppo elevato (\textit{O}(${n^2\choose k}$)) per essere risolto in tempi accettabili. Di seguito la definizione del problema di ottimizzazione originario:
 \\
 \begin{equation*}
 \begin{aligned}
 & \underset{E\textsubscript{k}}{\text{minimize}}
 & & RWC(G(V, E \cup E\textsubscript{k}),X,Y) \\
 & \text{subject to}
-& & E \cap E\textsubscript{k} = \emptyset, \left|{E\textsubscript{k}}\right| = k
+& & E\textsubscript{k} \subseteq V \times V \setminus E, \left|{E\textsubscript{k}}\right| = k
 \end{aligned}
 \end{equation*}
 \\
