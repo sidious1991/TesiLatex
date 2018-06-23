@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  23 JUN 2018 10:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  23 JUN 2018 12:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1820,20 +1820,33 @@ Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
 [15]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 102.
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--121
+
+ []
 
 
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
 [16]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 98.
-)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
 [17]
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[18])
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[19]
 \openout2 = `chap_3.aux'.
 
  (./chap_3.tex
@@ -1854,7 +1867,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 1043) has occurred while \output is active []
 
- [18
+ [20
 
 
 
@@ -1878,11 +1891,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[19]
+[21]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[20]
+[22]
 \openout2 = `chap_4.aux'.
 
  (./chap_4.tex
@@ -1903,7 +1916,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 1043) has occurred while \output is active []
 
- [21
+ [23
 
 
 
@@ -1927,11 +1940,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[22]
+[24]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[23]
+[25]
 \openout2 = `chap_5.aux'.
 
  (./chap_5.tex
@@ -1952,7 +1965,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 1681) has occurred while \output is active []
 
- [24
+ [26
 
 
 
@@ -1976,11 +1989,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[25]
+[27]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[26]
+[28]
 \openout2 = `app_a.aux'.
 
  (./app_a.tex
@@ -2001,7 +2014,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 1681) has occurred while \output is active []
 
- [27
+ [29
 
 
 
@@ -2025,11 +2038,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[28]
+[30]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[29]
+[31]
 \openout2 = `app_b.aux'.
 
  (./app_b.tex
@@ -2050,7 +2063,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 1681) has occurred while \output is active []
 
- [30
+ [32
 
 
 
@@ -2074,18 +2087,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[31]
+[33]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[32]
+[34]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 233.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 235.
- [33
+ [35
 
 
 ]
@@ -2102,8 +2115,8 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19113 strings out of 493013
- 301933 string characters out of 6133327
+ 19116 strings out of 493013
+ 301961 string characters out of 6133327
  621662 words of memory out of 5000000
  22153 multiletter control sequences out of 15000+600000
  108521 words of font info for 78 fonts, out of 8000000 for 9000
@@ -2134,10 +2147,10 @@ texlive/2016/texmf-dist/fonts/type1/public/lm/lmro10.pfb></usr/local/texlive/20
 ist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/lm/lmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
 /lm/lmtt12.pfb>
-Output written on tesi.pdf (44 pages, 489124 bytes).
+Output written on tesi.pdf (46 pages, 495098 bytes).
 PDF statistics:
- 481 PDF objects out of 1000 (max. 8388607)
- 406 compressed objects within 5 object streams
- 112 named destinations out of 1000 (max. 500000)
+ 491 PDF objects out of 1000 (max. 8388607)
+ 414 compressed objects within 5 object streams
+ 115 named destinations out of 1000 (max. 500000)
  118 words of extra memory for PDF output out of 10000 (max. 10000000)
 

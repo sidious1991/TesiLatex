@@ -85,15 +85,19 @@ Risolvere tale problema, così come si presenta, richiederebbe di considerare tu
 Questa osservazione suggerisce che gli archi tra vertici con \textit{in-degree} alto di ciascuna \textit{echo-chamber} sono buoni candidati per ottenere un abbassamento del \textit{random-walk controversy score}\footnote{Si rimanda alla lettura del \textit{Teorema 1.} dell'articolo \cite{garimella:paper}.}. 
 \\Mediante questo ridimensionamento del dominio degli archi candidati, ci si propone di ridurre l'\textit{RWC} esponendo alcuni nodi \textit{leader} di ciascuna \textit{echo-chamber} ai contenuti di alcuni nodi \textit{leader} dell'\textit{echo-chamber} opposta. 
 \\Ora, con l'obiettivo di effettuare la scelta dei \textit{k} archi migliori appartenenti al dominio così definito, vengono proposti due algoritmi: un \textit{algoritmo non greedy} (indicato di seguito come \textit{Algorithm 1}) ed un \textit{algoritmo greedy}.
-\\L'algoritmo \textit{non greedy} ha un tempo di esecuzione pari a \textit{O($k_1 \cdot k_2$)}, che costituisce un ottimo \textit{speedup} rispetto all'algoritmo \textit{brute-force}, che considera invece tutte le combinazioni di archi. \textit{Algorithm 1} si limita a scegliere dal dominio degli archi, ridimensionato come appena detto, i \textit{k} archi migliori in termini del decremento dell'\textit{RWC} che ciascuno consente se aggiunto \textit{individualmente}. Tuttavia il \textit{decremento dell'RWC} che un qualsiasi arco \textit{"e"} consente individualmente (\textit{$\delta$RWC\textsubscript{e}}) si rivelerebbe tale solo se tale arco fosse aggiunto per primo al grafo; più precisamente $\forall E' \supseteq E, \forall e \in V \times V \setminus E'$ vale l'espressione (3.6). Ovvero la somma dei \textit{$\delta$RWC} dei \textit{k} archi scelti dall'algoritmo \textit{non greedy} non corrisponde al decremento \textit{reale} dell'\textit{RWC} che si osserverebbe se tali archi apparissero nel grafo, ma ne è un \textit{upper-bound}.
-
+\\L'algoritmo \textit{non greedy} ha un tempo di esecuzione pari a \textit{O($k_1 \cdot k_2$)}, che costituisce un ottimo \textit{speedup} rispetto all'algoritmo \textit{brute-force}, che considera invece tutte le combinazioni di archi. \textit{Algorithm 1} si limita a scegliere dal dominio degli archi, ridimensionato come appena detto, i \textit{k} archi migliori in termini del decremento dell'\textit{RWC} che ciascuno consente se aggiunto \textit{individualmente}. Tuttavia il \textit{decremento dell'RWC} che un qualsiasi arco \textit{"e"} consente individualmente (\textit{$\delta$RWC\textsubscript{e}}) si rivelerebbe tale solo se tale arco fosse aggiunto per primo al grafo; più precisamente $\forall E' \supseteq E, \forall e \in V \times V \setminus E'$ vale l'espressione (3.6). 
 \begin{equation}
 \resizebox{1 \textwidth}{!} 
 {
     $ RWC(G(V,E),X,Y) - RWC(G(V, E \cup \{e\}),X,Y) \geq RWC(G(V,E'),X,Y) - RWC(G(V, E' \cup \{e\}),X,Y)$
 } 
 \end{equation}
-
+Ovvero la somma dei \textit{$\delta$RWC} dei \textit{k} archi scelti dall'algoritmo \textit{non greedy} non corrisponde al decremento \textit{reale} dell'\textit{RWC} che si osserverebbe se tali archi apparissero nel grafo, ma ne è un \textit{upper-bound}. Questo significa che l'algoritmo \textit{non greedy} è poco preciso nella scelta e potrebbe pertanto disattendere le aspettative di decremento della \textit{controversia}.
+\\L'alternativa è l'utilizzo di una versione \textit{greedy} di tale algoritmo. L'algoritmo \textit{greedy} non fa altro che effettuare la scelta dei \textit{k} archi non in un solo \textit{step} ma in \textit{k step}. In ognuno dei \textit{k} passi sceglie uno ed un solo arco, ossia l'arco migliore, tra quelli ancora disponibili, in termini del $\delta$RWC che consentirebbe se fosse aggiunto al grafo: l'arco scelto, infine, viene aggiunto al grafo con l'obiettivo di consentire una scelta più precisa dei restanti archi.
+\\Si osserva che, per la versione \textit{greedy}, è vero che la somma dei \textit{$\delta$RWC} dei \textit{k} archi scelti corrisponde al decremento \textit{reale} dell'\textit{RWC} che si osserverebbe se tali archi apparissero nel grafo. Nel capitolo relativo ai \textit{test} sarà possibile osservare quanto la versione \textit{greedy} riesca ad individuare archi migliori, in termini del decremento dell'\textit{RWC}, rispetto a quelli individuati dalla versione \textit{non greedy}.
+\\Lo svantaggio della versione \textit{greedy} riguarda il tempo di esecuzione. Il fatto che tale algoritmo sia sintetizzabile come un algoritmo \textit{non greedy} eseguito \textit{k} volte implica che il suo tempo di esecuzione sia pari a \textit{O($k \cdot k_1 \cdot k_2$)}, ovvero \textit{k} volte il tempo di esecuzione della versione \textit{non greedy}. Ad ogni modo, la scelta dell'algoritmo di \textit{edge recommendation} da utilizzare dovrebbe sempre essere dettata da un giusto compromesso tra i risultati che consente di ottenere e l'efficienza nei tempi di esecuzione.
+\\\\
+Nel prossimo paragrafo sarà illustrata una tecnica efficiente per calcolare il \textit{$\delta$RWC} associato a ciascun arco considerato dagli algoritmi appena descritti.
 \begin{algorithm}
 \caption{Algoritmo \textit{non greedy} per la scelta dei \textit{k} archi}
 \begin{algorithmic} 
@@ -116,3 +120,26 @@ Questa osservazione suggerisce che gli archi tra vertici con \textit{in-degree} 
 \end{algorithm}
 
 \section{Calcolo del decremento della controversia associato ad un arco}
+
+Per ogni arco \textit{$e \in V \times V \setminus E$} appartenente al dominio dei \textit{$k_1 \times k_2$} archi considerati dagli algoritmi \textit{non greedy e greedy}, si rende necessario calcolare il \textit{$\delta$RWC\textsubscript{e}} che esso consentirebbe qualora venisse aggiunto al grafo. Per effettuare questo calcolo verrebbe in mente di aggiungere l'arco \textit{"e"} al grafo, calcolare il nuovo \textit{RWC\textsubscript{\{e\}}}, per poi ricavare: 
+
+\begin{equation}
+\textit{$\delta$RWC\textsubscript{e}} = \textit{RWC - RWC\textsubscript{\{e\}}}
+\end{equation}
+
+\`E bene ricordare che il calcolo dell'\textit{RWC} è abbastanza oneroso e pertanto è meglio evitarlo quando possibile: se si utilizzasse la modalità (3.7), gli algoritmi di scelta dei \textit{k} archi dovrebbero calcolare l'\textit{RWC} un numero di volte pari a \textit{$k_1 \times k_2$}, cagionando un degrado prestazionale non trascurabile.
+\\Tuttavia, visto che siamo interessati solamente all'entità del decremento dell'\textit{RWC} a seguito dell'aggiunta dell'arco, possiamo utilizzare un'altra modalità di calcolo più efficiente. In particolare, considerando la \textit{matrice delle probabilità di transizione per colonna P}, dopo l'aggiunta dell'arco diretto \textit{(x,y)} solo una sua colonna ne è affetta: la colonna che corrisponde al vertice di origine \textit{"x"} dell'arco \textit{(x,y)}.
+\\Di seguito è evidenziata la colonna \textit{x-esima} prima e dopo l'aggiunta dell'arco diretto \textit{(x,y)}:
+
+$P^T = \begin{bmatrix}
+       \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots \\[0.3em]
+       \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots \\[0.3em]
+       \frac{1}{q} & \frac{1}{q} & \cdots & \frac{1}{q} & 0 & \cdots & 0 \\[0.3em]
+       \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots \\[0.3em]
+       \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots \\[0.3em]
+     \end{bmatrix}$
+
+
+
+
+
