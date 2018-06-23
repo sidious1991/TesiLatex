@@ -77,6 +77,28 @@
     \field{year}{2017}
   \endentry
 
+  \entry{golub:paper}{article}{}
+    \name{author}{1}{}{%
+      {{hash=GHGCFVL}{%
+         family={G.\bibnamedelima H.\bibnamedelima Golub},
+         familyi={G\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim
+  G\bibinitperiod},
+         given={C.\bibnamedelima F. Van\bibnamedelima Loan},
+         giveni={C\bibinitperiod\bibinitdelim F\bibinitperiod
+  V\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \keyw{important}
+    \strng{namehash}{GHGCFVL1}
+    \strng{fullhash}{GHGCFVL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{title}{{Matrix computations}}
+    \field{year}{2012}
+  \endentry
+
   \entry{garimella:paper}{article}{}
     \name{author}{1}{}{%
       {{hash=KGAGMMGDFM}{%

@@ -128,18 +128,66 @@ Per ogni arco \textit{$e \in V \times V \setminus E$} appartenente al dominio de
 \end{equation}
 
 \`E bene ricordare che il calcolo dell'\textit{RWC} è abbastanza oneroso e pertanto è meglio evitarlo quando possibile: se si utilizzasse la modalità (3.7), gli algoritmi di scelta dei \textit{k} archi dovrebbero calcolare l'\textit{RWC} un numero di volte pari a \textit{$k_1 \times k_2$}, cagionando un degrado prestazionale non trascurabile.
-\\Tuttavia, visto che siamo interessati solamente all'entità del decremento dell'\textit{RWC} a seguito dell'aggiunta dell'arco, possiamo utilizzare un'altra modalità di calcolo più efficiente. In particolare, considerando la \textit{matrice delle probabilità di transizione per colonna P}, dopo l'aggiunta dell'arco diretto \textit{(x,y)} solo una sua colonna ne è affetta: la colonna che corrisponde al vertice di origine \textit{"x"} dell'arco \textit{(x,y)}.
-\\Di seguito è evidenziata la colonna \textit{x-esima} prima e dopo l'aggiunta dell'arco diretto \textit{(x,y)}:
+\\Tuttavia, visto che siamo interessati solamente all'entità del decremento dell'\textit{RWC} a seguito dell'aggiunta di un arco, possiamo utilizzare un'altra modalità di calcolo più efficiente. In particolare, considerando la \textit{matrice delle probabilità di transizione per colonna P}, dopo l'aggiunta del generico arco diretto \textit{(i,j)} solo una sua colonna ne è affetta: la colonna che corrisponde al vertice di origine \textit{"i"} dell'arco \textit{(i,j)}.
+\\Di seguito è evidenziata la colonna \textit{i-esima} prima e dopo l'aggiunta dell'arco diretto \textit{(i,j)}:
 
 $P^T = \begin{bmatrix}
-       \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots \\[0.3em]
-       \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots \\[0.3em]
-       \frac{1}{q} & \frac{1}{q} & \cdots & \frac{1}{q} & 0 & \cdots & 0 \\[0.3em]
-       \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots \\[0.3em]
-       \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots \\[0.3em]
+       \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots \\[0.3em]
+       \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots \\[0.3em]
+       \frac{1}{q} & \frac{1}{q} & \cdots & \frac{1}{q} & 0 & 0 & \cdots & 0 \\[0.3em]
+       \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots \\[0.3em]
+       \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots \\[0.3em]
      \end{bmatrix}$
+\\\\
+Dove \textit{q} è l'\textit{out-degree} del nodo \textit{i}. A seguito dell'aggiunta dell'arco diretto \textit{(i,j)} la colonna \textit{i-esima} diventa:
+\\\\
+$P'^T = \begin{bmatrix}
+       \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots \\[0.3em]
+       \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots \\[0.3em]
+       \frac{1}{q+1} & \frac{1}{q+1} & \cdots & \frac{1}{q+1} & \frac{1}{q+1} & 0 & \cdots & 0 \\[0.3em]
+       \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots \\[0.3em]
+       \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots \\[0.3em]
+     \end{bmatrix}$
+\\\\
+L'elemento in posizione \textit{j-esima} della colonna \textit{i-esima} della nuova \textit{matrice di transizione P'} passa da un valore pari a \textit{0} ad un valore pari a $\frac{1}{q+1}$.
+\\Sia ora \textit{u\textsuperscript{T}} l'\textit{i-esimo} vettore della base standard di ${\rm I\!R^n}$ (dove \textit{n} è il numero di nodi del grafo); similmente, sia \textit{v\textsuperscript{T}} il \textit{j-esimo} vettore della base standard di ${\rm I\!R^n}$. 
+\\Definiamo infine il vettore \textit{z\textsuperscript{T}} come segue:
+\begin{enumerate}
+\item Se il vertice \textit{i} non è un vertice \textit{dangling}, $\textit{z\textsuperscript{T}} = \frac{1}{q+1}[\frac{1}{q},\frac{1}{q},...,\frac{1}{q},-1,...0,0,0]$, con \textit{-1} nella posizione corrispondente al vertice di arrivo \textit{j};
+\item Se il vertice \textit{i} è un vertice \textit{dangling}, $\textit{z\textsuperscript{T}} = e_x - v$ oppure $\textit{z\textsuperscript{T}} = e_y - v$, rispettivamente se si considera la matrice $P_x$ (\textit{random walk} che parte dall'\textit{echo-chamber X}) o la matrice $P_y$ (\textit{random walk} che parte dall'\textit{echo-chamber Y}).
+\end{enumerate}
+Si dimostra che la \textit{matrice delle probabilità di transizione} aggiornata è data da:
 
-
-
-
+\begin{equation}
+P' = P - z \otimes u^T
+\end{equation}
+\\
+Dove il simbolo $\otimes$ indica che il prodotto tra i due vettori non è scalare ma \textit{esterno}, il cui risultato è una matrice.
+\\Ricordando dalla definizione dell'\textit{RWC} (3.5) le formule che descrivono le matrici $M_x$ ed $M_y$ e sostituendovi, rispettivamente, $P'_x$ e $P'_y$ (seguendo la formula (3.8)) si ottiene:
+\\
+\begin{equation}
+M'_x = M_x + \alpha z_x \otimes u^T
+\end{equation}
+\begin{equation}
+M'_y = M_y + \alpha z_y \otimes u^T
+\end{equation}
+\\
+Nell'implementazione proposta, l'inversa delle matrici $M'_x$ e $M'_y$ (inversa che occorre per il calcolo dell'\textit{RWC}) è calcolata usando la formula di \textit{Sherman-Morrison}\cite{golub:paper}, vista la sua efficienza.
+\\Ora, per l'equazione (3.5), l'\textit{RWC} del grafo a seguito dell'aggiunta del nuovo arco diretto può essere scritto come:
+\\
+\begin{equation}
+RWC' = (1 - \alpha)(c_x - c_y)\textsuperscript{T}(M'_x\textsuperscript{-1}e_x - M'_y\textsuperscript{-1}e_y)
+\end{equation}
+\\
+E, finalmente, il $\delta$RWC è dato da:
+\\
+\begin{equation}
+\begin{split}
+\delta RWC = RWC' - RWC = (1 - \alpha)(c_x - c_y)\textsuperscript{T}(-(\frac{\alpha M_x\textsuperscript{-1}z_x \otimes u^T M_x\textsuperscript{-1}}{1 + \alpha u^T M_x\textsuperscript{-1}z_x})e_x \\+ (\frac{\alpha M_y\textsuperscript{-1}z_y \otimes u^T M_y\textsuperscript{-1}}{1 + \alpha u^T M_y\textsuperscript{-1}z_y})e_y)
+\end{split}
+\end{equation}
+\\ 
+Quest'equazione, sebbene apparentemente ingombrante, permette di calcolare in modo molto efficiente il $\delta RWC$ di ogni arco considerato, evitando di dover calcolare ogni volta il nuovo \textit{RWC} (operazione molto costosa) per poi prendere la differenza rispetto all'\textit{RWC} precedente. 
+\\\\
+Nel prossimo capitolo saranno presentate le tecnologie utilizzate per realizzare il sistema proposto e verranno illustrati i dettagli implementativi.
 
