@@ -28,14 +28,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1.1}Twitter Api}{23}{subsection.4.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Implementazione}{24}{section.4.2}
+\contentsline {subsection}{\numberline {4.1.2}Tweepy}{25}{subsection.4.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Test dell\IeC {\textquoteright }\textit {edge-recommendation system} in modalit\IeC {\`a} \textit {greedy e non}}{25}{chapter.5}
+\contentsline {subsection}{\numberline {4.1.3}GetOldTweets}{26}{subsection.4.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusioni e sviluppi futuri}{28}{chapter.6}
+\contentsline {subsection}{\numberline {4.1.4}Flusso di esecuzione del processo di raccolta dati}{27}{subsection.4.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}An appendix}{31}{appendix.Alph1}
+\contentsline {section}{\numberline {4.2}Implementazione}{28}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Another appendix}{34}{appendix.Alph2}
+\contentsline {chapter}{\numberline {5}Test dell\IeC {\textquoteright }\textit {edge-recommendation system} in modalit\IeC {\`a} \textit {greedy e non}}{29}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Riferimenti bibliografici}{37}{appendix.Alph2}
+\contentsline {chapter}{\numberline {6}Conclusioni e sviluppi futuri}{32}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}An appendix}{35}{appendix.Alph1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Another appendix}{38}{appendix.Alph2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Riferimenti bibliografici}{41}{appendix.Alph2}
