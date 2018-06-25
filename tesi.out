@@ -6,9 +6,12 @@
 \BOOKMARK [1][]{section.3.1}{Misura del grado di controversia}{chapter.3}% 6
 \BOOKMARK [1][]{section.3.2}{Definizione formale degli algoritmi per la risoluzione}{chapter.3}% 7
 \BOOKMARK [1][]{section.3.3}{Calcolo del decremento della controversia associato ad un arco}{chapter.3}% 8
-\BOOKMARK [0][]{chapter.4}{Tecnologie utilizzate ed implementazione}{}% 9
-\BOOKMARK [0][]{chapter.5}{Test dell\220edge-recommendation system in modalit\340 greedy e non}{}% 10
-\BOOKMARK [0][]{chapter.6}{Conclusioni e sviluppi futuri}{}% 11
-\BOOKMARK [0][]{appendix.Alph1}{An appendix}{}% 12
-\BOOKMARK [0][]{appendix.Alph2}{Another appendix}{}% 13
-\BOOKMARK [0][]{appendix.Alph2}{Riferimenti bibliografici}{}% 14
+\BOOKMARK [0][]{chapter.4}{Raccolta dati ed implementazione}{}% 9
+\BOOKMARK [1][]{section.4.1}{Raccolta dati}{chapter.4}% 10
+\BOOKMARK [2][]{subsection.4.1.1}{Twitter Api}{section.4.1}% 11
+\BOOKMARK [1][]{section.4.2}{Implementazione}{chapter.4}% 12
+\BOOKMARK [0][]{chapter.5}{Test dell\220edge-recommendation system in modalit\340 greedy e non}{}% 13
+\BOOKMARK [0][]{chapter.6}{Conclusioni e sviluppi futuri}{}% 14
+\BOOKMARK [0][]{appendix.Alph1}{An appendix}{}% 15
+\BOOKMARK [0][]{appendix.Alph2}{Another appendix}{}% 16
+\BOOKMARK [0][]{appendix.Alph2}{Riferimenti bibliografici}{}% 17

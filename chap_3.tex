@@ -1,3 +1,35 @@
-\chapter{Tecnologie utilizzate ed implementazione}
+\chapter{Raccolta dati ed implementazione}
 \label{chap:implementazione}
-\Blindtext
+
+Questo capitolo si occuperà, prima di tutto, di fornire dettagli sulle tecnologie e sulle modalità di raccolta dei dati da \textit{Twitter}, necessari alla costruzione di \textit{retweet graphs} associati ad \textit{hashtags} in \textit{input}.
+\\Infine verrà trattata puntualmente l'implementazione degli algoritmi, definiti rigorosamente nel capitolo precedente, e di tutte quelle tecniche che hanno permesso di raggiungere l'obiettivo preposto, ovvero l'implementazione di un \textit{framework} che permetta di:
+\begin{enumerate}
+\item costruire ed analizzare \textit{retweet graphs} associati ad \textit{hashtags di Twitter} in \textit{input};
+\item rilevare le \textit{echo-chambers} che caratterizzano la discussione;
+\item eseguire un algoritmo di \textit{k-edge recommendation}, in modalità \textit{greedy} o meno;
+\item fornire strumenti per l'analisi degli archi consigliati e per la visualizzazione dei nodi coinvolti (i.e. i nodi estremi degli archi consigliati).  
+\end{enumerate}
+
+\section{Raccolta dati}
+La raccolta dei dati è una fase indispensabile, una condizione \textit{sine qua non}, senza la quale non è pensabile raggiungere alcun obiettivo tra quelli prefissati.
+\\Poichè il \textit{software} proposto si occupa di \textit{endorsement graphs} della \textit{social network} di \textit{Twitter}, per la raccolta dei dati si è reso necessario l'utilizzo della \textit{Twitter Api}. Inoltre, visto che il linguaggio utilizzato per l'implementazione è \textit{Python}, sono state sfruttate le funzionalità della libreria \textit{Tweepy}, una via di accesso alla \textit{Twitter Api} di facile utilizzo. 
+\\Nel seguito saranno forniti dettagli sugli strumenti di \textit{Twitter Api e Tweepy} e su altre tecniche che hanno permesso di \textit{bypassare} importanti limitazioni temporali di \textit{Twitter}.  
+
+\subsection{Twitter Api}
+\textit{Twitter} mette a disposizione degli sviluppatori delle \textit{Api}, utili per l'acquisizione dei dati pubblicati dagli utenti. Per rendere possibile il loro utilizzo bisogna innanzitutto creare un \textit{account Twitter} e poi effettuare l'iscrizione al \textit{reparto sviluppatori di Twitter}. Questa procedura è molto rigida e qualora non fosse seguita in modo rigoroso non sarebbe possibile utilizzare le \textit{Api}. 
+\\Una volta effettuata l'iscrizione al \textit{reparto sviluppatori di Twitter}, è finalmente possibile procedere con la raccolta dei dati pubblicati dagli utenti, ma non prima di aver ottenuto le credenziali di accesso. Le credenziali vengono rilasciate a seguito della creazione di una \textit{Twitter App}, che rappresenta un \textit{progetto Twitter} dello sviluppatore: esse permetteranno di autenticarsi presso un \textit{server di Twitter}, con il quale sarà possibile interagire \textit{via streaming} mediante le \textit{Twitter Api} per ottenere i dati richiesti. Le credenziali si dividono in \textit{Token} e \textit{Consumer}, i quali hanno le seguenti caratteristiche e funzioni:
+\begin{itemize}
+\item il \textit{Token} permette l'accesso ai servizi che offre \textit{Twitter}. Non è sufficiente per consentire lo \textit{streaming} dei dati dal \textit{server}. \`E costituito da:
+\begin{itemize}
+\item \textit{Access Token};
+\item \textit{Access Secret}.
+\end{itemize}
+\item il \textit{Consumer} consente lo \textit{streaming} dei dati richiesti dal \textit{server}. \`E costituito da:
+\begin{itemize}
+\item \textit{Consumer Key};
+\item \textit{Consumer Secret}.
+\end{itemize}
+\end{itemize}
+Nell'ambito della stessa \textit{Twitter App}, queste chiavi possono essere rigenerate a piacimento, anche con l'obiettivo di evitare problematiche relavite alla sicurezza. 
+
+\section{Implementazione}

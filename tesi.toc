@@ -22,7 +22,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.3}Calcolo del decremento della controversia associato ad un arco}{19}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Tecnologie utilizzate ed implementazione}{22}{chapter.4}
+\contentsline {chapter}{\numberline {4}Raccolta dati ed implementazione}{22}{chapter.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Raccolta dati}{23}{section.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.1.1}Twitter Api}{23}{subsection.4.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Implementazione}{24}{section.4.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Test dell\IeC {\textquoteright }\textit {edge-recommendation system} in modalit\IeC {\`a} \textit {greedy e non}}{25}{chapter.5}
 \defcounter {refsection}{0}\relax 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  23 JUN 2018 17:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  25 JUN 2018 12:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1485,7 +1485,7 @@ Package biblatex Info: ... file 'tesi.bbl' found.
 Package biblatex Info: Reference section=0 on input line 148.
 Package biblatex Info: Reference segment=0 on input line 148.
 
-<images/Logo-Uni-Tor-Vergata.png, id=59, 770.88pt x 770.88pt>
+<images/Logo-Uni-Tor-Vergata.png, id=71, 770.88pt x 770.88pt>
 File: images/Logo-Uni-Tor-Vergata.png Graphic file (type png)
 
 <use images/Logo-Uni-Tor-Vergata.png>
@@ -1578,38 +1578,38 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
-[6] (./tesi.toc)
+[6] (./tesi.toc [7
+
+])
 \tf@toc=\write6
 \openout6 = `tesi.toc'.
 
- [7
-
-] (./tesi.lof)
+ [8] (./tesi.lof)
 \tf@lof=\write7
 \openout7 = `tesi.lof'.
 
- [8
+ [9
 
 
 ] (./tesi.lot)
 \tf@lot=\write8
 \openout8 = `tesi.lot'.
 
- [9
+ [10
 
 
 ] (./tesi.lol)
 \tf@lol=\write9
 \openout9 = `tesi.lol'.
 
- [10
+
+[11
 
 
 ]
 \openout2 = `chap_0.aux'.
 
-
-(./chap_0.tex
+ (./chap_0.tex
 Capitolo 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--20
@@ -1894,47 +1894,18 @@ Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
  (./chap_3.tex
 Capitolo 4.
-)
 
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 220.
-
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 220.
-
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 220.
-
-
-Underfull \vbox (badness 1043) has occurred while \output is active []
+Underfull \vbox (badness 4048) has occurred while \output is active []
 
  [22
 
 
 
 ]
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 220.
-
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 220.
-
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 220.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[23]
+[23])
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
@@ -2152,19 +2123,19 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 235.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 235.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 235.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 19F2EBCD2CDEE55F3997AEC0585895D6;1001.
+(rerunfilecheck)             Checksum: 96AD86D71B554D59FB2C116FBE113167;1177.
 Package logreq Info: Writing requests to 'tesi.run.xml'.
 \openout1 = `tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19128 strings out of 493013
- 302153 string characters out of 6133327
- 621662 words of memory out of 5000000
- 22155 multiletter control sequences out of 15000+600000
- 108521 words of font info for 78 fonts, out of 8000000 for 9000
+ 19140 strings out of 493013
+ 302286 string characters out of 6133327
+ 620662 words of memory out of 5000000
+ 22159 multiletter control sequences out of 15000+600000
+ 111519 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,19n,45p,2618b,1390s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,19n,45p,2618b,1405s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/20
 16/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2016/texmf-dist/
@@ -2190,10 +2161,10 @@ texlive/2016/texmf-dist/fonts/type1/public/lm/lmro10.pfb></usr/local/texlive/20
 ist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/lm/lmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
 /lm/lmtt12.pfb>
-Output written on tesi.pdf (48 pages, 501207 bytes).
+Output written on tesi.pdf (49 pages, 504006 bytes).
 PDF statistics:
- 509 PDF objects out of 1000 (max. 8388607)
- 430 compressed objects within 5 object streams
- 125 named destinations out of 1000 (max. 500000)
- 118 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 535 PDF objects out of 1000 (max. 8388607)
+ 455 compressed objects within 5 object streams
+ 133 named destinations out of 1000 (max. 500000)
+ 142 words of extra memory for PDF output out of 10000 (max. 10000000)
 
