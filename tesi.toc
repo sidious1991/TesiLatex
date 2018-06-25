@@ -32,9 +32,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1.3}GetOldTweets}{26}{subsection.4.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.4}Flusso di esecuzione del processo di raccolta dati}{27}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.4}Processo di raccolta dati}{27}{subsection.4.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Implementazione}{28}{section.4.2}
+\contentsline {section}{\numberline {4.2}Implementazione}{27}{section.4.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Test dell\IeC {\textquoteright }\textit {edge-recommendation system} in modalit\IeC {\`a} \textit {greedy e non}}{29}{chapter.5}
 \defcounter {refsection}{0}\relax 

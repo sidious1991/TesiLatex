@@ -61,11 +61,18 @@ Una volta costruito un oggetto \textit{tweetCriteria}, specificando le informazi
 \end{itemize}
 Gli \textit{ID} dei \textit{tweets} verranno utilizzati per recuperare tutti i \textit{retweets} associati, i quali sono indispensabili per costruire il \textit{retweet graph}.
 
-\subsection{Flusso di esecuzione del processo di raccolta dati}
+\subsection{Processo di raccolta dati}
+Descritte le caratteristiche e le peculiarità degli strumenti utilizzati per effettuare la raccolta dei dati, ora occorre analizzare il processo che permette di acquisirli e di renderli persistenti. Con tale obiettivo è stata implementata la classe \textit{TwittersRetweets}. Essa fornisce metodi per: 
+
+\begin{enumerate}
+\item Specificare i parametri di ricerca (i.e. \textit{Since,Until,QuerySearch}); 
+\item Recuperare dalla \textit{social network di Twitter} gli utenti che hanno partecipato alla discussione inerente alla \textit{QuerySearch} (ossia l'\textit{hashtag}) e nel periodo di tempo specificato; 
+\item Recuperare tutti i \textit{retweets} che sono stati prodotti 
+\end{enumerate}
 
 \begin{figure}
 \begin{center}
-\includegraphics[scale=0.55]{images/raccolta_dati_tesi.png}
+\includegraphics[scale=0.6]{images/raccolta_dati_tesi.png}
 \end{center}
 \caption{Processo di raccolta dati.}
 \label{fig:raccolta_dati}

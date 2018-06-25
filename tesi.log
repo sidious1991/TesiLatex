@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  25 JUN 2018 18:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  25 JUN 2018 23:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1917,21 +1917,21 @@ Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[26] <images/raccolta_dati_tesi.png, id=384, 690.58pt x 470.75874pt>
+[26] <images/raccolta_dati_tesi.png, id=384, 382.42876pt x 462.72874pt>
 File: images/raccolta_dati_tesi.png Graphic file (type png)
 
 <use images/raccolta_dati_tesi.png>
-Package pdftex.def Info: images/raccolta_dati_tesi.png used on input line 68.
-(pdftex.def)             Requested size: 379.82018pt x 258.9181pt.
+Package pdftex.def Info: images/raccolta_dati_tesi.png used on input line 75.
+(pdftex.def)             Requested size: 229.45901pt x 277.63939pt.
 )
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[27 <./images/raccolta_dati_tesi.png>]
+[27]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[28]
+[28 <./images/raccolta_dati_tesi.png>]
 \openout2 = `chap_4.aux'.
 
  (./chap_4.tex
@@ -2145,14 +2145,14 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 235.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 235.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 235.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 750627969296643BDBA67035110E495A;1404.
+(rerunfilecheck)             Checksum: BA00ADFB83A010AED8436DD632185CB5;1379.
 Package logreq Info: Writing requests to 'tesi.run.xml'.
 \openout1 = `tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19161 strings out of 493013
- 302647 string characters out of 6133327
+ 19164 strings out of 493013
+ 302668 string characters out of 6133327
  621662 words of memory out of 5000000
  22168 multiletter control sequences out of 15000+600000
  111519 words of font info for 79 fonts, out of 8000000 for 9000
@@ -2183,10 +2183,10 @@ texlive/2016/texmf-dist/fonts/type1/public/lm/lmro10.pfb></usr/local/texlive/20
 ist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/lm/lmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
 /lm/lmtt12.pfb>
-Output written on tesi.pdf (53 pages, 545459 bytes).
+Output written on tesi.pdf (53 pages, 527602 bytes).
 PDF statistics:
- 574 PDF objects out of 1000 (max. 8388607)
- 488 compressed objects within 5 object streams
- 144 named destinations out of 1000 (max. 500000)
+ 579 PDF objects out of 1000 (max. 8388607)
+ 493 compressed objects within 5 object streams
+ 147 named destinations out of 1000 (max. 500000)
  171 words of extra memory for PDF output out of 10000 (max. 10000000)
 
