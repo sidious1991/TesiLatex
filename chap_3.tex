@@ -63,11 +63,37 @@ Gli \textit{ID} dei \textit{tweets} verranno utilizzati per recuperare tutti i \
 
 \subsection{Processo di raccolta dati}
 Descritte le caratteristiche e le peculiarità degli strumenti utilizzati per effettuare la raccolta dei dati, ora occorre analizzare il processo che permette di acquisirli e di renderli persistenti. Con tale obiettivo è stata implementata la classe \textit{TwittersRetweets}. Essa fornisce metodi per: 
-
 \begin{enumerate}
 \item Specificare i parametri di ricerca (i.e. \textit{Since,Until,QuerySearch}); 
-\item Recuperare dalla \textit{social network di Twitter} gli utenti che hanno partecipato alla discussione inerente alla \textit{QuerySearch} (ossia l'\textit{hashtag}) e nel periodo di tempo specificato; 
-\item Recuperare tutti i \textit{retweets} che sono stati prodotti 
+\item Recuperare dalla \textit{social network di Twitter} tutti i \textit{tweets} che soddisfano i parametri di ricerca specificati al punto \textit{1.}, insieme agli utenti che li hanno prodotti; 
+\item Recuperare tutti i \textit{retweets} che sono stati prodotti verso i \textit{tweets} recuperati al punto \textit{2.};
+\item Organizzare i dati ottenuti in un \textit{file} e renderli persistenti.
+\end{enumerate}
+Un oggetto della classe \textit{TwittersRetweets} ha pertanto i seguenti attributi:
+\begin{itemize}
+\item \textit{since}, ossia la data di inizio ricerca; 
+\item \textit{until}, ossia la data di fine ricerca;
+\item \textit{query}, utilizzato, nel caso in esame, per specificare un \textit{hashtag};
+\item \textit{twittapi}, ossia l'oggetto \textit{api}, senza il quale è impossibile eseguire lo \textit{streaming}, ottenuto a seguito dell'autenticazione presso un \textit{server} di \textit{Twitter} mediante l'utilizzo della libreria \textit{Tweepy}.
+\end{itemize}
+Il processo di raccolta dati viene eseguito mediante l'invocazione del metodo \textit{computeRetweets(path)} su un oggetto della classe \textit{TwittersRetweets} che ha come attributi proprio i parametri di ricerca (i.e. \textit{since, until, query}) e l'oggetto \textit{twittapi}.
+L'esecuzione del metodo \textit{computeRetweets(path)} si articola in tre fasi, come è possibile evincere dalla figura \ref{fig:raccolta_dati}. Più precisamente:
+\begin{enumerate}
+\item Il metodo \textit{computeRetweets(path)} innanzittutto si occupa di recuperare tutti i \textit{tweets} che soddisfano i parametri di ricerca e gli utenti che li hanno creati. Per fare questo, viste le limitazioni temporali che impone l'\textit{Api} ufficiale di \textit{Twitter}, si rende necessario l'utilizzo della libreria \textit{GetOldTweets}: vengono specificati i criteri di ricerca dei \textit{tweets} da recuperare ed infine il \textit{TweetManager} si occupa di cercarli nella pagina \textit{html} di \textit{Twitter}, per poi restituirli. I \textit{tweets} restituiti sono caratterizzati da due importanti parametri: \textit{tweetid}, ossia l'identificativo univoco del \textit{tweet}, e lo \textit{username}, ossia l'utente che l'ha emesso. Per mezzo di questi parametri, in questa fase vengono costruiti due oggetti, ossia:
+\begin{itemize}
+\item \textit{dictioTwitters}: un dizionario che ha come chiavi gli \textit{usernames} degli utenti che hanno emesso i \textit{tweets} recuperati e come valori dei dizionari della forma \textit{\{'tweetcount' : x\}}, dove \textit{x} è il numero dei \textit{tweets} recuperati (e che quindi soddisfano i criteri di ricerca) che sono attribuibili ad un certo \textit{username};
+\item \textit{tweetids}: una lista che ha come elementi dei dizionari della forma \textit{\{tweetid : tweetuser\}}, dove \textit{tweetid} identifica un certo \textit{tweet} e \textit{tweetuser} identifica l'utente che l'ha emesso.
+\end{itemize}
+Questi oggetti vengono opportunamente popolati e poi forniti come \textit{input} alla fase successiva.
+\item La fase \textit{2} si occupa di scansionare la lista \textit{tweetids}, restituita dalla fase precedente, per individuare tutti i \textit{retweets} emessi nei confronti dei \textit{tweets} che soddisfano i criteri di ricerca. A fine scansione, questa fase restituisce il dizionario \textit{dictioRetweets}, che ha come chiavi delle tuple del tipo \textit{(retweetuser,tweetuser)}, dove \textit{retweetuser} è lo \textit{username} di un utente che ha \textit{retweettato} almeno un \textit{tweet} emesso dall'utente identificato da \textit{tweetuser}, e come valori dei dizionari del tipo \textit{\{'retweetcount' : x\}}, dove \textit{x} è il numero di volte che l'utente \textit{retweetuser} ha \textit{retweettato} dei contenuti dell'utente \textit{tweetuser}. 
+\\Questa volta, tuttavia, tali \textit{retweets} sono ottenuti per mezzo dell'\textit{Api} ufficiale di \textit{Twitter}. In particolare, per ogni elemento \textit{\{tweetid : tweetuser\}} della lista \textit{tweetids}:
+\begin{enumerate}
+\item mediante l'invocazione del metodo \textit{retweets}, messo a disposizione dalla \textit{Twitter Api}, vengono recuperati tutti i \textit{retweets} emessi nei confronti del \textit{tweet} identificato dal \textit{tweetid}. Tali \textit{retweets} vengono restituiti sotto forma di una lista di \textit{status objects}, un formato particolare che viene gestito dalla \textit{Twitter Api};
+\item per ogni \textit{status object}, che corrisponde ad un particolare \textit{retweet}, viene recuperato il \textit{JSON} che lo descrive, da cui viene estratto lo \textit{username} dell'utente che ha effettuato il \textit{retweet} stesso (accedendo opportunamente ai campi del \textit{JSON}), che chiamiamo \textit{retweetuser}. Se la tupla \textit{(retweetuser,tweetuser)} esiste già come chiave nel dizionario \textit{dictioRetweets} allora viene semplicemente aggiornato il valore del campo \textit{'retweetcount'} corrispondente, altrimenti tale tupla viene aggiunta al dizionario come sua nuova chiave con valore \textit{\{'retweetcount' : 1\}}. 
+\\Infine, se lo \textit{username} \textit{retweetuser} non è presente come chiave nel dizionario \textit{dictioTwitters}, viene aggiunta la nuova chiave \textit{retweetuser} con valore \textit{\{'tweetcount' : 0\}}, in quanto \textit{retweetuser} non ha mai emesso \textit{tweets} contenenti l'\textit{hashtag} specificato;
+\end{enumerate}
+;
+\item .
 \end{enumerate}
 
 \begin{figure}
