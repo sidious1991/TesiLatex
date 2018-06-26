@@ -90,10 +90,13 @@ Questi oggetti vengono opportunamente popolati e poi forniti come \textit{input}
 \begin{enumerate}
 \item mediante l'invocazione del metodo \textit{retweets}, messo a disposizione dalla \textit{Twitter Api}, vengono recuperati tutti i \textit{retweets} emessi nei confronti del \textit{tweet} identificato dal \textit{tweetid}. Tali \textit{retweets} vengono restituiti sotto forma di una lista di \textit{status objects}, un formato particolare che viene gestito dalla \textit{Twitter Api};
 \item per ogni \textit{status object}, che corrisponde ad un particolare \textit{retweet}, viene recuperato il \textit{JSON} che lo descrive, da cui viene estratto lo \textit{username} dell'utente che ha effettuato il \textit{retweet} stesso (accedendo opportunamente ai campi del \textit{JSON}), che chiamiamo \textit{retweetuser}. Se la tupla \textit{(retweetuser,tweetuser)} esiste già come chiave nel dizionario \textit{dictioRetweets} allora viene semplicemente aggiornato il valore del campo \textit{'retweetcount'} corrispondente, altrimenti tale tupla viene aggiunta al dizionario come sua nuova chiave con valore \textit{\{'retweetcount' : 1\}}. 
-\\Infine, se lo \textit{username} \textit{retweetuser} non è presente come chiave nel dizionario \textit{dictioTwitters}, viene aggiunta la nuova chiave \textit{retweetuser} con valore \textit{\{'tweetcount' : 0\}}, in quanto \textit{retweetuser} non ha mai emesso \textit{tweets} contenenti l'\textit{hashtag} specificato;
+\\Infine, se lo \textit{username} \textit{retweetuser} non è presente come chiave nel dizionario \textit{dictioTwitters}, viene aggiunta la nuova chiave \textit{retweetuser} con valore \textit{\{'tweetcount' : 0\}}, in quanto \textit{retweetuser} non ha mai emesso \textit{tweets} contenenti l'\textit{hashtag} specificato.
 \end{enumerate}
-;
-\item .
+Il bloccho di codice che implementa le azioni descritte nei precedenti punti (a) e (b) è opportunamente gestito da una clausola \textit{try}: in effetti, come precedentemente detto, l'invocazione del metodo \textit{retweets} della \textit{Twitter Api}, in caso di superamento della soglia di 100 richieste ogni 15 minuti, potrebbe causare il sollevamento dell'eccezione \textit{tweepy.error.RateLimitError}. Tale eccezione verrebbe gestita nella clausola \textit{except} immediatamente successiva, mettendo in pausa il processo di acquisizione dei \textit{retweets} per 15 minuti, in modo tale da non incorrere al blocco di un'ora delle credenziali;
+\item Acquisite le informazioni necessarie alla costruzione del \textit{retweet graph} corrispondente alla \textit{query} (ossia all'\textit{hashtag}) ed all'intervallo temporale \textit{since-until} forniti in input, è possibile procedere con il loro salvataggio in memoria. Infatti, giunto a questa fase, il metodo \textit{computeRetweets(path)} si occupa di rendere persistenti i dati collezionati nel dizionario \textit{dictioRetweets}. Innanzitutto apre il file di testo corrispondente al \textit{path} fornito in input e successivamente, per ogni chiave \textit{key} in \textit{dictioRetweets}, si occupa di salvarvi le informazioni nel formato \textit{"key[0],key[1],retweetcount"}, andando a capo per ogni \textit{entry} inserita. Ricordiamo che \textit{key[0]} è \textit{retweetuser}, \textit{key[1]} è \textit{tweetuser} e \textit{retweetcount} è il numero di volte che \textit{retweetuser} ha \textit{retweettato} \textit{tweets} di \textit{tweetuser}.
+\\In figura \ref{fig:retweet_file} è possibile osservare un esempio di tale file di testo.
+\\Bisogna sottolineare che questo formato di salvataggio dei dati è stato scelto anche per motivi di compatibilità con lo schema utilizzato dall'articolo \cite{garimella:paper}, in modo tale da poterne riprodurre facilmente i test.
+\\\\
 \end{enumerate}
 
 \begin{figure}
@@ -103,6 +106,15 @@ Questi oggetti vengono opportunamente popolati e poi forniti come \textit{input}
 \caption{Processo di raccolta dati.}
 \label{fig:raccolta_dati}
 \end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.6]{images/retweet_input_file.png}
+\end{center}
+\caption{Esempio di file che descrive un \textit{retweet graph}.}
+\label{fig:retweet_file}
+\end{figure}
+
 
 
 \section{Implementazione}
