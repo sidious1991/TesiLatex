@@ -36,12 +36,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Implementazione}{32}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Test dell\IeC {\textquoteright }\textit {edge-recommendation system} in modalit\IeC {\`a} \textit {greedy e non}}{33}{chapter.5}
+\contentsline {subsection}{\numberline {4.2.1}Creazione del \textit {retweet graph}}{33}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusioni e sviluppi futuri}{36}{chapter.6}
+\contentsline {subsection}{\numberline {4.2.2}Individuazione delle \textit {echo-chambers}}{34}{subsection.4.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}An appendix}{39}{appendix.Alph1}
+\contentsline {subsection}{\numberline {4.2.3}Calcolo dell'\textit {RWC}}{34}{subsection.4.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Another appendix}{42}{appendix.Alph2}
+\contentsline {subsection}{\numberline {4.2.4}Implementazione degli algoritmi proposti}{34}{subsection.4.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Riferimenti bibliografici}{45}{appendix.Alph2}
+\contentsline {subsection}{\numberline {4.2.5}Modalit\IeC {\`a} di organizzazione dei risultati}{34}{subsection.4.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Test dell\IeC {\textquoteright }\textit {edge-recommendation system} in modalit\IeC {\`a} \textit {greedy e non}}{35}{chapter.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Conclusioni e sviluppi futuri}{38}{chapter.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}An appendix}{41}{appendix.Alph1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Another appendix}{44}{appendix.Alph2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Riferimenti bibliografici}{47}{appendix.Alph2}

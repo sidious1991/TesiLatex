@@ -115,6 +115,42 @@ Il bloccho di codice che implementa le azioni descritte nei precedenti punti (a)
 \label{fig:retweet_file}
 \end{figure}
 
-
-
 \section{Implementazione}
+In questo paragrafo verrà descritta l'implementazione di tutte quelle fasi che sono successive alla raccolta dati. Fissato un certo \textit{hashtag} ed un intervallo di osservazione della discussione che ha luogo su \textit{Twitter}, i dati raccolti (come illustrato nel paragrafo precedente) devono essere tradotti in un vero e proprio \textit{retweet graph}, per il quale è possibile:
+\begin{enumerate}
+\item rilevere le \textit{echo-chambers} e calcolare l'\textit{RWC};
+\item eseguire i due algoritmi di \textit{k-edge recommendation}.
+\end{enumerate}
+In figura \ref{fig:pipe} è sintetizzato tutto il processo al quale viene sottoposto il grafo, che infine conduce ai risultati derivanti dall'applicazione dei due algoritmi alternativi proposti.
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.56]{images/pipeline_implementazione.png}
+\end{center}
+\caption{\textit{Pipeline} implementativa.}
+\label{fig:pipe}
+\end{figure}
+Nel seguito della trattazione verranno illustrati tutti i dettagli implementativi delle fasi di cui si compone la \textit{pipeline} in figura, iniziando dalla fase di creazione del \textit{retweet graph}.
+
+\subsection{Creazione del \textit{retweet graph}}
+Per eseguire agevolmente tutte le operazioni di manipolazione e gestione dei grafi utili al raggiungimento degli obiettivi sopra menzionati, è stato necessario trattare i \textit{retweet graphs} con un formato direttamente comprensibile dal linguaggio \textit{Python}. La fase di raccolta dati, illustrata nel capitolo precedente, al termine della sua esecuzione si preoccupa di rendere persistenti le informazioni raccolte: tuttavia tali informazioni non sono manipolabili agevolmente via codice e pertanto necessitano di essere tradotte in una vera e propria struttura dati, che rappresenta il \textit{retweet graph} a cui si riferiscono.
+A tale scopo, la classe \textit{EndorsementGraph}, che ha come attributi il \textit{path} del file di testo in input ed il suo nome, permette di:
+\begin{enumerate}
+\item \textit{parsare} il contenuto del file di testo in input, creato nella fase di raccolta dati, per ottenere la struttura dati che rappresenta il \textit{retweet graph} corrispondente;
+\item \textit{serializzare} la struttura dati creata, in modo da averne disponibilità anche al termine dell'esecuzione.
+\end{enumerate}
+In sintesi, la classe \textit{EndorsementGraph} permette di modellare un \textit{retweet graph}, corrispondente a determinati criteri di ricerca \textit{(querySearch,since,until)} e le cui informazioni sono state già raccolte ed organizzate in un file, con una struttura dati direttamente manipolabile da codice. 
+Il \textit{core} della classe \textit{EndorsementGraph} è il metodo \textit{buildEGraph}, il quale si occupa di effettuare questa \textit{traduzione} e di serializzare la struttura dati ottenuta, per poi memorizzare il risultato della serializzazione nella \textit{directory} il cui \textit{path} è specificato come parametro.
+
+\subsection{Individuazione delle \textit{echo-chambers}}
+
+\subsection{Calcolo dell'\textit{RWC}}
+
+\subsection{Implementazione degli algoritmi proposti}
+
+\subsection{Modalità di organizzazione dei risultati}
+
+
+
+
+
