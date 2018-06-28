@@ -12,7 +12,7 @@ Questo capitolo si occuperà, prima di tutto, di fornire dettagli sulle tecnolog
 
 \section{Raccolta dati}
 La raccolta dei dati è una fase indispensabile, una condizione \textit{sine qua non}, senza la quale non è pensabile raggiungere alcun obiettivo tra quelli prefissati.
-\\Poichè il \textit{software} proposto si occupa di \textit{endorsement graphs} della \textit{social network} di \textit{Twitter}, per la raccolta dei dati si è reso necessario l'utilizzo della \textit{Twitter Api}. Inoltre, visto che il linguaggio utilizzato per l'implementazione è \textit{Python}, sono state sfruttate le funzionalità della libreria \textit{Tweepy}, una via di accesso alla \textit{Twitter Api} di facile utilizzo. 
+\\Poichè il \textit{software} proposto si occupa di \textit{endorsement graphs} del \textit{social network} di \textit{Twitter}, per la raccolta dei dati si è reso necessario l'utilizzo della \textit{Twitter Api}. Inoltre, visto che il linguaggio utilizzato per l'implementazione è \textit{Python}, sono state sfruttate le funzionalità della libreria \textit{Tweepy}, una via di accesso alla \textit{Twitter Api} di facile utilizzo. 
 \\Nel seguito saranno forniti dettagli sugli strumenti di \textit{Twitter Api e Tweepy} e su altre tecniche che hanno permesso di \textit{bypassare} importanti limitazioni temporali delle \textit{Api di Twitter}.  
 
 \subsection{Twitter Api}
@@ -65,7 +65,7 @@ Gli \textit{ID} dei \textit{tweets} verranno utilizzati per recuperare tutti i \
 Descritte le caratteristiche e le peculiarità degli strumenti utilizzati per effettuare la raccolta dei dati, ora occorre analizzare il processo che permette di acquisirli e di renderli persistenti. Con tale obiettivo è stata implementata la classe \textit{TwittersRetweets}. Essa fornisce metodi per: 
 \begin{enumerate}
 \item Specificare i parametri di ricerca (i.e. \textit{Since,Until,QuerySearch}); 
-\item Recuperare dalla \textit{social network di Twitter} tutti i \textit{tweets} che soddisfano i parametri di ricerca specificati al punto \textit{1.}, insieme agli utenti che li hanno prodotti; 
+\item Recuperare dal \textit{social network di Twitter} tutti i \textit{tweets} che soddisfano i parametri di ricerca specificati al punto \textit{1.}, insieme agli utenti che li hanno prodotti; 
 \item Recuperare tutti i \textit{retweets} che sono stati prodotti verso i \textit{tweets} recuperati al punto \textit{2.};
 \item Organizzare i dati ottenuti in un \textit{file} e renderli persistenti.
 \end{enumerate}
