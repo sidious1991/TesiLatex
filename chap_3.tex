@@ -143,7 +143,7 @@ In sintesi, la classe \textit{EndorsementGraph} permette di modellare un \textit
 Il \textit{core} della classe \textit{EndorsementGraph} è il metodo \textit{buildEGraph}, il quale si occupa di costruire tale struttura dati e di serializzarla, per poi memorizzare il risultato della serializzazione nella \textit{directory} il cui \textit{path} è specificato come parametro.
 \\Il metodo \textit{buildEGraph} demanda al \textit{package NetworkX} la creazione della struttura dati che descrive il \textit{retweet graph} considerato e la sua manipolazione. In particolare, \textit{NetworkX} è un pacchetto \textit{Python} per la creazione, la manipolazione e lo studio della struttura, delle dinamiche e delle funzioni di reti complesse. Tra le altre \textit{features}, in particolare offre strumenti per lo studio della struttura e della dinamica delle reti sociali, biologiche e infrastrutturali, strumenti che sono stati largamente sfruttati nel lavoro di tesi proposto.
 \\Scendiamo ora nei dettagli implementativi del metodo \textit{buildEGraph(destination\_dir)}. Esso viene invocato su un oggetto della classe \textit{EndorsementGraph}, caratterizzato dagli attributi \textit{input\_dir} e \textit{input\_name}, ossia, rispettivamente, la \textit{directory} e il nome del file di testo che descrive il \textit{retweet graph} in considerazione, file creato nella fase di raccolta dati.
-\\Il metodo \textit{buildEGraph} costruisce un \textit{DiGraph} di \textit{NetworkX} a partire dalle informazioni collezionate nel file \textit{input\_name} attraverso i seguenti passi:
+\\Il metodo \textit{buildEGraph} costruisce un \textit{DiGraph} (i.e. grafo diretto) di \textit{NetworkX} a partire dalle informazioni collezionate nel file \textit{input\_name} attraverso i seguenti passi:
 \begin{enumerate}
 \item Crea tre dizionari:
 \begin{itemize}
@@ -156,12 +156,28 @@ Il \textit{core} della classe \textit{EndorsementGraph} è il metodo \textit{bui
 \item sia possibile associare ad ogni \textit{username} di utenti che hanno partecipato alla discussione un identificativo, ossia \textit{dictio\_nodes\_convert[username]};
 \item sia possibile associare ad ogni arco \textit{(source,dest)} una tupla di identificativi \textit{(dictio\_nodes\_convert[source],dictio\_nodes\_convert[dest])};
 \item sia possibile associare ad ogni tupla \textit{(dictio\_nodes\_convert[source],\\dictio\_nodes\_convert[dest])} una probabilità di \textit{retweet} pari a:  
-\\\\$\frac{dictio\_edges[(source,dest)]}{dictio\_nodes[source]}$.
-\end{itemize}
-\item Utilizzando le informazioni ottenute al passo precedente, il metodo \textit{buildEGraph} popola il grafo con dei nodi, non più identificati da uno \textit{username} ma da un intero univoco e che hanno come attributo il proprio \textit{retweetcount} (i.e. il numero di volte che l'utente corrispondente al nodo ha effettuato un \textit{retweet} sul \textit{topic} in questione), e degli archi diretti, che hanno come unico attributo una probabilità di \textit{retweet}.
-\end{enumerate}
 
+\begin{equation}
+P[(source,dest)] = \frac{dictio\_edges[(source,dest)]}{dictio\_nodes[source]}
+\end{equation}
+
+\end{itemize}
+\item Utilizzando le informazioni ottenute al passo precedente, il metodo \textit{buildEGraph} popola il \textit{DiGraph} con dei nodi, identificati da un intero univoco e che hanno come attributi il proprio \textit{retweetcount} (i.e. il numero di volte che l'utente corrispondente al nodo ha effettuato un \textit{retweet} sul \textit{topic} in questione) ed il proprio \textit{username}, e degli archi diretti, che hanno come unico attributo una probabilità di \textit{retweet}, ricavata dalla formula (4.1);
+
+\item Serializza il \textit{DiGraph} ottenuto mediante l'utilizzo del modulo \textit{Pickle}, il quale implementa i protocolli binari per la serializzazione e la de-serializzazione di una struttura di oggetti Python. Infine si preoccupa di rendere persistente il risultato della serializzazione: ciò consente di riutilizzare in futuro il \textit{retweet graph} creato, evitando di dover rieseguire il \textit{parsing}, semplicemente invocando l'operazione di \textit{unpickling} sulla versione serializzata, ottenendo nuovamente l'oggetto originario.  
+\end{enumerate}
+Bisogna sottolineare il fatto che la probabilità di \textit{retweet} (4.1), seppur inserita come attributo degli archi del \textit{DiGraph}, non è stata utilizzata nell'implementazione proposta ma è stata comunque inserita per permettere futuri sviluppi del \textit{framework}.
+\\
 \subsection{Individuazione delle \textit{echo-chambers}}
+
+Il metodo \textit{computeData} della classe \textit{utilities} si occupa di individuare le \textit{echo-chambers} del \textit{retweet graph} in input, per poi ricavare tutti i componenti necessari al calcolo del \textit{random-walk controversy score} ed all'esecuzione degli algoritmi di \textit{k-edge recommendation}.
+\\Come detto nel capitolo precedente, le \textit{echo-chambers} vengono individuate utilizzando l'algoritmo di \textit{Girvan-Newman}, la cui implementazione è resa disponibile dal \textit{package NetworkX}. Tale implementazione richiede di convertire il grafo nella sua versione \textit{non diretta}, ma nulla vieta in futuro di estendere il codice in modo tale che riesca a gestire anche grafi diretti. 
+Ad ogni modo, tale algoritmo riesce a discriminare le comunità del grafo in input, rendendo possibile la creazione dei seguenti dizionari:
+\begin{itemize}
+\item \textit{communities}, in cui ogni chiave corrisponde all'indice di una comunità ed il valore corrispondente altro non è che la lista nei nodi del grafo che appartengono a tale comunità; 
+\item \textit{partitions}, in cui ogni chiave è un nodo del grafo ed il valore corrispondente è l'indice della comunità a cui tale nodo appartiene.
+\end{itemize}
+I dizionari \textit{communities e partitions} permettono di partizionare perfettamente i nodi del grafo in due sottoinsiemi (precedentemente indicati con \textit{X,Y}) e, tramite questa partizione, di eseguire tutte le tecniche proposte per ridurre l'\textit{RWC}.
 
 \subsection{Calcolo dell'\textit{RWC}}
 

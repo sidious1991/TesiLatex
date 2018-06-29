@@ -38,20 +38,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.2.1}Creazione del \textit {retweet graph}}{33}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Individuazione delle \textit {echo-chambers}}{35}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.2}Individuazione delle \textit {echo-chambers}}{36}{subsection.4.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.3}Calcolo dell'\textit {RWC}}{35}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.3}Calcolo dell'\textit {RWC}}{36}{subsection.4.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.4}Implementazione degli algoritmi proposti}{35}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.4}Implementazione degli algoritmi proposti}{36}{subsection.4.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.5}Modalit\IeC {\`a} di organizzazione dei risultati}{35}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.5}Modalit\IeC {\`a} di organizzazione dei risultati}{36}{subsection.4.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Test dell\IeC {\textquoteright }\textit {edge-recommendation system} in modalit\IeC {\`a} \textit {greedy e non}}{36}{chapter.5}
+\contentsline {chapter}{\numberline {5}Test dell\IeC {\textquoteright }\textit {edge-recommendation system} in modalit\IeC {\`a} \textit {greedy e non}}{37}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusioni e sviluppi futuri}{39}{chapter.6}
+\contentsline {chapter}{\numberline {6}Conclusioni e sviluppi futuri}{40}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}An appendix}{42}{appendix.Alph1}
+\contentsline {chapter}{\numberline {A}An appendix}{43}{appendix.Alph1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Another appendix}{45}{appendix.Alph2}
+\contentsline {chapter}{\numberline {B}Another appendix}{46}{appendix.Alph2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Riferimenti bibliografici}{48}{appendix.Alph2}
+\contentsline {chapter}{Riferimenti bibliografici}{49}{appendix.Alph2}
