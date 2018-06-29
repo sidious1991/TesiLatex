@@ -162,25 +162,50 @@ P[(source,dest)] = \frac{dictio\_edges[(source,dest)]}{dictio\_nodes[source]}
 \end{equation}
 
 \end{itemize}
-\item Utilizzando le informazioni ottenute al passo precedente, il metodo \textit{buildEGraph} popola il \textit{DiGraph} con dei nodi, identificati da un intero univoco e che hanno come attributi il proprio \textit{retweetcount} (i.e. il numero di volte che l'utente corrispondente al nodo ha effettuato un \textit{retweet} sul \textit{topic} in questione) ed il proprio \textit{username}, e degli archi diretti, che hanno come unico attributo una probabilità di \textit{retweet}, ricavata dalla formula (4.1);
+\item Utilizzando le informazioni ottenute al passo precedente, il metodo \textit{buildEGraph} popola il \textit{DiGraph} con dei nodi, identificati da un intero univoco e che hanno come attributi il proprio \textit{retweetcount} (i.e. il numero di volte che l'utente corrispondente al nodo ha effettuato un \textit{retweet} sul \textit{topic} in questione) ed il proprio \textit{username}, e degli archi diretti, che hanno come unico attributo una probabilità di \textit{retweet}, ricavata dalla formula (3.1);
 
 \item Serializza il \textit{DiGraph} ottenuto mediante l'utilizzo del modulo \textit{Pickle}, il quale implementa i protocolli binari per la serializzazione e la de-serializzazione di una struttura di oggetti Python. Infine si preoccupa di rendere persistente il risultato della serializzazione: ciò consente di riutilizzare in futuro il \textit{retweet graph} creato, evitando di dover rieseguire il \textit{parsing}, semplicemente invocando l'operazione di \textit{unpickling} sulla versione serializzata, ottenendo nuovamente l'oggetto originario.  
 \end{enumerate}
-Bisogna sottolineare il fatto che la probabilità di \textit{retweet} (4.1), seppur inserita come attributo degli archi del \textit{DiGraph}, non è stata utilizzata nell'implementazione proposta ma è stata comunque inserita per permettere futuri sviluppi del \textit{framework}.
+Bisogna sottolineare il fatto che la probabilità di \textit{retweet} (3.1), seppur inserita come attributo degli archi del \textit{DiGraph}, non è stata utilizzata nell'implementazione proposta ma è stata comunque inserita per permettere futuri sviluppi del \textit{framework}.
 \\
 \subsection{Individuazione delle \textit{echo-chambers}}
 
-Il metodo \textit{computeData} della classe \textit{utilities} si occupa di individuare le \textit{echo-chambers} del \textit{retweet graph} in input, per poi ricavare tutti i componenti necessari al calcolo del \textit{random-walk controversy score} ed all'esecuzione degli algoritmi di \textit{k-edge recommendation}.
-\\Come detto nel capitolo precedente, le \textit{echo-chambers} vengono individuate utilizzando l'algoritmo di \textit{Girvan-Newman}, la cui implementazione è resa disponibile dal \textit{package NetworkX}. Tale implementazione richiede di convertire il grafo nella sua versione \textit{non diretta}, ma nulla vieta in futuro di estendere il codice in modo tale che riesca a gestire anche grafi diretti. 
-Ad ogni modo, tale algoritmo riesce a discriminare le comunità del grafo in input, rendendo possibile la creazione dei seguenti dizionari:
+Il metodo \textit{computeData} del modulo \textit{utilities} si occupa di individuare le \textit{echo-chambers} del \textit{retweet graph} in input, le quali sono indispensabili per ricavare tutti i componenti necessari al calcolo del \textit{random-walk controversy score} ed all'esecuzione degli algoritmi di \textit{k-edge recommendation}.
+\\Come detto nel capitolo precedente, le \textit{echo-chambers} vengono individuate mediante l'esecuzione dell'algoritmo di \textit{Girvan-Newman}, la cui implementazione è resa disponibile dal \textit{package NetworkX}. Tale implementazione richiede di convertire il grafo in input nella sua versione \textit{non diretta} (i.e. grafo \textit{non orientato}), ma nulla vieta in futuro di estendere il codice in modo tale che riesca a gestire anche grafi diretti. 
+Il risultato dell'esecuzione dell'algoritmo di \textit{Girvan-Newman} viene gestito dal metodo \textit{computeData} con l'ausilio dei seguenti dizionari:
 \begin{itemize}
-\item \textit{communities}, in cui ogni chiave corrisponde all'indice di una comunità ed il valore corrispondente altro non è che la lista nei nodi del grafo che appartengono a tale comunità; 
+\item \textit{communities}, in cui ogni chiave corrisponde all'indice di una delle comunità rilevate dall'algoritmo ed il valore corrispondente altro non è che la lista dei nodi del grafo che appartengono a tale comunità; 
 \item \textit{partitions}, in cui ogni chiave è un nodo del grafo ed il valore corrispondente è l'indice della comunità a cui tale nodo appartiene.
 \end{itemize}
-I dizionari \textit{communities e partitions} permettono di partizionare perfettamente i nodi del grafo in due sottoinsiemi (precedentemente indicati con \textit{X,Y}) e, tramite questa partizione, di eseguire tutte le tecniche proposte per ridurre l'\textit{RWC}.
+I dizionari \textit{communities e partitions} permettono di partizionare perfettamente l'insieme dei nodi del grafo, in modo tale che ciascuno di essi venga associato all'\textit{echo-chamber} a cui appartiene, ossia al lato della \textit{controversia} per il quale si schiera. Nei paragrafi a seguire, sarà possibile notare quanto tali dizionari siano largamente usati ed indispensabili per l'esecuzione del sistema proposto.
+\\\`E necessario precisare che la scelta dell'algoritmo di \textit{Girvan-Newman} non è stata immediata ma, al contrario, precedentemente è stato valutato un algoritmo di \textit{community detection} alternativo, ossia l'algoritmo di \textit{Louvain}.  
+\\Al contrario dell'algoritmo di \textit{Girvan-Newman}, il metodo di \textit{Louvain} non agisce rimuovendo ad ogni passo l'arco caratterizzato dall'\textit{edge betweenness} più alta ma è incentrato sull'ottimizzazione della \textit{modularità}, che misura la densità dei collegamenti all'interno delle comunità rispetto ai collegamenti tra le comunità. L'algoritmo inizia assegnando ciascun nodo alla propria comunità e consiste in due fasi:
+\begin{enumerate}
+\item \textit{modularity optimization}: in questa fase, per ciascun nodo l'algoritmo esamina quanto cambierebbe la modularità se il nodo venisse rimosso dalla sua comunità e aggiunto alla comunità di ciascuno dei suoi vicini. Il nodo viene quindi inserito nella comunità in cui viene massimizzato il guadagno in modularità. Questo processo viene ripetuto per ciascuno dei nodi fino a quando non è possibile ottenere ulteriori miglioramenti;
+\item \textit{community aggregation}: l'algoritmo ora crea una nuova rete i cui nodi sono le comunità trovate nella prima fase.
+\end{enumerate}
+Queste fasi vengono ripetute in modo iterativo fino al raggiungimento della modularità massima. In sintesi, è possibile dire che l'approccio di \textit{Louvain} si basa su un processo di \textit{aggregazione} della rete mentre l'approccio di \textit{Girvan-Newman} si basa su un processo di \textit{decomposizione} della rete. 
+\\Tuttavia il processo di \textit{aggregazione} di \textit{Louvain} è volto all'ottimizzazione della \textit{modularità} e quindi nel momento in cui si arresta potrebbe aver rilevato un numero di comunità maggiore di due; al contrario \textit{Girvan-Newman}, essendo caratterizzato da un processo di \textit{decomposizione}, può essere arrestato nel momento in cui rileva esattamente due comunità. 
+\\Questo è sostanzialmente il motivo che ha condotto alla scelta dell'algoritmo di \textit{Girvan-Newman}, non tralasciando le motivazioni addotte nel precedente capitolo \textit{Teoria alla base del problema ed algoritmi per la risoluzione}.
 
 \subsection{Calcolo dell'\textit{RWC}}
+Una volta rilevate le \textit{echo-chambers} del \textit{retweet graph} in input, descritto mediante un \textit{DiGraph} del \textit{package NetworkX}, è possibile ricavare tutte le componenti utili al calcolo dell'\textit{indice di controversia RWC}. 
+\\Il processo di calcolo dell'\textit{RWC} del grafo in input è illustrato in figura \ref{fig:rwc}. 
 
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.55]{images/calcolo_rwc.png}
+\end{center}
+\caption{Processo di calcolo del \textit{random-walk controversy score} di un \textit{retweet graph}.}
+\label{fig:rwc}
+\end{figure}
+Come illustrato in figura, il \textit{DiGraph di NetworkX}, che descrive il \textit{retweet graph} considerato, viene fornito come input al metodo \textit{computeData} il quale, dopo averne individuato le \textit{echo-chambers}, produce i seguenti dati:
+\begin{itemize}
+\item i vettori di \textit{restart} e\textsubscript{x} ed e\textsubscript{y}, dove \textit{X,Y} indicano le due \textit{echo-chambers} del \textit{DiGraph}; 
+\item i vettori c\textsubscript{x} e e\textsubscript{y};  
+\item le matrici di transizione P\textsubscript{x} e P\textsubscript{y} e le inverse delle matrici M\textsubscript{x} ed M\textsubscript{y};
+\item 
+\end{itemize}
 \subsection{Implementazione degli algoritmi proposti}
 
 \subsection{Modalità di organizzazione dei risultati}

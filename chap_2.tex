@@ -47,13 +47,13 @@ Per il calcolo dei vettori di \textit{PageRank} personalizzati (\textit{r\textsu
 RWC(G,X,Y) = (c_x - c_y)\textsuperscript{T}(r_x - r_y)
 \end{equation}
 \\
-Sostituendo le equazioni (3.2) e (3.3) nell'espressione (3.4) si ottiene:
+Sostituendo le equazioni (2.2) e (2.3) nell'espressione (2.4) si ottiene:
 \\
 \begin{equation}
 RWC(G,X,Y) = (1 - \alpha)(c_x - c_y)\textsuperscript{T}(M_x\textsuperscript{-1}e_x - M_y\textsuperscript{-1}e_y)
 \end{equation}
 \\
-Dove \textit{M\textsubscript{x} = (I - $\alpha$P\textsubscript{x})} e \textit{M\textsubscript{y} = (I - $\alpha$P\textsubscript{y})}. Quest'ultima è la formula utilizzata nell'implementazione del sistema proposto. Ad ogni modo, riferendosi all'equazione (3.4) è possibile fare le seguenti osservazioni:
+Dove \textit{M\textsubscript{x} = (I - $\alpha$P\textsubscript{x})} e \textit{M\textsubscript{y} = (I - $\alpha$P\textsubscript{y})}. Quest'ultima è la formula utilizzata nell'implementazione del sistema proposto. Ad ogni modo, riferendosi all'equazione (2.4) è possibile fare le seguenti osservazioni:
 \begin{enumerate}
 \item Innanzitutto occorre precisare che \textit{r\textsubscript{x}} è una \textit{distribuzione stazionaria di probabilità} del \textit{random walk} associato all'esecuzione di \textit{PageRank page\textsubscript{x}}: ognuno dei suoi elementi \textit{r\textsubscript{x}[i]} ($\forall \textit{i = 0,...,n-1}$) rappresenta la probabilità che il \textit{random walk} si trovi nel nodo \textit{i} all'equilibrio. Simili considerazioni valgono per \textit{r\textsubscript{y}};
 \item Qualora le due comunità (\textit{echo-chambers}) \textit{X e Y} fossero molto divise tra loro (i.e. pochissimi archi diretti che le connettono), ci si aspetterebbe un \textit{r\textsubscript{x}} con valori pressoché nulli nelle coordinate corrispondenti ai nodi di \textit{Y} e non nulli altrove e, viceversa, parlando di \textit{r\textsubscript{y}}\footnote{Ricordare che, essendo \textit{distribuzioni di probabilità}, vale: $\sum_{i=0}^{n-1} r_x[i] = 1$ e $\sum_{j=0}^{n-1} r_y[j] = 1$.}. In tal caso l'espressione $(c_x - c_y)\textsuperscript{T}(r_x - r_y)$ assume il valore massimo, indice di un'elevata \textit{controversia} nella rete.
@@ -85,7 +85,7 @@ Risolvere tale problema, così come si presenta, richiederebbe di considerare tu
 Questa osservazione suggerisce che gli archi tra vertici con \textit{in-degree} alto di ciascuna \textit{echo-chamber} sono buoni candidati per ottenere un abbassamento del \textit{random-walk controversy score}\footnote{Si rimanda alla lettura del \textit{Teorema 1.} dell'articolo \cite{garimella:paper}.}. 
 \\Mediante questo ridimensionamento del dominio degli archi candidati, ci si propone di ridurre l'\textit{RWC} esponendo alcuni nodi \textit{leader} di ciascuna \textit{echo-chamber} ai contenuti di alcuni nodi \textit{leader} dell'\textit{echo-chamber} opposta. 
 \\Ora, con l'obiettivo di effettuare la scelta dei \textit{k} archi migliori appartenenti al dominio così definito, vengono proposti due algoritmi: un \textit{algoritmo non greedy} (indicato di seguito come \textit{Algorithm 1}) ed un \textit{algoritmo greedy}.
-\\L'algoritmo \textit{non greedy} ha un tempo di esecuzione pari a \textit{O($k_1 \cdot k_2$)}, che costituisce un ottimo \textit{speedup} rispetto all'algoritmo \textit{brute-force}, che considera invece tutte le combinazioni di archi. \textit{Algorithm 1} si limita a scegliere dal dominio degli archi, ridimensionato come appena detto, i \textit{k} archi migliori in termini del decremento dell'\textit{RWC} che ciascuno consente se aggiunto \textit{individualmente}. Tuttavia il \textit{decremento dell'RWC} che un qualsiasi arco \textit{"e"} consente individualmente (\textit{$\delta$RWC\textsubscript{e}}) si rivelerebbe tale solo se tale arco fosse aggiunto per primo al grafo; più precisamente $\forall E' \supseteq E, \forall e \in V \times V \setminus E'$ vale l'espressione (3.6). 
+\\L'algoritmo \textit{non greedy} ha un tempo di esecuzione pari a \textit{O($k_1 \cdot k_2$)}, che costituisce un ottimo \textit{speedup} rispetto all'algoritmo \textit{brute-force}, che considera invece tutte le combinazioni di archi. \textit{Algorithm 1} si limita a scegliere dal dominio degli archi, ridimensionato come appena detto, i \textit{k} archi migliori in termini del decremento dell'\textit{RWC} che ciascuno consente se aggiunto \textit{individualmente}. Tuttavia il \textit{decremento dell'RWC} che un qualsiasi arco \textit{"e"} consente individualmente (\textit{$\delta$RWC\textsubscript{e}}) si rivelerebbe tale solo se tale arco fosse aggiunto per primo al grafo; più precisamente $\forall E' \supseteq E, \forall e \in V \times V \setminus E'$ vale l'espressione (2.6). 
 \begin{equation}
 \resizebox{1 \textwidth}{!} 
 {
@@ -127,7 +127,7 @@ Per ogni arco \textit{$e \in V \times V \setminus E$} appartenente al dominio de
 \textit{$\delta$RWC\textsubscript{e}} = \textit{RWC - RWC\textsubscript{\{e\}}}
 \end{equation}
 
-\`E bene ricordare che il calcolo dell'\textit{RWC} è abbastanza oneroso e pertanto è meglio evitarlo quando possibile: se si utilizzasse la modalità (3.7), gli algoritmi di scelta dei \textit{k} archi dovrebbero calcolare l'\textit{RWC} un numero di volte pari a \textit{$k_1 \times k_2$}, cagionando un degrado prestazionale non trascurabile.
+\`E bene ricordare che il calcolo dell'\textit{RWC} è abbastanza oneroso e pertanto è meglio evitarlo quando possibile: se si utilizzasse la modalità (2.7), gli algoritmi di scelta dei \textit{k} archi dovrebbero calcolare l'\textit{RWC} un numero di volte pari a \textit{$k_1 \times k_2$}, cagionando un degrado prestazionale non trascurabile.
 \\Tuttavia, visto che siamo interessati solamente all'entità del decremento dell'\textit{RWC} a seguito dell'aggiunta di un arco, possiamo utilizzare un'altra modalità di calcolo più efficiente. In particolare, considerando la \textit{matrice delle probabilità di transizione per colonna P}, dopo l'aggiunta del generico arco diretto \textit{(i,j)} solo una sua colonna ne è affetta: la colonna che corrisponde al vertice di origine \textit{"i"} dell'arco \textit{(i,j)}.
 \\Di seguito è evidenziata la colonna \textit{i-esima} prima e dopo l'aggiunta dell'arco diretto \textit{(i,j)}:
 
@@ -163,7 +163,7 @@ P' = P - z \otimes u^T
 \end{equation}
 \\
 Dove il simbolo $\otimes$ indica che il prodotto tra i due vettori non è scalare ma \textit{esterno}, il cui risultato è una matrice.
-\\Ricordando dalla definizione dell'\textit{RWC} (3.5) le formule che descrivono le matrici $M_x$ ed $M_y$ e sostituendovi, rispettivamente, $P'_x$ e $P'_y$ (seguendo la formula (3.8)) si ottiene:
+\\Ricordando dalla definizione dell'\textit{RWC} (2.5) le formule che descrivono le matrici $M_x$ ed $M_y$ e sostituendovi, rispettivamente, $P'_x$ e $P'_y$ (seguendo la formula (2.8)) si ottiene:
 \\
 \begin{equation}
 M'_x = M_x + \alpha z_x \otimes u^T
@@ -173,7 +173,7 @@ M'_y = M_y + \alpha z_y \otimes u^T
 \end{equation}
 \\
 Nell'implementazione proposta, l'inversa delle matrici $M'_x$ e $M'_y$ (inversa che occorre per il calcolo dell'\textit{RWC}) è calcolata usando la formula di \textit{Sherman-Morrison}\cite{golub:paper}, vista la sua efficienza.
-\\Ora, per l'equazione (3.5), l'\textit{RWC} del grafo a seguito dell'aggiunta del nuovo arco diretto può essere scritto come:
+\\Ora, per l'equazione (2.5), l'\textit{RWC} del grafo a seguito dell'aggiunta del nuovo arco diretto può essere scritto come:
 \\
 \begin{equation}
 RWC' = (1 - \alpha)(c_x - c_y)\textsuperscript{T}(M'_x\textsuperscript{-1}e_x - M'_y\textsuperscript{-1}e_y)

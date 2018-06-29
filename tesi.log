@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  29 JUN 2018 12:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  29 JUN 2018 19:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1341,8 +1341,8 @@ File: english.lbx 2016/09/17 v3.6 biblatex localization (PK/JW/AB)
 Package biblatex Warning: Patching footnotes failed.
 (biblatex)                Footnote detection will not work.
 
-(./tesi.aux (./chap_0.aux) (./chap_1.aux) (./chap_2.aux) (./chap_3.aux)
-(./chap_4.aux) (./chap_5.aux) (./app_a.aux) (./app_b.aux))
+(./tesi.aux (./chap_0.aux) (./chap_2.aux) (./chap_3.aux) (./chap_4.aux)
+(./chap_5.aux) (./app_a.aux) (./app_b.aux))
 \openout1 = `tesi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 148.
@@ -1485,7 +1485,7 @@ Package biblatex Info: ... file 'tesi.bbl' found.
 Package biblatex Info: Reference section=0 on input line 148.
 Package biblatex Info: Reference segment=0 on input line 148.
 
-<images/Logo-Uni-Tor-Vergata.png, id=103, 770.88pt x 770.88pt>
+<images/Logo-Uni-Tor-Vergata.png, id=99, 770.88pt x 770.88pt>
 File: images/Logo-Uni-Tor-Vergata.png Graphic file (type png)
 
 <use images/Logo-Uni-Tor-Vergata.png>
@@ -1737,20 +1737,11 @@ Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
 [7]
-\openout2 = `chap_1.aux'.
-
- (./chap_1.tex
-Capitolo 2.
-) [8
-
-
-
-]
 \openout2 = `chap_2.aux'.
 
  (./chap_2.tex
-Capitolo 3.
-[9
+Capitolo 2.
+[8
 
 
 
@@ -1766,11 +1757,11 @@ Underfull \vbox (badness 1221) has occurred while \output is active []
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[10]
+[9]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[11]
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 33--36
 
  []
@@ -1779,7 +1770,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--36
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[12]
+[11]
 Underfull \hbox (badness 10000) in paragraph at lines 41--46
 
  []
@@ -1793,7 +1784,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--52
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[13]
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 67--73
 
  []
@@ -1815,11 +1806,11 @@ Underfull \vbox (badness 3657) has occurred while \output is active []
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[14]
+[13]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[15]
+[14]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 102.
 
@@ -1831,37 +1822,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--121
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[16]
+[15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
+[16]
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
 [17]
+Underfull \hbox (badness 10000) in paragraph at lines 134--156
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--156
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 134--156
+
+ []
+
+
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 134--156
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 134--156
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 134--156
-
- []
-
-
-Overfull \vbox (0.59995pt too high) has occurred while \output is active []
-
-
-[19]
 Underfull \hbox (badness 10000) in paragraph at lines 163--168
 
  []
@@ -1870,7 +1861,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--168
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[20]
+[19]
 Underfull \hbox (badness 10000) in paragraph at lines 173--178
 
  []
@@ -1889,19 +1880,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 188--193
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[21]
+[20]
 \openout2 = `chap_3.aux'.
 
  (./chap_3.tex
-Capitolo 4.
+Capitolo 3.
 
 Underfull \vbox (badness 4048) has occurred while \output is active []
 
- [22
+ [21
 
 
 
 ]
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[22]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
@@ -1926,10 +1921,6 @@ Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
 [28]
-Overfull \vbox (0.59995pt too high) has occurred while \output is active []
-
-
-[29]
 Underfull \hbox (badness 10000) in paragraph at lines 96--100
 
  []
@@ -1943,14 +1934,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--100
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[30] <images/raccolta_dati_tesi.png, id=442, 382.42876pt x 462.72874pt>
+[29] <images/raccolta_dati_tesi.png, id=434, 382.42876pt x 462.72874pt>
 File: images/raccolta_dati_tesi.png Graphic file (type png)
 
 <use images/raccolta_dati_tesi.png>
 Package pdftex.def Info: images/raccolta_dati_tesi.png used on input line 104.
 (pdftex.def)             Requested size: 229.45901pt x 277.63939pt.
 
-<images/retweet_input_file.png, id=443, 274.02374pt x 120.45pt>
+<images/retweet_input_file.png, id=435, 274.02374pt x 120.45pt>
 File: images/retweet_input_file.png Graphic file (type png)
 
 <use images/retweet_input_file.png>
@@ -1960,8 +1951,8 @@ Package pdftex.def Info: images/retweet_input_file.png used on input line 112.
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[31 <./images/raccolta_dati_tesi.png> <./images/retweet_input_file.png>]
-<images/pipeline_implementazione.png, id=451, 844.15375pt x 296.10625pt>
+[30 <./images/raccolta_dati_tesi.png> <./images/retweet_input_file.png>]
+<images/pipeline_implementazione.png, id=442, 844.15375pt x 296.10625pt>
 File: images/pipeline_implementazione.png Graphic file (type png)
 
 <use images/pipeline_implementazione.png>
@@ -1977,7 +1968,7 @@ Overfull \hbox (45.93152pt too wide) in paragraph at lines 128--129
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[32 <./images/pipeline_implementazione.png>]
+[31 <./images/pipeline_implementazione.png>]
 Overfull \hbox (3.27806pt too wide) in paragraph at lines 142--148
 \T1/lmr/m/n/12 Scendiamo ora nei det-ta-gli im-ple-men-ta-ti-vi del me-to-do \T
 1/lmr/m/it/12 buil-dE-Gra-ph(destination_dir)\T1/lmr/m/n/12 .
@@ -1987,11 +1978,11 @@ Overfull \hbox (3.27806pt too wide) in paragraph at lines 142--148
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[33]
+[32]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[34]
+[33]
 Underfull \hbox (badness 10000) in paragraph at lines 169--171
 
  []
@@ -2003,15 +1994,36 @@ Underfull \vbox (badness 2828) has occurred while \output is active []
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[35])
+[34]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[36]
+[35]
+Underfull \vbox (badness 3646) has occurred while \output is active []
+
+
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[36] <images/calcolo_rwc.png, id=481, 738.76pt x 442.65375pt>
+File: images/calcolo_rwc.png Graphic file (type png)
+
+<use images/calcolo_rwc.png>
+Package pdftex.def Info: images/calcolo_rwc.png used on input line 197.
+(pdftex.def)             Requested size: 406.31924pt x 243.4603pt.
+
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[37 <./images/calcolo_rwc.png>])
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[38]
 \openout2 = `chap_4.aux'.
 
  (./chap_4.tex
-Capitolo 5.
+Capitolo 4.
 )
 
 Package blindtext Warning: italian not defined, using English instead.
@@ -2028,7 +2040,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 1043) has occurred while \output is active []
 
- [37
+ [39
 
 
 
@@ -2052,15 +2064,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[38]
+[40]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[39]
+[41]
 \openout2 = `chap_5.aux'.
 
  (./chap_5.tex
-Capitolo 6.
+Capitolo 5.
 )
 
 Package blindtext Warning: italian not defined, using English instead.
@@ -2077,7 +2089,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 1681) has occurred while \output is active []
 
- [40
+ [42
 
 
 
@@ -2101,11 +2113,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[41]
+[43]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[42]
+[44]
 \openout2 = `app_a.aux'.
 
  (./app_a.tex
@@ -2126,7 +2138,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 1681) has occurred while \output is active []
 
- [43
+ [45
 
 
 
@@ -2150,11 +2162,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[44]
+[46]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[45]
+[47]
 \openout2 = `app_b.aux'.
 
  (./app_b.tex
@@ -2175,7 +2187,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 1681) has occurred while \output is active []
 
- [46
+ [48
 
 
 
@@ -2199,41 +2211,41 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[47]
+[49]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[48]
+[50]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 233.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 235.
- [49
+ [51
 
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 235.
 
-(./tesi.aux (./chap_0.aux) (./chap_1.aux) (./chap_2.aux) (./chap_3.aux)
-(./chap_4.aux) (./chap_5.aux) (./app_a.aux) (./app_b.aux))
+(./tesi.aux (./chap_0.aux) (./chap_2.aux) (./chap_3.aux) (./chap_4.aux)
+(./chap_5.aux) (./app_a.aux) (./app_b.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 235.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 235.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 6A8A0A1CA3B2FC0EA64734E687C232F2;1804.
+(rerunfilecheck)             Checksum: 6A2BBF680E35CC2D0FF293DCD1D922BD;1751.
 Package logreq Info: Writing requests to 'tesi.run.xml'.
 \openout1 = `tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
  19212 strings out of 493013
- 303428 string characters out of 6133327
- 621722 words of memory out of 5000000
- 22184 multiletter control sequences out of 15000+600000
+ 303491 string characters out of 6133327
+ 621715 words of memory out of 5000000
+ 22186 multiletter control sequences out of 15000+600000
  115790 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,19n,45p,2618b,1401s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,19n,45p,2618b,1390s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/
 texlive/2016/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/20
 16/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2016/texmf-dist/
@@ -2259,10 +2271,10 @@ texlive/2016/texmf-dist/fonts/type1/public/lm/lmro10.pfb></usr/local/texlive/20
 ist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/lm/lmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
 /lm/lmtt12.pfb>
-Output written on tesi.pdf (61 pages, 648149 bytes).
+Output written on tesi.pdf (63 pages, 733417 bytes).
 PDF statistics:
- 670 PDF objects out of 1000 (max. 8388607)
- 572 compressed objects within 6 object streams
- 177 named destinations out of 1000 (max. 500000)
- 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 682 PDF objects out of 1000 (max. 8388607)
+ 580 compressed objects within 6 object streams
+ 181 named destinations out of 1000 (max. 500000)
+ 218 words of extra memory for PDF output out of 10000 (max. 10000000)
 
