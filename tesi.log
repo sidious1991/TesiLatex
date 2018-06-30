@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  29 JUN 2018 19:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  30 JUN 2018 12:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2005,21 +2005,30 @@ Underfull \vbox (badness 3646) has occurred while \output is active []
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[36] <images/calcolo_rwc.png, id=481, 738.76pt x 442.65375pt>
+[36] <images/calcolo_rwc.png, id=481, 703.62875pt x 442.65375pt>
 File: images/calcolo_rwc.png Graphic file (type png)
 
 <use images/calcolo_rwc.png>
 Package pdftex.def Info: images/calcolo_rwc.png used on input line 197.
-(pdftex.def)             Requested size: 406.31924pt x 243.4603pt.
+(pdftex.def)             Requested size: 386.99701pt x 243.4603pt.
 
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[37 <./images/calcolo_rwc.png>])
+[37 <./images/calcolo_rwc.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 208--211
+
+ []
+
+
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[38]
+[38])
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[39]
 \openout2 = `chap_4.aux'.
 
  (./chap_4.tex
@@ -2040,7 +2049,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 1043) has occurred while \output is active []
 
- [39
+ [40
 
 
 
@@ -2064,11 +2073,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[40]
+[41]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[41]
+[42]
 \openout2 = `chap_5.aux'.
 
  (./chap_5.tex
@@ -2089,7 +2098,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 1681) has occurred while \output is active []
 
- [42
+ [43
 
 
 
@@ -2113,11 +2122,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[43]
+[44]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[44]
+[45]
 \openout2 = `app_a.aux'.
 
  (./app_a.tex
@@ -2138,7 +2147,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 1681) has occurred while \output is active []
 
- [45
+ [46
 
 
 
@@ -2162,11 +2171,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[46]
+[47]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[47]
+[48]
 \openout2 = `app_b.aux'.
 
  (./app_b.tex
@@ -2187,7 +2196,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 1681) has occurred while \output is active []
 
- [48
+ [49
 
 
 
@@ -2211,18 +2220,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[49]
+[50]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[50]
+[51]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 233.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 235.
- [51
+ [52
 
 
 ]
@@ -2239,8 +2248,8 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 19212 strings out of 493013
- 303491 string characters out of 6133327
+ 19215 strings out of 493013
+ 303523 string characters out of 6133327
  621715 words of memory out of 5000000
  22186 multiletter control sequences out of 15000+600000
  115790 words of font info for 80 fonts, out of 8000000 for 9000
@@ -2271,10 +2280,10 @@ texlive/2016/texmf-dist/fonts/type1/public/lm/lmro10.pfb></usr/local/texlive/20
 ist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/lm/lmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
 /lm/lmtt12.pfb>
-Output written on tesi.pdf (63 pages, 733417 bytes).
+Output written on tesi.pdf (64 pages, 736246 bytes).
 PDF statistics:
- 682 PDF objects out of 1000 (max. 8388607)
- 580 compressed objects within 6 object streams
- 181 named destinations out of 1000 (max. 500000)
+ 689 PDF objects out of 1000 (max. 8388607)
+ 586 compressed objects within 6 object streams
+ 184 named destinations out of 1000 (max. 500000)
  218 words of extra memory for PDF output out of 10000 (max. 10000000)
 

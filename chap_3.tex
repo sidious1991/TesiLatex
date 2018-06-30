@@ -189,7 +189,7 @@ Queste fasi vengono ripetute in modo iterativo fino al raggiungimento della modu
 \\Questo è sostanzialmente il motivo che ha condotto alla scelta dell'algoritmo di \textit{Girvan-Newman}, non tralasciando le motivazioni addotte nel precedente capitolo \textit{Teoria alla base del problema ed algoritmi per la risoluzione}.
 
 \subsection{Calcolo dell'\textit{RWC}}
-Una volta rilevate le \textit{echo-chambers} del \textit{retweet graph} in input, descritto mediante un \textit{DiGraph} del \textit{package NetworkX}, è possibile ricavare tutte le componenti utili al calcolo dell'\textit{indice di controversia RWC}. 
+Una volta rilevate le \textit{echo-chambers} del \textit{retweet graph} in input, ossia il \textit{DiGraph} ricavato nella precedente fase di \textit{"creazione del retweet graph"}, è possibile ottenere tutte le componenti utili al calcolo dell'\textit{indice di controversia RWC}, le quali dipendono proprio dalla struttura delle comunità. 
 \\Il processo di calcolo dell'\textit{RWC} del grafo in input è illustrato in figura \ref{fig:rwc}. 
 
 \begin{figure}
@@ -199,14 +199,27 @@ Una volta rilevate le \textit{echo-chambers} del \textit{retweet graph} in input
 \caption{Processo di calcolo del \textit{random-walk controversy score} di un \textit{retweet graph}.}
 \label{fig:rwc}
 \end{figure}
-Come illustrato in figura, il \textit{DiGraph di NetworkX}, che descrive il \textit{retweet graph} considerato, viene fornito come input al metodo \textit{computeData} il quale, dopo averne individuato le \textit{echo-chambers}, produce i seguenti dati:
+Come illustrato in figura, il \textit{DiGraph di NetworkX} ottenuto nella fase di \textit{"creazione del retweet graph"} viene fornito come input al metodo \textit{computeData} il quale, dopo averne individuato le \textit{echo-chambers}, produce\footnote{Oltre ai dati elencati, il metodo \textit{computeData} produce anche i dizionari \textit{communities,partitions} e le liste dei nodi delle due comunità \textit{sorted\_x,sorted\_y}, ordinate secondo l'\textit{in degree} dei nodi stessi. Ad ogni modo questi dati non sono utili al calcolo dell'\textit{RWC} e pertanto per il momento non verranno considerati.}:
 \begin{itemize}
-\item i vettori di \textit{restart} e\textsubscript{x} ed e\textsubscript{y}, dove \textit{X,Y} indicano le due \textit{echo-chambers} del \textit{DiGraph}; 
-\item i vettori c\textsubscript{x} e e\textsubscript{y};  
-\item le matrici di transizione P\textsubscript{x} e P\textsubscript{y} e le inverse delle matrici M\textsubscript{x} ed M\textsubscript{y};
-\item 
+\item i vettori di \textit{restart} $e_x$ ed $e_y$, dove \textit{X,Y} indicano le due \textit{echo-chambers} del \textit{DiGraph}; 
+\item i vettori $c_x$ e $c_y$;  
+\item le matrici di transizione $P_x$ e $P_y$ e quindi le matrici $M_x\textsuperscript{-1}$ ed $M_y\textsuperscript{-1}$. 
 \end{itemize}
+Per chiarimenti riguardo il significato di questi vettori e matrici si consiglia la lettura del capitolo precedente.
+\\Il metodo \textit{rwc} del modulo \textit{rwc\_lib} ha il compito di utilizzare questi dati per calcolare finalmente il \textit{random-walk controversy score} del \textit{DiGraph} in input, applicando la seguente espressione:
+\\
+\begin{equation}
+RWC(G,X,Y) = (1 - \alpha)(c_x - c_y)\textsuperscript{T}(M_x\textsuperscript{-1}e_x - M_y\textsuperscript{-1}e_y)
+\end{equation}
+\\
+Dove $\alpha$, fornito come parametro al metodo \textit{rwc}, è la \textit{probabilità di continuare il random-walk} e quindi $(1-\alpha)$ è la \textit{restart probability}. 
+\\Come già precedentemente affermato, nell'esecuzione dei due algoritmi alternativi di \textit{k-edge recommendation} si cercherà di invocare quanto meno possibile il metodo \textit{computeData}, il quale presenta un peso computazionale piuttosto ingente dovuto, tra le altre cose, al calcolo delle matrici inverse  $M_x\textsuperscript{-1}$ ed $M_y\textsuperscript{-1}$. 
+\\L'esecuzione di entrambi gli algoritmi di \textit{k-edge recommendation} proposti richiede di calcolare, per ogni arco scansionato, il \textit{$\delta RWC$} che esso apporterebbe se fosse aggiunto al grafo. Se non si utilizzasse una strategia di calcolo più efficiente, per ottenere tale \textit{$\delta RWC$} bisognerebbe misurare l'\textit{RWC} del grafo a seguito dell'aggiunta dell'arco in considerazione, per poi effettuare la differenza con l'\textit{RWC} prima dell'aggiunta. Ciò richiederebbe di invocare \textit{computeData} un numero di volte pari al numero di archi scansionati, con l'effetto di un degrado prestazionale non trascurabile. \\Con l'obiettivo di ovviare a tutto ciò, l'implementazione proposta dei due algoritmi di \textit{k-edge recommendation} utilizza la tecnica di \textit{Sherman-Morrison}, già illustrata nel capitolo precedente, la quale permette di evitare di invocare continuamente il metodo \textit{computeData} per il calcolo dei \textit{$\delta RWC$}. 
+
 \subsection{Implementazione degli algoritmi proposti}
+I due algoritmi di \textit{k-edge recommendation} implementati, ossia \textit{non greedy} e \textit{greedy}, hanno come caratteristica comune il dominio degli archi diretti da cui scelgono i \textit{k} più promettenti, in termini di decremento dell'\textit{RWC} che consentirebbero se fossero aggiunti al grafo. Tale dominio è costituito da tutti gli archi diretti, non ancora materializzati nel \textit{retweet graph} considerato, che connettono i \textit{$k_1$} vertici con \textit{in degree} più alto dell'\textit{echo-chamber X} con i \textit{$k_2$} vertici con \textit{in degree} più alto dell'\textit{echo-chamber Y} e viceversa, dove \textit{$k_1$} e \textit{$k_2$} devono essere forniti come input. 
+\\L'unica differenza tra i due algoritmi riguarda la modalità di scelta dei \textit{k} archi ed il loro \textit{pseudo-codice} può aiutare a comprenderla:
+
 
 \subsection{Modalità di organizzazione dei risultati}
 
