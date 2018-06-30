@@ -214,11 +214,58 @@ RWC(G,X,Y) = (1 - \alpha)(c_x - c_y)\textsuperscript{T}(M_x\textsuperscript{-1}e
 \\
 Dove $\alpha$, fornito come parametro al metodo \textit{rwc}, è la \textit{probabilità di continuare il random-walk} e quindi $(1-\alpha)$ è la \textit{restart probability}. 
 \\Come già precedentemente affermato, nell'esecuzione dei due algoritmi alternativi di \textit{k-edge recommendation} si cercherà di invocare quanto meno possibile il metodo \textit{computeData}, il quale presenta un peso computazionale piuttosto ingente dovuto, tra le altre cose, al calcolo delle matrici inverse  $M_x\textsuperscript{-1}$ ed $M_y\textsuperscript{-1}$. 
-\\L'esecuzione di entrambi gli algoritmi di \textit{k-edge recommendation} proposti richiede di calcolare, per ogni arco scansionato, il \textit{$\delta RWC$} che esso apporterebbe se fosse aggiunto al grafo. Se non si utilizzasse una strategia di calcolo più efficiente, per ottenere tale \textit{$\delta RWC$} bisognerebbe misurare l'\textit{RWC} del grafo a seguito dell'aggiunta dell'arco in considerazione, per poi effettuare la differenza con l'\textit{RWC} prima dell'aggiunta. Ciò richiederebbe di invocare \textit{computeData} un numero di volte pari al numero di archi scansionati, con l'effetto di un degrado prestazionale non trascurabile. \\Con l'obiettivo di ovviare a tutto ciò, l'implementazione proposta dei due algoritmi di \textit{k-edge recommendation} utilizza la tecnica di \textit{Sherman-Morrison}, già illustrata nel capitolo precedente, la quale permette di evitare di invocare continuamente il metodo \textit{computeData} per il calcolo dei \textit{$\delta RWC$}. 
+\\L'esecuzione di entrambi gli algoritmi di \textit{k-edge recommendation} proposti richiede di calcolare, per ogni arco scansionato, il \textit{$\delta RWC$} che esso apporterebbe se fosse aggiunto al grafo. Se non si utilizzasse una strategia di calcolo più efficiente, per ottenere tale \textit{$\delta RWC$} bisognerebbe misurare l'\textit{RWC} del grafo a seguito dell'aggiunta dell'arco in considerazione, per poi effettuare la differenza con l'\textit{RWC} prima dell'aggiunta. Ciò richiederebbe di invocare \textit{computeData} un numero di volte pari al numero di archi scansionati, con l'effetto di un degrado prestazionale non trascurabile. \\Con l'obiettivo di ovviare a tutto ciò, l'implementazione proposta di entrambi gli algoritmi di \textit{k-edge recommendation} utilizza la tecnica di \textit{Sherman-Morrison}, già illustrata nel capitolo precedente, la quale permette di evitare di invocare continuamente il metodo \textit{computeData} per il calcolo dei \textit{$\delta RWC$}. 
 
 \subsection{Implementazione degli algoritmi proposti}
-I due algoritmi di \textit{k-edge recommendation} implementati, ossia \textit{non greedy} e \textit{greedy}, hanno come caratteristica comune il dominio degli archi diretti da cui scelgono i \textit{k} più promettenti, in termini di decremento dell'\textit{RWC} che consentirebbero se fossero aggiunti al grafo. Tale dominio è costituito da tutti gli archi diretti, non ancora materializzati nel \textit{retweet graph} considerato, che connettono i \textit{$k_1$} vertici con \textit{in degree} più alto dell'\textit{echo-chamber X} con i \textit{$k_2$} vertici con \textit{in degree} più alto dell'\textit{echo-chamber Y} e viceversa, dove \textit{$k_1$} e \textit{$k_2$} devono essere forniti come input. 
-\\L'unica differenza tra i due algoritmi riguarda la modalità di scelta dei \textit{k} archi ed il loro \textit{pseudo-codice} può aiutare a comprenderla:
+Entrambi gli algoritmi di \textit{k-edge recommendation} implementati, ossia \textit{non greedy} e \textit{greedy}, scelgono i \textit{k} archi più promettenti, in termini del decremento dell'\textit{RWC} che consentirebbero se fossero aggiunti al grafo, partendo dallo stesso dominio. Tale dominio è costituito da tutti gli archi diretti, non ancora materializzati nel \textit{retweet graph} considerato, che connettono i \textit{$k_1$} vertici con \textit{in degree} più alto dell'\textit{echo-chamber X} con i \textit{$k_2$} vertici con \textit{in degree} più alto dell'\textit{echo-chamber Y} e viceversa, dove \textit{$k_1$} e \textit{$k_2$} devono essere forniti come input. 
+\\I due algoritmi, come precedentemente affermato, differiscono tra loro solo per la modalità di selezione dei \textit{k} archi: questa differenza è facilmente deducibile dallo \textit{pseudo-codice} dei metodi che li implementano.
+
+\begin{algorithm}
+\caption{\textit{non\_greedy\_alg(g, data, X, Y, $\alpha$, $k_1$, $k_2$, k)}}
+\begin{algorithmic} 
+\STATE sorted\_x $\leftarrow$ sort\_nodes(g, X); 
+\STATE sorted\_y $\leftarrow$ sort\_nodes(g, Y);
+\STATE domain\_edges $\leftarrow$ get\_domain\_edges(g, $\alpha$, $k_1$, $k_2$, sorted\_x, sorted\_y, data);
+\STATE sorted\_edges $\leftarrow$ sort\_by\_delta\_rwc(domain\_edges);
+\STATE best\_edges $\leftarrow$ sorted\_edges[0:k];
+\RETURN best\_edges;
+\end{algorithmic}
+\end{algorithm}
+
+Osservando \textit{Algorithm 2 e Algorithm 3}, risulta subito evidente la minore complessità dello \textit{pseudo-codice} dell'algoritmo \textit{non-greedy} che, vedremo nei test, corrisponde ad una maggiore efficienza per quanto concerne i tempi di esecuzione ma anche ad una minore efficacia per quanto concerne il decremento dell'\textit{RWC}, rispetto a ciò che invece consente l'algoritmo \textit{greedy}.
+\\Poniamo ora l'attenzione sullo \textit{pseudo-codice} dell'algoritmo \textit{non-greedy} e cerchiamo di analizzarlo, iniziando dai parametri in input:
+\begin{itemize}
+\item \textit{g} è il \textit{DiGraph} in input, ossia il \textit{retweet graph} (caratterizzato da un certo \textit{hashtag}) di cui si vuole ridurre il \textit{random-walk controversy score}; 
+\item \textit{data} è l'insieme di vettori e matrici restituiti dal metodo \textit{computeData}, come osservato precedentemente;
+\item \textit{X,Y} sono le due comunità (i.e. \textit{echo-chambers}) del grafo, anch'esse restituite dal metodo \textit{computeData} ed individuate mediante l'esecuzione dell'algoritmo di \textit{Girvan-Newman};
+\item $\alpha$, $k_1$, $k_2$ e $k$ sono, rispettivamente, la \textit{probabilità di continuare il random-walk}, il numero di vertici con \textit{in degree} più alto della comunità \textit{X} da considerare, il numero di vertici con \textit{in degree} più alto della comunità \textit{Y} da considerare ed il numero di archi da consigliare. 
+\end{itemize}
+Come è possibile osservare dal suo \textit{pseudo-codice}, la modalità di selezione dei \textit{k} archi migliori utilizzata dall'algoritmo \textit{non-greedy} si compone dei seguenti passi:
+\begin{enumerate}
+\item \textit{sorting} dei nodi della comunità \textit{X} e \textit{sorting} dei nodi della comunità \textit{Y} rispetto al loro \textit{in degree};
+\item costruzione del dominio dei \textit{$k_1 \times k_2$} archi che collegano i \textit{$k_1$} vertici con \textit{in degree} più alto dell'\textit{echo-chamber X} con i \textit{$k_2$} vertici con \textit{in degree} più alto dell'\textit{echo-chamber Y} e viceversa, tra i quali verranno scelti i \textit{k} più promettenti per la riduzione dell'\textit{RWC}. Bisogna sottolineare che tale dominio potrebbe contenere meno di  \textit{$k_1 \times k_2$} archi, qualora qualcuno di essi fosse già presente nel grafo. Nello \textit{pseudo-codice} questo passo viene espletato da \textit{get\_domain\_edges}, alla cui implementazione è richiesto anche di associare ad ogni arco del dominio il proprio \textit{$\delta RWC$}, calcolato mediante la tecnica di \textit{Sherman-Morrison};
+\item \textit{sorting} degli archi del dominio individuato al punto precedente in ordine decrescente dei loro \textit{$\delta RWC$}, cambiati di segno. Nello \textit{pseudo-codice} questo passo viene espletato da \textit{sort\_by\_delta\_rwc};
+\item \textit{return} dei \textit{top-k} archi dell'insieme ordinato al punto precedente, ossia i \textit{best\_edges}.
+\end{enumerate}
+
+\begin{algorithm}
+\caption{\textit{greedy\_alg(g, data, X, Y, $\alpha$, $k_1$, $k_2$, k)}}
+\begin{algorithmic} 
+\STATE Initialization : best\_edges $\leftarrow$ [];
+\STATE Initialization : round\_data $\leftarrow$ data;
+\FOR{\textit{i = 0:k}}
+\STATE sorted\_x $\leftarrow$ sort\_nodes(g, X); 
+\STATE sorted\_y $\leftarrow$ sort\_nodes(g, Y);
+\STATE domain\_edges $\leftarrow$ get\_domain\_edges(g, $\alpha$, $k_1$, $k_2$, sorted\_x, sorted\_y, round\_data);
+\STATE sorted\_edges $\leftarrow$ sort\_by\_delta\_rwc(domain\_edges);
+\STATE g.add\_edge(sorted\_edges[0]);
+\STATE round\_data $\leftarrow$ compute\_data(g, $\alpha$, X, Y);
+\STATE best\_edges.append(sorted\_edges[0]);
+\ENDFOR
+\RETURN best\_edges;
+\end{algorithmic}
+\end{algorithm}
+
 
 
 \subsection{Modalità di organizzazione dei risultati}
