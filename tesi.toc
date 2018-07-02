@@ -42,14 +42,14 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.4}Implementazione degli algoritmi proposti}{39}{subsection.3.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.5}Modalit\IeC {\`a} di organizzazione dei risultati}{41}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.5}Strumento per la visualizzazione degli archi consigliati}{43}{subsection.3.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Test dell\IeC {\textquoteright }\textit {edge-recommendation system} in modalit\IeC {\`a} \textit {greedy e non}}{42}{chapter.4}
+\contentsline {chapter}{\numberline {4}Test dell\IeC {\textquoteright }\textit {edge-recommendation system} in modalit\IeC {\`a} \textit {greedy e non}}{44}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{45}{chapter.5}
+\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{47}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}An appendix}{48}{appendix.Alph1}
+\contentsline {chapter}{\numberline {A}An appendix}{50}{appendix.Alph1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Another appendix}{51}{appendix.Alph2}
+\contentsline {chapter}{\numberline {B}Another appendix}{53}{appendix.Alph2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Riferimenti bibliografici}{54}{appendix.Alph2}
+\contentsline {chapter}{Riferimenti bibliografici}{56}{appendix.Alph2}

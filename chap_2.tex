@@ -121,13 +121,13 @@ Nel prossimo paragrafo sarà illustrata una tecnica efficiente per calcolare il 
 
 \section{Calcolo del decremento della controversia associato ad un arco}
 
-Per ogni arco \textit{$e \in V \times V \setminus E$} appartenente al dominio dei \textit{$k_1 \times k_2$} archi considerati dagli algoritmi \textit{non greedy e greedy}, si rende necessario calcolare il \textit{$\delta$RWC\textsubscript{e}} che esso consentirebbe qualora venisse aggiunto al grafo. Per effettuare questo calcolo verrebbe in mente di aggiungere l'arco \textit{"e"} al grafo, calcolare il nuovo \textit{RWC\textsubscript{\{e\}}}, per poi ricavare: 
+Per ogni arco \textit{$e \in V \times V \setminus E$} appartenente al dominio dei \textit{$2 \times k_1 \times k_2$} archi diretti considerati dagli algoritmi \textit{non greedy e greedy}, si rende necessario calcolare il \textit{$\delta$RWC\textsubscript{e}} che esso consentirebbe qualora venisse aggiunto al grafo. Per effettuare questo calcolo verrebbe in mente di aggiungere l'arco \textit{"e"} al grafo, calcolare il nuovo \textit{RWC\textsubscript{\{e\}}}, per poi ricavare: 
 
 \begin{equation}
 \textit{$\delta$RWC\textsubscript{e}} = \textit{RWC - RWC\textsubscript{\{e\}}}
 \end{equation}
 
-\`E bene ricordare che il calcolo dell'\textit{RWC} è abbastanza oneroso e pertanto è meglio evitarlo quando possibile: se si utilizzasse la modalità (2.7), gli algoritmi di scelta dei \textit{k} archi dovrebbero calcolare l'\textit{RWC} un numero di volte pari a \textit{$k_1 \times k_2$}, cagionando un degrado prestazionale non trascurabile.
+\`E bene ricordare che il calcolo dell'\textit{RWC} è abbastanza oneroso e pertanto è meglio evitarlo quando possibile: se si utilizzasse la modalità (2.7), gli algoritmi di scelta dei \textit{k} archi dovrebbero calcolare l'\textit{RWC} un numero di volte pari a \textit{$2 \times k_1 \times k_2$}, cagionando un degrado prestazionale non trascurabile.
 \\Tuttavia, visto che siamo interessati solamente all'entità del decremento dell'\textit{RWC} a seguito dell'aggiunta di un arco, possiamo utilizzare un'altra modalità di calcolo più efficiente. In particolare, considerando la \textit{matrice delle probabilità di transizione per colonna P}, dopo l'aggiunta del generico arco diretto \textit{(i,j)} solo una sua colonna ne è affetta: la colonna che corrisponde al vertice di origine \textit{"i"} dell'arco \textit{(i,j)}.
 \\Di seguito è evidenziata la colonna \textit{i-esima} prima e dopo l'aggiunta dell'arco diretto \textit{(i,j)}:
 

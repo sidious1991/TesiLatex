@@ -213,8 +213,8 @@ RWC(G,X,Y) = (1 - \alpha)(c_x - c_y)\textsuperscript{T}(M_x\textsuperscript{-1}e
 \end{equation}
 \\
 Dove $\alpha$, fornito come parametro al metodo \textit{rwc}, è la \textit{probabilità di continuare il random-walk} e quindi $(1-\alpha)$ è la \textit{restart probability}. 
-\\Come già precedentemente affermato, nell'esecuzione dei due algoritmi alternativi di \textit{k-edge recommendation} si cercherà di invocare quanto meno possibile il metodo \textit{computeData}, il quale presenta un peso computazionale piuttosto ingente dovuto, tra le altre cose, al calcolo delle matrici inverse  $M_x\textsuperscript{-1}$ ed $M_y\textsuperscript{-1}$. 
-\\L'esecuzione di entrambi gli algoritmi di \textit{k-edge recommendation} proposti richiede di calcolare, per ogni arco scansionato, il \textit{$\delta RWC$} che esso apporterebbe se fosse aggiunto al grafo. Se non si utilizzasse una strategia di calcolo più efficiente, per ottenere tale \textit{$\delta RWC$} bisognerebbe misurare l'\textit{RWC} del grafo a seguito dell'aggiunta dell'arco in considerazione, per poi effettuare la differenza con l'\textit{RWC} prima dell'aggiunta. Ciò richiederebbe di invocare \textit{computeData} un numero di volte pari al numero di archi scansionati, con l'effetto di un degrado prestazionale non trascurabile. \\Con l'obiettivo di ovviare a tutto ciò, l'implementazione proposta di entrambi gli algoritmi di \textit{k-edge recommendation} utilizza la tecnica di \textit{Sherman-Morrison}, già illustrata nel capitolo precedente, la quale permette di evitare di invocare continuamente il metodo \textit{computeData} per il calcolo dei \textit{$\delta RWC$}. 
+\\Come già precedentemente affermato, i due algoritmi alternativi di \textit{k-edge recommendation} sono stati implementati perseguendo anche l'obiettivo di limitare l'invocazione del metodo \textit{computeData}, poiché esso presenta un peso computazionale piuttosto ingente dovuto, tra le altre cose, al calcolo delle matrici inverse  $M_x\textsuperscript{-1}$ ed $M_y\textsuperscript{-1}$. 
+\\L'esecuzione di entrambi gli algoritmi di \textit{k-edge recommendation} proposti richiede di calcolare, per ogni arco scansionato, il \textit{$\delta RWC$} che esso apporterebbe se fosse aggiunto al grafo. Se non si utilizzasse una strategia di calcolo più efficiente, per ottenere tale \textit{$\delta RWC$} bisognerebbe misurare l'\textit{RWC} del grafo a seguito dell'aggiunta dell'arco in considerazione, per poi effettuare la differenza con l'\textit{RWC} prima dell'aggiunta. Ciò provocherebbe l'invocazione del metodo \textit{computeData} un numero di volte pari al numero di archi scansionati, con l'effetto di un degrado prestazionale non trascurabile. \\Con l'obiettivo di ovviare a tutto ciò, l'implementazione proposta di entrambi gli algoritmi di \textit{k-edge recommendation} utilizza la tecnica di \textit{Sherman-Morrison}, già illustrata nel capitolo precedente, la quale permette di evitare di invocare continuamente il metodo \textit{computeData} per il calcolo dei \textit{$\delta RWC$}. 
 
 \subsection{Implementazione degli algoritmi proposti}
 Entrambi gli algoritmi di \textit{k-edge recommendation} implementati, ossia \textit{non greedy} e \textit{greedy}, scelgono i \textit{k} archi più promettenti, in termini del decremento dell'\textit{RWC} che consentirebbero se fossero aggiunti al grafo, partendo dallo stesso dominio. Tale dominio è costituito da tutti gli archi diretti, non ancora materializzati nel \textit{retweet graph} considerato, che connettono i \textit{$k_1$} vertici con \textit{in degree} più alto dell'\textit{echo-chamber X} con i \textit{$k_2$} vertici con \textit{in degree} più alto dell'\textit{echo-chamber Y} e viceversa, dove \textit{$k_1$} e \textit{$k_2$} devono essere forniti come input. 
@@ -240,10 +240,10 @@ Osservando \textit{Algorithm 2 e Algorithm 3}, risulta subito evidente la minore
 \item \textit{X,Y} sono le due comunità (i.e. \textit{echo-chambers}) del grafo, anch'esse restituite dal metodo \textit{computeData} ed individuate mediante l'esecuzione dell'algoritmo di \textit{Girvan-Newman};
 \item $\alpha$, $k_1$, $k_2$ e $k$ sono, rispettivamente, la \textit{probabilità di continuare il random-walk}, il numero di vertici con \textit{in degree} più alto della comunità \textit{X} da considerare, il numero di vertici con \textit{in degree} più alto della comunità \textit{Y} da considerare ed il numero di archi da consigliare. 
 \end{itemize}
-Come è possibile osservare dal suo \textit{pseudo-codice}, la modalità di selezione dei \textit{k} archi migliori utilizzata dall'algoritmo \textit{non-greedy} si compone dei seguenti passi:
+Come è possibile osservare dal suo \textit{pseudo-codice}, la modalità di selezione dei \textit{k} archi utilizzata dall'algoritmo \textit{non-greedy} si compone dei seguenti passi:
 \begin{enumerate}
 \item \textit{sorting} dei nodi della comunità \textit{X} e \textit{sorting} dei nodi della comunità \textit{Y} rispetto al loro \textit{in degree};
-\item costruzione del dominio dei \textit{$k_1 \times k_2$} archi che collegano i \textit{$k_1$} vertici con \textit{in degree} più alto dell'\textit{echo-chamber X} con i \textit{$k_2$} vertici con \textit{in degree} più alto dell'\textit{echo-chamber Y} e viceversa, tra i quali verranno scelti i \textit{k} più promettenti per la riduzione dell'\textit{RWC}. Bisogna sottolineare che tale dominio potrebbe contenere meno di  \textit{$k_1 \times k_2$} archi, qualora qualcuno di essi fosse già presente nel grafo. Nello \textit{pseudo-codice} questo passo viene espletato da \textit{get\_domain\_edges}, alla cui implementazione è richiesto anche di associare ad ogni arco del dominio il proprio \textit{$\delta RWC$}, calcolato mediante la tecnica di \textit{Sherman-Morrison};
+\item costruzione del dominio dei \textit{$2 \times k_1 \times k_2$} archi diretti che collegano i \textit{$k_1$} vertici con \textit{in degree} più alto dell'\textit{echo-chamber X} con i \textit{$k_2$} vertici con \textit{in degree} più alto dell'\textit{echo-chamber Y} e viceversa, tra i quali verranno scelti i \textit{k} più promettenti per la riduzione dell'\textit{RWC}. Bisogna sottolineare che tale dominio potrebbe contenere meno di  \textit{$2 \times k_1 \times k_2$} archi, qualora qualcuno di essi fosse già presente nel grafo. Nello \textit{pseudo-codice} questo passo viene espletato da \textit{get\_domain\_edges}, alla cui implementazione è richiesto anche di associare ad ogni arco del dominio il proprio \textit{$\delta RWC$}, calcolato mediante la tecnica di \textit{Sherman-Morrison};
 \item \textit{sorting} degli archi del dominio individuato al punto precedente in ordine decrescente dei loro \textit{$\delta RWC$}, cambiati di segno. Nello \textit{pseudo-codice} questo passo viene espletato da \textit{sort\_by\_delta\_rwc};
 \item \textit{return} dei \textit{top-k} archi dell'insieme ordinato al punto precedente, ossia i \textit{best\_edges}.
 \end{enumerate}
@@ -252,23 +252,33 @@ Come è possibile osservare dal suo \textit{pseudo-codice}, la modalità di sele
 \caption{\textit{greedy\_alg(g, data, X, Y, $\alpha$, $k_1$, $k_2$, k)}}
 \begin{algorithmic} 
 \STATE Initialization : best\_edges $\leftarrow$ [];
-\STATE Initialization : round\_data $\leftarrow$ data;
 \FOR{\textit{i = 0:k}}
 \STATE sorted\_x $\leftarrow$ sort\_nodes(g, X); 
 \STATE sorted\_y $\leftarrow$ sort\_nodes(g, Y);
-\STATE domain\_edges $\leftarrow$ get\_domain\_edges(g, $\alpha$, $k_1$, $k_2$, sorted\_x, sorted\_y, round\_data);
+\STATE domain\_edges $\leftarrow$ get\_domain\_edges(g, $\alpha$, $k_1$, $k_2$, sorted\_x, sorted\_y, data);
 \STATE sorted\_edges $\leftarrow$ sort\_by\_delta\_rwc(domain\_edges);
 \STATE g.add\_edge(sorted\_edges[0]);
-\STATE round\_data $\leftarrow$ compute\_data(g, $\alpha$, X, Y);
+\STATE data $\leftarrow$ compute\_data(g, $\alpha$, X, Y);
 \STATE best\_edges.append(sorted\_edges[0]);
 \ENDFOR
 \RETURN best\_edges;
 \end{algorithmic}
 \end{algorithm}
 
+La versione \textit{greedy} dell'algoritmo di \textit{k-edge recommendation} è caratterizzata dagli stessi parametri in input della versione \textit{non-greedy} ma, come si osserva dal suo \textit{pseudo-codice}, differisce da quest'ultima per quanto riguarda la modalità di scelta dei \textit{k} archi da proporre. In particolare, si nota che in ognuno dei \textit{k} passi impiegati per individuare i \textit{k} archi esegue le seguenti operazioni:
+\begin{enumerate}
+\item \textit{sorting} dei nodi della comunità \textit{X} e \textit{sorting} dei nodi della comunità \textit{Y} rispetto al loro \textit{in degree};
+\item costruzione del dominio dei \textit{$2 \times k_1 \times k_2$} archi diretti, come descritto al punto 2 dell'algoritmo \textit{non-greedy}; 
+\item \textit{sorting} degli archi del dominio individuato al punto precedente, come descritto al punto 3 dell'algoritmo \textit{non-greedy};
+\item aggiunta al grafo \textit{g} dell'arco diretto migliore, individuato al punto precedente. Per migliore si intende in termini del \textit{$\delta RWC$} associato. Nello \textit{pseudo-codice} questo passo viene espletato da \textit{add\_edge};
+\item ricalcolo dell'oggetto \textit{data}, mediante l'invocazione del metodo \textit{computeData}, necessario a seguito dell'aggiunta del nuovo arco al grafo \textit{g}. Come è possibile notare dallo \textit{pseudo-codice}, in questo caso al metodo \textit{computeData} vengono passate come parametri anche le due \textit{echo-chambers X,Y}. L'algoritmo \textit{greedy}, infatti, assume che le due comunità \textit{X,Y} restino invariate a seguito delle aggiunte degli archi al grafo: per permettere questo, l'implementazione di \textit{computeData} consente di scegliere se specificare o meno le \textit{echo-chambers} come parametri in input e, in caso vengano specificate, esse non vengono ricalcolate nuovamente.
+\\Oltretutto, l'esigenza dell'algoritmo \textit{greedy} di fissare le \textit{echo-chambers} consente di ottenere un vantaggio prestazionale, visto che permette di non eseguire continuamente l'algoritmo di \textit{Girvan-Newman}\footnote{In caso contrario, sarebbe stato necessario invocare l'algoritmo di \textit{Girvan-Newman} un numero di volte pari a \textit{k}, con l'effetto di un degrado prestazionale inaccettabile.}, il quale risulta oneroso soprattutto per grafi con molti nodi ed archi, come nel caso in esame;
+\item aggiornamento della lista \textit{best\_edges} mediante l'aggiunta dell'arco diretto individuato al punto 3 (i.e. \textit{sorted\_edges[0]}).
+\end{enumerate}
+Al termine del \textit{loop}, l'algoritmo \textit{greedy} restituisce la lista dei \textit{k} archi costruita in \textit{k} passi, ovvero la lista \textit{best\_edges}.
+\\Come già osservato precedentemente, l'algoritmo \textit{greedy} è senz'altro più lento dell'algoritmo \textit{non-greedy} di un fattore \textit{k}, visto che impiega \textit{k} passi per scegliere \textit{k} archi. Questa caratteristica, tuttavia, fa sì che la modalità di selezione degli archi adottata dalla versione \textit{greedy} sia più precisa e permetta, a parità di archi aggiunti, un maggiore decremento del \textit{random-walk controversy score} del grafo rispetto a quanto permette la versione \textit{non-greedy}. Il capitolo relativo ai test dimostrerà l'attendibilità di queste osservazioni.
 
-
-\subsection{Modalità di organizzazione dei risultati}
+\subsection{Strumento per la visualizzazione degli archi consigliati}
 
 
 
