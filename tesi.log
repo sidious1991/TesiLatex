@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  4 JUL 2018 13:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  4 JUL 2018 21:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2135,178 +2135,174 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--24
 
 
 ]
-<images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, id=583, 845.07718
-pt x 597.55246pt>
-File: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic file 
-(type pdf)
+<images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, id=583, 597.55246pt x 
+845.07718pt>
+File: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file (type
+ pdf)
+ <use images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf>
+Package pdftex.def Info: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf
+ used on input line 40.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+File: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file (type
+ pdf)
 
-<use images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf>
-Package pdftex.def Info: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCEN
-T.pdf used on input line 40.
-(pdftex.def)             Requested size: 845.07512pt x 597.551pt.
-File: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic file 
-(type pdf)
+<use images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf>
+Package pdftex.def Info: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf
+ used on input line 40.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
-<use images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf>
-Package pdftex.def Info: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCEN
-T.pdf used on input line 40.
-(pdftex.def)             Requested size: 845.07512pt x 597.551pt.
+<images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, id=586, page=1, 597.55
+246pt x 845.07718pt>
+File: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file (type
+ pdf)
 
-<images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, id=586, page=1, 8
-45.07718pt x 597.55246pt>
-File: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic file 
-(type pdf)
+<use images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, page 1>
+Package pdftex.def Info: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf
+, page1 used on input line 40.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+File: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file (type
+ pdf)
 
-<use images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, page 1>
-Package pdftex.def Info: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCEN
-T.pdf, page1 used on input line 40.
-(pdftex.def)             Requested size: 845.07512pt x 597.551pt.
-File: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic file 
-(type pdf)
-
-<use images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, page 1>
-Package pdftex.def Info: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCEN
-T.pdf, page1 used on input line 40.
-(pdftex.def)             Requested size: 597.55899pt x 422.5328pt.
+<use images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, page 1>
+Package pdftex.def Info: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf
+, page1 used on input line 40.
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
 [47]
-File: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic file 
-(type pdf)
- <use images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, page 1>
-Package pdftex.def Info: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCEN
-T.pdf, page1 used on input line 40.
-(pdftex.def)             Requested size: 597.55899pt x 422.5328pt.
-File: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic file 
-(type pdf)
+File: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file (type
+ pdf)
+ <use images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, page 1>
+Package pdftex.def Info: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf
+, page1 used on input line 40.
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+File: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file (type
+ pdf)
 
-<use images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, page 1>
-Package pdftex.def Info: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCEN
-T.pdf, page1 used on input line 40.
-(pdftex.def)             Requested size: 597.55899pt x 422.5328pt.
-File: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic file 
-(type pdf)
+<use images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, page 1>
+Package pdftex.def Info: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf
+, page1 used on input line 40.
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+File: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file (type
+ pdf)
 
-<use images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, page 1>
-Package pdftex.def Info: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCEN
-T.pdf, page1 used on input line 40.
-(pdftex.def)             Requested size: 597.55899pt x 422.5328pt.
-
-[48 <./images/BEEFBAN_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf>]
-<images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, id=608, 845.07718
-pt x 597.55246pt>
-File: images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic file 
-(type pdf)
-
-<use images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf>
-Package pdftex.def Info: images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCEN
-T.pdf used on input line 41.
+<use images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, page 1>
+Package pdftex.def Info: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf
+, page1 used on input line 40.
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+ [48 <./images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf>]
+<images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, id=608, 845.07718pt x 
+597.55246pt>
+File: images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file (type
+ pdf)
+ <use images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf>
+Package pdftex.def Info: images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf
+ used on input line 41.
 (pdftex.def)             Requested size: 845.07512pt x 597.551pt.
-File: images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic file 
-(type pdf)
+File: images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file (type
+ pdf)
 
-<use images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf>
-Package pdftex.def Info: images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCEN
-T.pdf used on input line 41.
+<use images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf>
+Package pdftex.def Info: images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf
+ used on input line 41.
 (pdftex.def)             Requested size: 845.07512pt x 597.551pt.
 
-<images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, id=611, page=1, 8
-45.07718pt x 597.55246pt>
-File: images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic file 
-(type pdf)
+<images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, id=611, page=1, 845.07
+718pt x 597.55246pt>
+File: images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file (type
+ pdf)
 
-<use images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, page 1>
-Package pdftex.def Info: images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCEN
-T.pdf, page1 used on input line 41.
+<use images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, page 1>
+Package pdftex.def Info: images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf
+, page1 used on input line 41.
 (pdftex.def)             Requested size: 845.07512pt x 597.551pt.
-File: images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic file 
+File: images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file (type
+ pdf)
+
+<use images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, page 1>
+Package pdftex.def Info: images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf
+, page1 used on input line 41.
+(pdftex.def)             Requested size: 597.55899pt x 422.5328pt.
+File: images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file (type
+ pdf)
+
+<use images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, page 1>
+Package pdftex.def Info: images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf
+, page1 used on input line 41.
+(pdftex.def)             Requested size: 597.55899pt x 422.5328pt.
+File: images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file (type
+ pdf)
+
+<use images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, page 1>
+Package pdftex.def Info: images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf
+, page1 used on input line 41.
+(pdftex.def)             Requested size: 597.55899pt x 422.5328pt.
+File: images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file (type
+ pdf)
+
+<use images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, page 1>
+Package pdftex.def Info: images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf
+, page1 used on input line 41.
+(pdftex.def)             Requested size: 597.55899pt x 422.5328pt.
+ [49 <./images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf>]
+<images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, id=627, 597.55246
+pt x 845.07718pt>
+File: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file 
 (type pdf)
 
-<use images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, page 1>
-Package pdftex.def Info: images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCEN
-T.pdf, page1 used on input line 41.
-(pdftex.def)             Requested size: 597.55899pt x 422.5328pt.
-File: images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic file 
+<use images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf>
+Package pdftex.def Info: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCEN
+T.pdf used on input line 42.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+File: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file 
 (type pdf)
 
-<use images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, page 1>
-Package pdftex.def Info: images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCEN
-T.pdf, page1 used on input line 41.
-(pdftex.def)             Requested size: 597.55899pt x 422.5328pt.
-File: images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic file 
+<use images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf>
+Package pdftex.def Info: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCEN
+T.pdf used on input line 42.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+
+<images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, id=630, page=1, 5
+97.55246pt x 845.07718pt>
+File: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file 
 (type pdf)
 
-<use images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, page 1>
-Package pdftex.def Info: images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCEN
-T.pdf, page1 used on input line 41.
-(pdftex.def)             Requested size: 597.55899pt x 422.5328pt.
-File: images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic file 
+<use images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, page 1>
+Package pdftex.def Info: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCEN
+T.pdf, page1 used on input line 42.
+(pdftex.def)             Requested size: 597.551pt x 845.07512pt.
+File: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file 
 (type pdf)
 
-<use images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, page 1>
-Package pdftex.def Info: images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCEN
-T.pdf, page1 used on input line 41.
-(pdftex.def)             Requested size: 597.55899pt x 422.5328pt.
+<use images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, page 1>
+Package pdftex.def Info: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCEN
+T.pdf, page1 used on input line 42.
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+File: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file 
+(type pdf)
 
-[49 <./images/INDIANA_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf>]
-<images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, id=627, 845.
-07718pt x 597.55246pt>
-File: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic 
-file (type pdf)
+<use images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, page 1>
+Package pdftex.def Info: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCEN
+T.pdf, page1 used on input line 42.
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+File: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file 
+(type pdf)
 
-<use images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf>
-Package pdftex.def Info: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_D
-ESCENT.pdf used on input line 42.
-(pdftex.def)             Requested size: 845.07512pt x 597.551pt.
-File: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic 
-file (type pdf)
+<use images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, page 1>
+Package pdftex.def Info: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCEN
+T.pdf, page1 used on input line 42.
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
+File: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file 
+(type pdf)
 
-<use images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf>
-Package pdftex.def Info: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_D
-ESCENT.pdf used on input line 42.
-(pdftex.def)             Requested size: 845.07512pt x 597.551pt.
+<use images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, page 1>
+Package pdftex.def Info: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCEN
+T.pdf, page1 used on input line 42.
+(pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 
-<images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, id=630, page
-=1, 845.07718pt x 597.55246pt>
-File: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic 
-file (type pdf)
-
-<use images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, page 1>
-Package pdftex.def Info: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_D
-ESCENT.pdf, page1 used on input line 42.
-(pdftex.def)             Requested size: 845.07512pt x 597.551pt.
-File: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic 
-file (type pdf)
-
-<use images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, page 1>
-Package pdftex.def Info: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_D
-ESCENT.pdf, page1 used on input line 42.
-(pdftex.def)             Requested size: 597.55899pt x 422.5328pt.
-File: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic 
-file (type pdf)
-
-<use images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, page 1>
-Package pdftex.def Info: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_D
-ESCENT.pdf, page1 used on input line 42.
-(pdftex.def)             Requested size: 597.55899pt x 422.5328pt.
-File: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic 
-file (type pdf)
-
-<use images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, page 1>
-Package pdftex.def Info: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_D
-ESCENT.pdf, page1 used on input line 42.
-(pdftex.def)             Requested size: 597.55899pt x 422.5328pt.
-File: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf Graphic 
-file (type pdf)
-
-<use images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf, page 1>
-Package pdftex.def Info: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_D
-ESCENT.pdf, page1 used on input line 42.
-(pdftex.def)             Requested size: 597.55899pt x 422.5328pt.
-
-[50 <./images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_GRADIENT_DESCENT.pdf>])
+[50 <./images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf>])
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
@@ -2482,7 +2478,7 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  20384 strings out of 493013
- 321466 string characters out of 6133327
+ 321331 string characters out of 6133327
  644968 words of memory out of 5000000
  23274 multiletter control sequences out of 15000+600000
  120061 words of font info for 81 fonts, out of 8000000 for 9000
@@ -2513,7 +2509,7 @@ texlive/2016/texmf-dist/fonts/type1/public/lm/lmro10.pfb></usr/local/texlive/20
 ist/fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/lm/lmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
 /lm/lmtt12.pfb>
-Output written on tesi.pdf (73 pages, 2056997 bytes).
+Output written on tesi.pdf (73 pages, 2061544 bytes).
 PDF statistics:
  841 PDF objects out of 1000 (max. 8388607)
  707 compressed objects within 8 object streams
