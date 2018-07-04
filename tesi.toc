@@ -44,12 +44,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.2.5}Strumento per la visualizzazione degli archi consigliati}{43}{subsection.3.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Test dell\IeC {\textquoteright }\textit {edge-recommendation system} in modalit\IeC {\`a} \textit {greedy e non}}{45}{chapter.4}
+\contentsline {chapter}{\numberline {4}Test dell\IeC {\textquoteright }\textit {edge-recommendation system} in modalit\IeC {\`a} \textit {greedy e non}}{46}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{48}{chapter.5}
+\contentsline {section}{\numberline {4.1}Discesa dell'\textit {RWC}}{47}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}An appendix}{51}{appendix.Alph1}
+\contentsline {section}{\numberline {4.2}Qualit\IeC {\`a} degli archi proposti}{51}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Another appendix}{54}{appendix.Alph2}
+\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{52}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Riferimenti bibliografici}{57}{appendix.Alph2}
+\contentsline {chapter}{\numberline {A}An appendix}{55}{appendix.Alph1}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Another appendix}{58}{appendix.Alph2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Riferimenti bibliografici}{61}{appendix.Alph2}

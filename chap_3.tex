@@ -295,6 +295,15 @@ Pertanto, il grafo differenza, se si considerano solo i \textit{k} archi propost
 \end{enumerate}
 
 Il \textit{coloring} dei nodi del grafo differenza viene eseguito dal metodo di \textit{NetworkX} \textit{bipartite.color(bipartite\_graph)}, dove \textit{bipartite\_graph} è un grafo diretto i cui archi sono tutti e soli i \textit{k} archi scelti dall'algoritmo di \textit{recommendation} considerato ed i cui nodi sono tutti e soli i nodi che sono \textit{endpoints} di almeno uno tra tali archi. 
-\\Evitando di scendere troppo nei dettagli implementativi, inseriamo di seguito un esempio di \textit{output} tipico del \textit{tool} proposto, che aiuta a chiarire quanto già detto.
+\\Evitando di scendere troppo nei dettagli implementativi, inseriamo di seguito un esempio di \textit{output} tipico del \textit{tool} proposto, che aiuta a chiarire quanto già detto (figura \ref{fig:tool}).
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{images/beefban_in_degree_probability_free.png}
+\end{center}
+\caption{\textit{Output} tipico del \textit{tool} di visualizzazione.}
+\label{fig:tool}
+\end{figure}
+I nodi \textit{gialli} appartengono ad una \textit{comunità} ed i nodi \textit{rossi} all'altra; gli archi evidenziati in \textit{rosso} sono i \textit{k} archi diretti scelti dall'algoritmo di \textit{k-edge recommendation} utilizzato. Si può notare come ad ogni nodo venga associato, nell'ordine, l'\textit{username} corrispondente, il suo \textit{in degree}, \textit{out degree} ed il rapporto $\frac{in degree}{out degree + 1}$.
 
 
