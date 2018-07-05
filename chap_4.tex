@@ -40,8 +40,8 @@ Di seguito inseriamo i grafici che mostrano la discesa dell'\textit{RWC} dei \te
 \includepdf{images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf}
 \includepdf{images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf}
 \includepdf{images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf}
-Ciascuno dei tre grafici, uno per \textit{retweet graph}, ha l'obiettivo di fornire un confronto tra i due algoritmi \textit{greedy} e \textit{non-greedy} in termini del decremento dell'\textit{RWC} che ciascuno di essi consente di raggiungere a parità di archi proposti. 
-\\In particolare, fissato un \textit{retweet graph g} ed il numero di archi attualmente proposti \textit{$0 < j \leq k$}, il grafico corrispondente a \textit{g} mostra due funzioni, rispettivamente di colore \textit{rosso} e di colore \textit{blu}:
+Ciascuno dei tre grafici, uno per \textit{retweet graph}, ha l'obiettivo di confrontare i decrementi dell'\textit{RWC} che rispettivamente i due algoritmi di \textit{edge recommendation} consentono di raggiungere a parità di archi proposti. 
+\\In particolare, fissato un \textit{retweet graph g}, il grafico corrispondente mostra due funzioni, rispettivamente di colore \textit{rosso} e di colore \textit{blu}, con valori nel dominio \textit{$0 < j \leq k$}:
 \begin{itemize}
 \item \textit{RWC(g,j)\textsubscript{greedy}}, ovvero l'\textit{RWC} che caratterizzerebbe il \textit{retweet graph g} qualora i primi \textit{j} archi proposti dall'algoritmo \textit{greedy} si materializzassero nel grafo; 
 \item \textit{RWC(g,j)\textsubscript{non-greedy}}, ovvero l'\textit{RWC} che caratterizzerebbe il \textit{retweet graph g} qualora i primi \textit{j} archi proposti dall'algoritmo \textit{non-greedy} si materializzassero nel grafo.
@@ -50,7 +50,7 @@ Come si nota immediatamente dai grafici, per ogni \textit{retweet graph g} consi
 \\\\
 $\textit{RWC(g,j)\textsubscript{greedy}} \leq \textit{RWC(g,j)\textsubscript{non-greedy}}, \forall j = 1,..,k$
 \\\\
-Ovvero, a parità di archi proposti, l'algoritmo \textit{greedy} consente \textit{sempre} di raggiungere un decremento maggiore dell'\textit{RWC} di ciascun grafo \textit{g}. Questa maggiore \textit{efficacia} dell'algoritmo \textit{greedy} non soprende, viste la considerazioni e le analisi condotte nei capitoli precedenti, e deriva sostanzialmente dalla maggiore \textit{qualità}, in termini di decremento del \textit{grado di controversia}, di ciascun arco che propone. 
+Ovvero, a parità di archi proposti, l'algoritmo \textit{greedy} consente \textit{sempre} di raggiungere un decremento dell'\textit{RWC} maggiore o uguale, per ciascun grafo \textit{g}. Questa maggiore \textit{efficacia} dell'algoritmo \textit{greedy} non soprende, viste la considerazioni e le analisi condotte nei capitoli precedenti, e deriva sostanzialmente dalla maggiore \textit{qualità}, in termini di decremento del \textit{grado di controversia}, di ciascun arco che propone. 
 \\Il paragrafo a seguire si occuperà proprio di confrontare gli archi proposti dai due algoritmi \textit{greedy} e \textit{non-greedy}, in termini dei \textit{$\delta RWC$} corrispondenti.
 
 \section{Qualità degli archi proposti}
@@ -59,5 +59,71 @@ Ognuno dei seguenti grafici, corrispondenti ai tre \textit{retweet graphs} consi
 \includepdf{images/BEEFBAN_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf}
 \includepdf{images/INDIANA_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf}
 \includepdf{images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf}
+Questa volta ciascuno dei tre grafici, uno per \textit{retweet graph}, ha l'obiettivo di confrontare i \textit{$\delta RWC$} associati ai \textit{k} archi che rispettivamente i due algoritmi di \textit{edge recommendation} propongono.
+\\Più precisamente, fissato un \textit{retweet graph g}, il grafico corrispondente mostra due funzioni, rispettivamente di colore \textit{rosso} e di colore \textit{blu}, con valori nel dominio \textit{$0 < i \leq k$}\footnote{Ovvero l'\textit{i-esimo} arco proposto.}:
+\begin{itemize}
+\item \textit{$\delta RWC(g,i)\textsubscript{greedy}$}, ovvero il \textit{$\delta RWC$} che l'\textit{i-esimo} arco proposto dall'algoritmo \textit{greedy} consentirebbe di ottenere qualora si materializzasse successivamente a \textit{tutti} gli archi proposti con indici da \textit{1} a \textit{i-1};
+\item \textit{$\delta RWC(g,i)\textsubscript{non-greedy}$}\footnote{Ciascun \textit{$\delta RWC(g,i)\textsubscript{non-greedy}$} non è il \textit{$\delta RWC$} utilizzato dall'algoritmo \textit{non-greedy} come criterio di scelta dell'\textit{i-esimo} arco ma è l'effettivo decremento dell'\textit{RWC} che l'\textit{i-esimo} arco proposto apporterebbe se si materializzasse secondo l'ordine di scelta.}, ovvero il \textit{$\delta RWC$} che l'\textit{i-esimo} arco proposto dall'algoritmo \textit{non-greedy} consentirebbe di ottenere qualora si materializzasse successivamente a \textit{tutti} gli archi proposti con indici da \textit{1} a \textit{i-1}.
+\end{itemize}
+Anche in questo caso è evidente che, per ogni \textit{retweet graph g} considerato e praticamente $\forall i = 1,..,k$, vale:
+\\\\
+$\textit{$\delta RWC(g,i)\textsubscript{greedy}$} \leq \textit{$\delta RWC(g,i)\textsubscript{non-greedy}$}$
+\\\\
+Ovvero, nell'ipotesi che tutti gli archi precedentemente proposti vengano accettati, il \textit{$\delta RWC$} associato all'\textit{i-esimo} arco proposto dall'algoritmo \textit{greedy} è minore del \textit{$\delta RWC$} associato all'\textit{i-esimo} arco proposto dall'algoritmo \textit{non-greedy}, $\forall i = 1,..,k$. Quest'osservazione implica che, generalmente, gli archi scelti da \textit{greedy} siano migliori \textit{qualitativamente} rispetto a quelli scelti da \textit{non-greedy}, poiché determinano un maggior decremento dell'\textit{RWC} associato al \textit{retweet graph} in input.
+\\I risultati sinora ottenuti derivano senz'altro dalla maggior precisione del criterio di scelta degli archi dell'algoritmo \textit{greedy} rispetto a quello dell'algoritmo \textit{non-greedy}. 
+\\A tal proposito, è possibile utilizzare il \textit{tool di visualizzazione} introdotto nel capitolo precedente per analizzare, per ogni \textit{retweet graph} in input, le caratteristiche dei \textit{k} archi scelti da ciascuno dei due algoritmi e dei nodi coinvolti: quest'analisi potrebbe far luce sulle ulteriori cause che rendono un algoritmo più efficace dell'altro. 
+\\Di seguito inseriamo gli \textit{outputs} del \textit{tool}, ciascuno dei quali descrive i risultati dell'applicazione di uno dei due algoritmi di \textit{edge recommendation} su un \textit{retweet graph} in input.
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{images/beefban_in_degree_greedy_probability_free.png}
+\end{center}
+\caption{Porzione dell'\textit{output} del \textit{tool} a seguito dell'esecuzione di \textit{greedy} sul \textit{retweet graph \#beefban}.}
+\label{fig:beefgreedy}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{images/beefban_in_degree_probability_free.png}
+\end{center}
+\caption{Porzione dell'\textit{output} del \textit{tool} a seguito dell'esecuzione di \textit{non greedy} sul \textit{retweet graph \#beefban}.}
+\label{fig:beefnotgreedy}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{images/indiana_in_degree_greedy_probability_free.png}
+\end{center}
+\caption{Porzione dell'\textit{output} del \textit{tool} a seguito dell'esecuzione di \textit{greedy} sul \textit{retweet graph \#indiana}.}
+\label{fig:indigreedy}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{images/indiana_in_degree_probability_free.png}
+\end{center}
+\caption{Porzione dell'\textit{output} del \textit{tool} a seguito dell'esecuzione di \textit{non greedy} sul \textit{retweet graph \#indiana}.}
+\label{fig:indinotgreedy}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{images/russia_march_in_degree_greedy_probability_free.png}
+\end{center}
+\caption{Porzione dell'\textit{output} del \textit{tool} a seguito dell'esecuzione di \textit{greedy} sul \textit{retweet graph \#russia\_march}.}
+\label{fig:russiagreedy}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{images/russia_march_in_degree_probability_free.png}
+\end{center}
+\caption{Porzione dell'\textit{output} del \textit{tool} a seguito dell'esecuzione di \textit{non greedy} sul \textit{retweet graph \#russia\_march}.}
+\label{fig:russianotgreedy}
+\end{figure}
+
+
+
+
 
 
