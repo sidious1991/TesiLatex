@@ -3,12 +3,12 @@
 
 Il sistema implementato è stato sottoposto a vari test con lo scopo di valutare i due algoritmi di \textit{k-edge recommendation} alternativi, ovvero \textit{greedy e non greedy}, ed in modo tale da poterli confrontare tra loro in termini di:
 \begin{itemize} 
-\item decremento totale dell'\textit{RWC} che ciascuno di essi riesce ad apportare ad un certo \textit{retweet graph} in input, a parità di numero di archi da proporre \textit{k};
+\item decremento totale dell'\textit{RWC} che ciascuno di essi consente di apportare ad un certo \textit{retweet graph} in input, a parità di numero di archi proposti \textit{k};
 \item qualità dei \textit{k} archi scelti, in termini del \textit{$\delta RWC$} associato a ciascuno di essi;
 \item tempi di esecuzione.
 \end{itemize}
 
-I \textit{retweet graphs} utilizzati come input dei test corrispondono alle discussioni attorno agli \textit{hashtags} controversi \textit{\#beefban, \#indiana, \#russia\_march}, le cui informazioni (i.e. \textit{tweets} e \textit{retweets} emessi nel periodo di osservazione) sono reperibili presso il \textit{repository} degli autori dell'articolo \cite{garimella:paper}. Pertanto, in questo caso, non è stato necessario eseguire il \textit{processo di raccolta dati} descritto nel capitolo precedente ma, per ciascuno degli \textit{hashtags} appena menzionati, è bastato \textit{parsare} il file dei \textit{retweets} (disponibile nel \textit{repository}) e creare il \textit{retweet graph} corrispondente.
+I \textit{retweet graphs} utilizzati come input dei test corrispondono alle discussioni attorno agli \textit{hashtags} controversi \textit{\#beefban, \#indiana, \#russia\_march}, le cui informazioni (i.e. \textit{tweets} e \textit{retweets} emessi nel periodo di osservazione) sono reperibili presso il \textit{repository} degli autori dell'articolo \cite{garimella:paper}. Pertanto, in questo caso, non è stato necessario eseguire il \textit{processo di raccolta dati} descritto nel capitolo precedente ma, per ciascuno degli \textit{hashtags} appena menzionati, è bastato \textit{parsare} il relativo file dei \textit{retweets} (disponibile nel \textit{repository}) e creare il \textit{retweet graph} corrispondente.
 \\I \textit{retweet graphs} creati, relativi agli \textit{hashtags} di cui sopra, hanno le seguenti caratteristiche:
 \\\\
 \begin{tabular}{l*{6}{c}r}
@@ -26,7 +26,7 @@ I parametri del sistema sono stati impostati con i seguenti valori:
 \item $k_2 = 20$;
 \item $k = 50$.
 \end{itemize}
-Nel prossimo paragrafo, per ciascuno dei tre \textit{retweet graphs} in input, verranno mostrati e commentati i risultati dei test in termini della discesa dell'\textit{RWC} derivante dall'applicazione di ciascuno dei due algoritmi di \textit{recommendation} proposti. 
+Nel prossimo paragrafo, per ciascuno dei tre \textit{retweet graphs} in input, verranno mostrati e commentati i risultati dei test relativi alla discesa dell'\textit{RWC} ottenuta a seguito dell'applicazione di ciascuno dei due algoritmi di \textit{recommendation} proposti. 
 
 \section{Discesa dell'\textit{RWC}}
 
@@ -40,5 +40,24 @@ Di seguito inseriamo i grafici che mostrano la discesa dell'\textit{RWC} dei \te
 \includepdf{images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf}
 \includepdf{images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf}
 \includepdf{images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf}
+Ciascuno dei tre grafici, uno per \textit{retweet graph}, ha l'obiettivo di fornire un confronto tra i due algoritmi \textit{greedy} e \textit{non-greedy} in termini del decremento dell'\textit{RWC} che ciascuno di essi consente di raggiungere a parità di archi proposti. 
+\\In particolare, fissato un \textit{retweet graph g} ed il numero di archi attualmente proposti \textit{$0 < j \leq k$}, il grafico corrispondente a \textit{g} mostra due funzioni, rispettivamente di colore \textit{rosso} e di colore \textit{blu}:
+\begin{itemize}
+\item \textit{RWC(g,j)\textsubscript{greedy}}, ovvero l'\textit{RWC} che caratterizzerebbe il \textit{retweet graph g} qualora i primi \textit{j} archi proposti dall'algoritmo \textit{greedy} si materializzassero nel grafo; 
+\item \textit{RWC(g,j)\textsubscript{non-greedy}}, ovvero l'\textit{RWC} che caratterizzerebbe il \textit{retweet graph g} qualora i primi \textit{j} archi proposti dall'algoritmo \textit{non-greedy} si materializzassero nel grafo.
+\end{itemize}
+Come si nota immediatamente dai grafici, per ogni \textit{retweet graph g} considerato vale:
+\\\\
+$\textit{RWC(g,j)\textsubscript{greedy}} \leq \textit{RWC(g,j)\textsubscript{non-greedy}}, \forall j = 1,..,k$
+\\\\
+Ovvero, a parità di archi proposti, l'algoritmo \textit{greedy} consente \textit{sempre} di raggiungere un decremento maggiore dell'\textit{RWC} di ciascun grafo \textit{g}. Questa maggiore \textit{efficacia} dell'algoritmo \textit{greedy} non soprende, viste la considerazioni e le analisi condotte nei capitoli precedenti, e deriva sostanzialmente dalla maggiore \textit{qualità}, in termini di decremento del \textit{grado di controversia}, di ciascun arco che propone. 
+\\Il paragrafo a seguire si occuperà proprio di confrontare gli archi proposti dai due algoritmi \textit{greedy} e \textit{non-greedy}, in termini dei \textit{$\delta RWC$} corrispondenti.
 
 \section{Qualità degli archi proposti}
+Ognuno dei seguenti grafici, corrispondenti ai tre \textit{retweet graphs} considerati, associa ad ogni arco, proposto da ognuno dei due algoritmi, il relativo \textit{$\delta RWC$}.
+
+\includepdf{images/BEEFBAN_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf}
+\includepdf{images/INDIANA_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf}
+\includepdf{images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf}
+
+
