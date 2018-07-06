@@ -50,10 +50,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.2}Qualit\IeC {\`a} degli archi proposti}{51}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{62}{chapter.5}
+\contentsline {section}{\numberline {4.3}Tempi di esecuzione}{56}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}An appendix}{65}{appendix.Alph1}
+\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{63}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {B}Another appendix}{68}{appendix.Alph2}
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Riferimenti bibliografici}{71}{appendix.Alph2}
+\contentsline {chapter}{Riferimenti bibliografici}{66}{chapter.5}

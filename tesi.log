@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  5 JUL 2018 17:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  6 JUL 2018 12:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1390,7 +1390,7 @@ Package biblatex Warning: Patching footnotes failed.
 (biblatex)                Footnote detection will not work.
 
 (./tesi.aux (./chap_0.aux) (./chap_2.aux) (./chap_3.aux) (./chap_4.aux)
-(./chap_5.aux) (./app_a.aux) (./app_b.aux))
+(./chap_5.aux))
 \openout1 = `tesi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 149.
@@ -1408,8 +1408,7 @@ LaTeX Font Info:    ... okay on input line 149.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 149.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 149.
 
-
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/local/texlive/2016/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 149.
@@ -1532,7 +1531,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-<images/Logo-Uni-Tor-Vergata.png, id=107, 770.88pt x 770.88pt>
+<images/Logo-Uni-Tor-Vergata.png, id=103, 770.88pt x 770.88pt>
 File: images/Logo-Uni-Tor-Vergata.png Graphic file (type png)
 
 <use images/Logo-Uni-Tor-Vergata.png>
@@ -1632,25 +1631,10 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
  [8
 
 
-] (./tesi.lot)
-\tf@lot=\write8
-\openout8 = `tesi.lot'.
-
- [9
-
-
-] (./tesi.lol)
-\tf@lol=\write9
-\openout9 = `tesi.lol'.
-
- [10
-
-
 ]
 \openout2 = `chap_0.aux'.
 
-
-(./chap_0.tex
+ (./chap_0.tex
 Capitolo 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 11.
@@ -1713,6 +1697,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--20
 Underfull \vbox (badness 3977) has occurred while \output is active []
 
  [1
+
 
 
 
@@ -1977,14 +1962,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--100
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[29] <images/raccolta_dati_tesi.png, id=458, 382.42876pt x 462.72874pt>
+[29] <images/raccolta_dati_tesi.png, id=442, 382.42876pt x 462.72874pt>
 File: images/raccolta_dati_tesi.png Graphic file (type png)
 
 <use images/raccolta_dati_tesi.png>
 Package pdftex.def Info: images/raccolta_dati_tesi.png used on input line 104.
 (pdftex.def)             Requested size: 229.45901pt x 277.63939pt.
 
-<images/retweet_input_file.png, id=459, 274.02374pt x 120.45pt>
+<images/retweet_input_file.png, id=443, 274.02374pt x 120.45pt>
 File: images/retweet_input_file.png Graphic file (type png)
 
 <use images/retweet_input_file.png>
@@ -1995,7 +1980,7 @@ Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
 [30 <./images/raccolta_dati_tesi.png> <./images/retweet_input_file.png>]
-<images/pipeline_implementazione.png, id=466, 844.15375pt x 296.10625pt>
+<images/pipeline_implementazione.png, id=450, 844.15375pt x 296.10625pt>
 File: images/pipeline_implementazione.png Graphic file (type png)
 
 <use images/pipeline_implementazione.png>
@@ -2048,7 +2033,7 @@ Underfull \vbox (badness 3646) has occurred while \output is active []
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[36] <images/calcolo_rwc.png, id=505, 703.62875pt x 442.65375pt>
+[36] <images/calcolo_rwc.png, id=489, 703.62875pt x 442.65375pt>
 File: images/calcolo_rwc.png Graphic file (type png)
 
 <use images/calcolo_rwc.png>
@@ -2088,7 +2073,7 @@ Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
 [43]
-<images/beefban_in_degree_probability_free.png, id=574, 925.056pt x 669.9429pt>
+<images/beefban_in_degree_probability_free.png, id=558, 925.056pt x 669.9429pt>
 File: images/beefban_in_degree_probability_free.png Graphic file (type png)
 <use images/beefban_in_degree_probability_free.png>
 Package pdftex.def Info: images/beefban_in_degree_probability_free.png used on 
@@ -2132,7 +2117,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--24
 
 
 ]
-<images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, id=597, 597.55246pt x 
+<images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, id=581, 597.55246pt x 
 845.07718pt>
 File: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file (type
  pdf)
@@ -2148,7 +2133,7 @@ Package pdftex.def Info: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf
  used on input line 40.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
-<images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, id=600, page=1, 597.55
+<images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, id=584, page=1, 597.55
 246pt x 845.07718pt>
 File: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file (type
  pdf)
@@ -2190,7 +2175,7 @@ Package pdftex.def Info: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf
 , page1 used on input line 40.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
  [48 <./images/BEEFBAN_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf>]
-<images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, id=622, 845.07718pt x 
+<images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, id=606, 845.07718pt x 
 597.55246pt>
 File: images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file (type
  pdf)
@@ -2206,7 +2191,7 @@ Package pdftex.def Info: images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf
  used on input line 41.
 (pdftex.def)             Requested size: 845.07512pt x 597.551pt.
 
-<images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, id=625, page=1, 845.07
+<images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, id=609, page=1, 845.07
 718pt x 597.55246pt>
 File: images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file (type
  pdf)
@@ -2244,7 +2229,7 @@ Package pdftex.def Info: images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf
 , page1 used on input line 41.
 (pdftex.def)             Requested size: 597.55899pt x 422.5328pt.
  [49 <./images/INDIANA_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf>]
-<images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, id=640, 597.55246
+<images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, id=624, 597.55246
 pt x 845.07718pt>
 File: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file 
 (type pdf)
@@ -2261,7 +2246,7 @@ Package pdftex.def Info: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCEN
 T.pdf used on input line 42.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
-<images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, id=643, page=1, 5
+<images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf, id=627, page=1, 5
 97.55246pt x 845.07718pt>
 File: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_RWC_DESCENT.pdf Graphic file 
 (type pdf)
@@ -2310,7 +2295,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 49--55
  []
 
 
-<images/BEEFBAN_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf, id=659, 597.55246pt
+<images/BEEFBAN_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf, id=642, 597.55246pt
  x 845.07718pt>
 File: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf Graphic file (t
 ype pdf)
@@ -2327,7 +2312,7 @@ Package pdftex.def Info: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.
 pdf used on input line 59.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
-<images/BEEFBAN_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf, id=662, page=1, 597
+<images/BEEFBAN_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf, id=645, page=1, 597
 .55246pt x 845.07718pt>
 File: images/BEEFBAN_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf Graphic file (t
 ype pdf)
@@ -2370,7 +2355,7 @@ pdf, page1 used on input line 59.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 
 [52 <./images/BEEFBAN_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf>]
-<images/INDIANA_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf, id=681, 597.55246pt
+<images/INDIANA_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf, id=665, 597.55246pt
  x 845.07718pt>
 File: images/INDIANA_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf Graphic file (t
 ype pdf)
@@ -2387,7 +2372,7 @@ Package pdftex.def Info: images/INDIANA_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.
 pdf used on input line 60.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
-<images/INDIANA_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf, id=684, page=1, 597
+<images/INDIANA_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf, id=668, page=1, 597
 .55246pt x 845.07718pt>
 File: images/INDIANA_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf Graphic file (t
 ype pdf)
@@ -2426,7 +2411,7 @@ pdf, page1 used on input line 60.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 
 [53 <./images/INDIANA_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf>]
-<images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf, id=700, 597.55
+<images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf, id=683, 597.55
 246pt x 845.07718pt>
 File: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf Graphic fi
 le (type pdf)
@@ -2443,7 +2428,7 @@ Package pdftex.def Info: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_PER_EDGE_D
 ELTA.pdf used on input line 61.
 (pdftex.def)             Requested size: 597.551pt x 845.07512pt.
 
-<images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf, id=703, page=1
+<images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf, id=686, page=1
 , 597.55246pt x 845.07718pt>
 File: images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf Graphic fi
 le (type pdf)
@@ -2482,12 +2467,12 @@ ELTA.pdf, page1 used on input line 61.
 (pdftex.def)             Requested size: 597.57834pt x 845.1138pt.
 
 [54 <./images/RUSSIA_MARCH_IN_DEG_PROBABILITY_FREE_PER_EDGE_DELTA.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 68--76
+Underfull \hbox (badness 10000) in paragraph at lines 68--78
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--76
+Underfull \hbox (badness 10000) in paragraph at lines 68--78
 
  []
 
@@ -2496,84 +2481,107 @@ Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
 [55]
-<images/beefban_in_degree_greedy_probability_free.png, id=727, 925.056pt x 669.
+Underfull \hbox (badness 10000) in paragraph at lines 79--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 79--89
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[56]
+<images/beefban_in_degree_greedy_probability_free.png, id=717, 925.056pt x 669.
 9429pt>
 File: images/beefban_in_degree_greedy_probability_free.png Graphic file (type p
 ng)
  <use images/beefban_in_degree_greedy_probability_free.png>
 Package pdftex.def Info: images/beefban_in_degree_greedy_probability_free.png u
-sed on input line 79.
+sed on input line 92.
 (pdftex.def)             Requested size: 462.52687pt x 334.97063pt.
 
-Overfull \hbox (35.73552pt too wide) in paragraph at lines 79--80
+Overfull \hbox (35.73552pt too wide) in paragraph at lines 92--93
  [] 
  []
 
 File: images/beefban_in_degree_probability_free.png Graphic file (type png)
 <use images/beefban_in_degree_probability_free.png>
 Package pdftex.def Info: images/beefban_in_degree_probability_free.png used on 
-input line 87.
+input line 100.
 (pdftex.def)             Requested size: 462.52687pt x 334.97063pt.
 
-Overfull \hbox (35.73552pt too wide) in paragraph at lines 87--88
+Overfull \hbox (35.73552pt too wide) in paragraph at lines 100--101
  [] 
  []
 
 
-Overfull \vbox (0.59995pt too high) has occurred while \output is active []
-
-
-[56 <./images/beefban_in_degree_greedy_probability_free.png>]
-<images/indiana_in_degree_greedy_probability_free.png, id=734, 925.056pt x 669.
+<images/indiana_in_degree_greedy_probability_free.png, id=718, 925.056pt x 669.
 9429pt>
 File: images/indiana_in_degree_greedy_probability_free.png Graphic file (type p
 ng)
  <use images/indiana_in_degree_greedy_probability_free.png>
 Package pdftex.def Info: images/indiana_in_degree_greedy_probability_free.png u
-sed on input line 95.
+sed on input line 108.
 (pdftex.def)             Requested size: 462.52687pt x 334.97063pt.
 
-Overfull \hbox (35.73552pt too wide) in paragraph at lines 95--96
+Overfull \hbox (35.73552pt too wide) in paragraph at lines 108--109
  [] 
  []
 
 
-<images/indiana_in_degree_probability_free.png, id=735, 925.056pt x 669.9429pt>
+<images/indiana_in_degree_probability_free.png, id=719, 925.056pt x 669.9429pt>
 File: images/indiana_in_degree_probability_free.png Graphic file (type png)
 <use images/indiana_in_degree_probability_free.png>
 Package pdftex.def Info: images/indiana_in_degree_probability_free.png used on 
-input line 103.
+input line 116.
 (pdftex.def)             Requested size: 462.52687pt x 334.97063pt.
 
-Overfull \hbox (35.73552pt too wide) in paragraph at lines 103--104
+Overfull \hbox (35.73552pt too wide) in paragraph at lines 116--117
  [] 
  []
 
 
-<images/russia_march_in_degree_greedy_probability_free.png, id=736, 925.056pt x
+<images/russia_march_in_degree_greedy_probability_free.png, id=720, 925.056pt x
  669.9429pt>
 File: images/russia_march_in_degree_greedy_probability_free.png Graphic file (t
 ype png)
  <use images/russia_march_in_degree_greedy_probability_free.png>
 Package pdftex.def Info: images/russia_march_in_degree_greedy_probability_free.
-png used on input line 111.
+png used on input line 124.
 (pdftex.def)             Requested size: 462.52687pt x 334.97063pt.
 
-Overfull \hbox (35.73552pt too wide) in paragraph at lines 111--112
+Overfull \hbox (35.73552pt too wide) in paragraph at lines 124--125
  [] 
  []
 
 
-<images/russia_march_in_degree_probability_free.png, id=737, 925.056pt x 669.94
+<images/russia_march_in_degree_probability_free.png, id=721, 925.056pt x 669.94
 29pt>
 File: images/russia_march_in_degree_probability_free.png Graphic file (type png
 )
  <use images/russia_march_in_degree_probability_free.png>
 Package pdftex.def Info: images/russia_march_in_degree_probability_free.png use
-d on input line 119.
+d on input line 132.
 (pdftex.def)             Requested size: 462.52687pt x 334.97063pt.
 
-Overfull \hbox (35.73552pt too wide) in paragraph at lines 119--120
+Overfull \hbox (35.73552pt too wide) in paragraph at lines 132--133
  [] 
  []
 
@@ -2581,23 +2589,27 @@ Overfull \hbox (35.73552pt too wide) in paragraph at lines 119--120
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[57]
+[57 <./images/beefban_in_degree_greedy_probability_free.png>]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[58 <./images/indiana_in_degree_greedy_probability_free.png>]
+[58]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[59 <./images/indiana_in_degree_probability_free.png>]
+[59 <./images/indiana_in_degree_greedy_probability_free.png>]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[60 <./images/russia_march_in_degree_greedy_probability_free.png>]
+[60 <./images/indiana_in_degree_probability_free.png>]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[61 <./images/russia_march_in_degree_probability_free.png>]
+[61 <./images/russia_march_in_degree_greedy_probability_free.png>]
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[62 <./images/russia_march_in_degree_probability_free.png>]
 \openout2 = `chap_5.aux'.
 
  (./chap_5.tex
@@ -2618,7 +2630,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 1681) has occurred while \output is active []
 
- [62
+ [63
 
 
 
@@ -2639,139 +2651,41 @@ Package blindtext Warning: italian not defined, using English instead.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
-Overfull \vbox (0.59995pt too high) has occurred while \output is active []
-
-
-[63]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
 [64]
-\openout2 = `app_a.aux'.
-
- (./app_a.tex
-Appendice A.
-)
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 227.
-
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 227.
-
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 227.
-
-
-Underfull \vbox (badness 1681) has occurred while \output is active []
-
- [65
-
-
-
-]
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 227.
-
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 227.
-
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 227.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[66]
-Overfull \vbox (0.59995pt too high) has occurred while \output is active []
-
-
-[67]
-\openout2 = `app_b.aux'.
-
- (./app_b.tex
-Appendice B.
-)
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 228.
-
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 228.
-
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 228.
-
-
-Underfull \vbox (badness 1681) has occurred while \output is active []
-
- [68
-
-
-
-]
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 228.
-
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 228.
-
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 228.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (0.59995pt too high) has occurred while \output is active []
-
-
-[69]
-Overfull \vbox (0.59995pt too high) has occurred while \output is active []
-
-
-[70]
+[65]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 234.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 236.
- [71
+ [66
 
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 236.
 
 (./tesi.aux (./chap_0.aux) (./chap_2.aux) (./chap_3.aux) (./chap_4.aux)
-(./chap_5.aux) (./app_a.aux) (./app_b.aux))
+(./chap_5.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 236.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 236.
 Package rerunfilecheck Info: File `tesi.out' has not changed.
-(rerunfilecheck)             Checksum: 4C08D7CA05681226ED08201EA3D50376;1903.
+(rerunfilecheck)             Checksum: 8271936367D35CB2F644D61285103B43;1856.
 Package logreq Info: Writing requests to 'tesi.run.xml'.
 \openout1 = `tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20460 strings out of 493013
- 324665 string characters out of 6133327
- 644968 words of memory out of 5000000
- 23322 multiletter control sequences out of 15000+600000
+ 20423 strings out of 493013
+ 324337 string characters out of 6133327
+ 644956 words of memory out of 5000000
+ 23316 multiletter control sequences out of 15000+600000
  124329 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,19n,45p,2618b,1400s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2801,10 +2715,10 @@ st/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/lm/lmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
 /lm/lmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt12.
 pfb>
-Output written on tesi.pdf (82 pages, 3947638 bytes).
+Output written on tesi.pdf (75 pages, 3911511 bytes).
 PDF statistics:
- 958 PDF objects out of 1000 (max. 8388607)
- 786 compressed objects within 8 object streams
- 252 named destinations out of 1000 (max. 500000)
- 384 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 922 PDF objects out of 1000 (max. 8388607)
+ 757 compressed objects within 8 object streams
+ 241 named destinations out of 1000 (max. 500000)
+ 376 words of extra memory for PDF output out of 10000 (max. 10000000)
 
