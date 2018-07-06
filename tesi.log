@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  6 JUL 2018 12:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  6 JUL 2018 15:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2481,22 +2481,17 @@ Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
 [55]
-Underfull \hbox (badness 10000) in paragraph at lines 79--89
+Underfull \hbox (badness 10000) in paragraph at lines 79--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--89
+Underfull \hbox (badness 10000) in paragraph at lines 79--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 79--89
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--89
+Underfull \hbox (badness 10000) in paragraph at lines 79--92
 
  []
 
@@ -2514,20 +2509,20 @@ File: images/beefban_in_degree_greedy_probability_free.png Graphic file (type p
 ng)
  <use images/beefban_in_degree_greedy_probability_free.png>
 Package pdftex.def Info: images/beefban_in_degree_greedy_probability_free.png u
-sed on input line 92.
+sed on input line 101.
 (pdftex.def)             Requested size: 462.52687pt x 334.97063pt.
 
-Overfull \hbox (35.73552pt too wide) in paragraph at lines 92--93
+Overfull \hbox (35.73552pt too wide) in paragraph at lines 101--102
  [] 
  []
 
 File: images/beefban_in_degree_probability_free.png Graphic file (type png)
 <use images/beefban_in_degree_probability_free.png>
 Package pdftex.def Info: images/beefban_in_degree_probability_free.png used on 
-input line 100.
+input line 109.
 (pdftex.def)             Requested size: 462.52687pt x 334.97063pt.
 
-Overfull \hbox (35.73552pt too wide) in paragraph at lines 100--101
+Overfull \hbox (35.73552pt too wide) in paragraph at lines 109--110
  [] 
  []
 
@@ -2538,10 +2533,10 @@ File: images/indiana_in_degree_greedy_probability_free.png Graphic file (type p
 ng)
  <use images/indiana_in_degree_greedy_probability_free.png>
 Package pdftex.def Info: images/indiana_in_degree_greedy_probability_free.png u
-sed on input line 108.
+sed on input line 117.
 (pdftex.def)             Requested size: 462.52687pt x 334.97063pt.
 
-Overfull \hbox (35.73552pt too wide) in paragraph at lines 108--109
+Overfull \hbox (35.73552pt too wide) in paragraph at lines 117--118
  [] 
  []
 
@@ -2550,10 +2545,10 @@ Overfull \hbox (35.73552pt too wide) in paragraph at lines 108--109
 File: images/indiana_in_degree_probability_free.png Graphic file (type png)
 <use images/indiana_in_degree_probability_free.png>
 Package pdftex.def Info: images/indiana_in_degree_probability_free.png used on 
-input line 116.
+input line 125.
 (pdftex.def)             Requested size: 462.52687pt x 334.97063pt.
 
-Overfull \hbox (35.73552pt too wide) in paragraph at lines 116--117
+Overfull \hbox (35.73552pt too wide) in paragraph at lines 125--126
  [] 
  []
 
@@ -2564,10 +2559,10 @@ File: images/russia_march_in_degree_greedy_probability_free.png Graphic file (t
 ype png)
  <use images/russia_march_in_degree_greedy_probability_free.png>
 Package pdftex.def Info: images/russia_march_in_degree_greedy_probability_free.
-png used on input line 124.
+png used on input line 133.
 (pdftex.def)             Requested size: 462.52687pt x 334.97063pt.
 
-Overfull \hbox (35.73552pt too wide) in paragraph at lines 124--125
+Overfull \hbox (35.73552pt too wide) in paragraph at lines 133--134
  [] 
  []
 
@@ -2578,10 +2573,10 @@ File: images/russia_march_in_degree_probability_free.png Graphic file (type png
 )
  <use images/russia_march_in_degree_probability_free.png>
 Package pdftex.def Info: images/russia_march_in_degree_probability_free.png use
-d on input line 132.
+d on input line 141.
 (pdftex.def)             Requested size: 462.52687pt x 334.97063pt.
 
-Overfull \hbox (35.73552pt too wide) in paragraph at lines 132--133
+Overfull \hbox (35.73552pt too wide) in paragraph at lines 141--142
  [] 
  []
 
@@ -2589,27 +2584,31 @@ Overfull \hbox (35.73552pt too wide) in paragraph at lines 132--133
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[57 <./images/beefban_in_degree_greedy_probability_free.png>]
+[57]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[58]
+[58 <./images/beefban_in_degree_greedy_probability_free.png>]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[59 <./images/indiana_in_degree_greedy_probability_free.png>]
+[59]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[60 <./images/indiana_in_degree_probability_free.png>]
+[60 <./images/indiana_in_degree_greedy_probability_free.png>]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[61 <./images/russia_march_in_degree_greedy_probability_free.png>]
+[61 <./images/indiana_in_degree_probability_free.png>]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[62 <./images/russia_march_in_degree_probability_free.png>]
+[62 <./images/russia_march_in_degree_greedy_probability_free.png>]
+Overfull \vbox (0.59995pt too high) has occurred while \output is active []
+
+
+[63 <./images/russia_march_in_degree_probability_free.png>]
 \openout2 = `chap_5.aux'.
 
  (./chap_5.tex
@@ -2630,7 +2629,7 @@ Package blindtext Warning: italian not defined, using English instead.
 
 Underfull \vbox (badness 1681) has occurred while \output is active []
 
- [63
+ [64
 
 
 
@@ -2654,18 +2653,18 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[64]
+[65]
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
-[65]
+[66]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 234.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 236.
- [66
+ [67
 
 
 ]
@@ -2682,8 +2681,8 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20423 strings out of 493013
- 324337 string characters out of 6133327
+ 20424 strings out of 493013
+ 324344 string characters out of 6133327
  644956 words of memory out of 5000000
  23316 multiletter control sequences out of 15000+600000
  124329 words of font info for 82 fonts, out of 8000000 for 9000
@@ -2715,10 +2714,10 @@ st/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/lm/lmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
 /lm/lmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt12.
 pfb>
-Output written on tesi.pdf (75 pages, 3911511 bytes).
+Output written on tesi.pdf (76 pages, 3913509 bytes).
 PDF statistics:
- 922 PDF objects out of 1000 (max. 8388607)
- 757 compressed objects within 8 object streams
- 241 named destinations out of 1000 (max. 500000)
+ 926 PDF objects out of 1000 (max. 8388607)
+ 760 compressed objects within 8 object streams
+ 242 named destinations out of 1000 (max. 500000)
  376 words of extra memory for PDF output out of 10000 (max. 10000000)
 

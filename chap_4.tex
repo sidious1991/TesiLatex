@@ -81,11 +81,20 @@ Questo paragrafo ha lo scopo di mostrare e commentare i tempi di esecuzione dei 
 \begin{tabular}{l*{6}{c}r}
 \textbf{Hashtag}         & \textbf{greedy} & \textbf{non greedy}  \\
 \hline
-\#beefban 		 & 7252 sec & 159 sec  \\
-\#indiana        	 & 17580 sec & 372 sec \\
-\#russia\_march   	 & 12720 sec & 293 sec  \\
+\#beefban 		 & 7252 sec &  149 sec  \\
+\#indiana        	 & 17580 sec & 352 sec \\
+\#russia\_march   	 & 12720 sec & 253 sec  \\
 \end{tabular}
 \\\\\\
+Come era facile intuire, i tempi di esecuzione di entrambi gli algoritmi crescono all'aumentare della complessità del \textit{retweet graph} in input, complessità espressa in termini del numero di nodi e del numero di archi. Addirittura l'algoritmo \textit{greedy} con input il \textit{retweet graph \#indiana}, che è il grafo più ingente tra i tre esaminati, necessita di quasi 5 ore di esecuzione.  
+\\Il tempo di esecuzione è anche funzione dell'algoritmo di \textit{k-edge recommendation} utilizzato: infatti i test hanno confermato le osservazioni riportate nel capitolo 2, nelle quali si asseriva che, a parità di valori dei parametri di sistema ($\alpha, k_1, k_2, k$) e del \textit{retweet graph} in input, l'algoritmo \textit{greedy} è circa \textit{k} volte più lento dell'algoritmo \textit{non-greedy}. Nei casi in esame:
+\begin{itemize}
+\item 7252 sec $\simeq$  \textit{k} $\times$ 149 sec;
+\item 17580 sec $\simeq$ \textit{k} $\times$ 352 sec;
+\item 12720 sec $\simeq$ \textit{k} $\times$ 253 sec.
+\end{itemize}
+Dove \textit{k} è il numero di archi da proporre ed in questo caso vale 50.
+\\La maggiore precisione e, quindi, la maggiore efficacia dell'algoritmo \textit{greedy} si paga con il suo tempo di esecuzione, il quale può risultare addirittura proibitivo nel caso di grafi molto ingenti. Pertanto, la scelta dell'algoritmo da utilizzare va effettuata caso per caso e dipende dalle esigenze che si vogliono soddisfare, che riguardino i tempi di esecuzione o l'efficacia degli archi proposti.
 
 \begin{figure}
 \begin{center}
