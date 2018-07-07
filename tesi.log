@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  6 JUL 2018 15:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.24)  7 JUL 2018 11:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1637,59 +1637,39 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
  (./chap_0.tex
 Capitolo 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 11.
+(Font)              <5> on input line 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--20
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--20
+Underfull \hbox (badness 10000) in paragraph at lines 4--15
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--20
+Underfull \hbox (badness 10000) in paragraph at lines 4--15
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--20
+Underfull \hbox (badness 10000) in paragraph at lines 4--15
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--20
+Underfull \hbox (badness 10000) in paragraph at lines 4--15
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--20
+Underfull \hbox (badness 10000) in paragraph at lines 4--15
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--20
+Underfull \hbox (badness 10000) in paragraph at lines 4--15
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4--20
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--20
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--20
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--20
+Underfull \hbox (badness 10000) in paragraph at lines 4--15
 
  []
 
@@ -1716,36 +1696,19 @@ Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
 [3]
-Underfull \vbox (badness 1275) has occurred while \output is active []
+Underfull \vbox (badness 2644) has occurred while \output is active []
 
 
 Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 41--49
+Underfull \hbox (badness 10000) in paragraph at lines 36--41
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--49
-
- []
-
-
-Overfull \hbox (7.19669pt too wide) in paragraph at lines 41--49
-\T1/lmr/m/it/12 Fissato co-me obiet-ti-vo il de-cre-men-to del gra-do di con-tr
-o-ver-sia di una quan-ti-tà $\OT1/lmr/m/n/12 ^^A\OML/lmm/m/it/12 RWC$\T1/lmr/m/
-it/12 ,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--49
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 41--49
+Underfull \hbox (badness 10000) in paragraph at lines 36--41
 
  []
 
@@ -2613,58 +2576,18 @@ Overfull \vbox (0.59995pt too high) has occurred while \output is active []
 
  (./chap_5.tex
 Capitolo 5.
-)
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 223.
-
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 223.
-
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 223.
-
-
-Underfull \vbox (badness 1681) has occurred while \output is active []
-
- [64
+) [64
 
 
 
 ]
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 223.
-
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 223.
-
-
-Package blindtext Warning: italian not defined, using English instead.
-(blindtext)                 on input line 223.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Overfull \vbox (0.59995pt too high) has occurred while \output is active []
-
-
-[65]
-Overfull \vbox (0.59995pt too high) has occurred while \output is active []
-
-
-[66]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 234.
 
  (/usr/local/texlive/2016/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 236.
- [67
+ [65
 
 
 ]
@@ -2681,10 +2604,10 @@ Package logreq Info: Writing requests to 'tesi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 20424 strings out of 493013
- 324344 string characters out of 6133327
+ 20421 strings out of 493013
+ 324313 string characters out of 6133327
  644956 words of memory out of 5000000
- 23316 multiletter control sequences out of 15000+600000
+ 23315 multiletter control sequences out of 15000+600000
  124329 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  45i,19n,45p,2618b,1400s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2714,10 +2637,10 @@ st/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/t
 ype1/public/lm/lmsy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public
 /lm/lmsy8.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/lm/lmtt12.
 pfb>
-Output written on tesi.pdf (76 pages, 3913509 bytes).
+Output written on tesi.pdf (74 pages, 3909361 bytes).
 PDF statistics:
- 926 PDF objects out of 1000 (max. 8388607)
- 760 compressed objects within 8 object streams
- 242 named destinations out of 1000 (max. 500000)
+ 917 PDF objects out of 1000 (max. 8388607)
+ 753 compressed objects within 8 object streams
+ 240 named destinations out of 1000 (max. 500000)
  376 words of extra memory for PDF output out of 10000 (max. 10000000)
 
