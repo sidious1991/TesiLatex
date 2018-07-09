@@ -137,6 +137,7 @@ chap_4,%
 chap_5,%
 %app_a,%
 %app_b,%
+ringraziamenti,%
 }
 
 % FILE DI BIBLIOGRAFIA
@@ -165,7 +166,6 @@ chap_5,%
 \vspace*{\stretch{1}}
 \begin{flushright}
 \noindent
-Da inserire qui tutte le dediche della mia tesi...
 \end{flushright}
 \vspace*{\stretch{6}}
 \cleardoublepage
@@ -190,7 +190,7 @@ consiste nel considerare solo gli archi diretti che permettono di connettere i v
 \item \textit{greedy}: vengono scelti \textit{k} archi in \textit{k steps}, in ognuno dei quali viene estratto l'arco migliore, tra quelli rimanenti, in termini di decremento del \textit{grado di controversia} che apporterebbe se fosse aggiunto al grafo.
 \end{itemize}
 Nel lavoro di tesi verranno descritte le modalità di implementazione di tali algoritmi e successivamente verranno confrontati tra loro in termini di efficacia (ossia in termini del decremento del \textit{grado di controversia} che consentono, qualora tutti gli archi che consigliano venissero accettati) ed in termini di tempi di esecuzione ed efficienza computazionale: a tal fine sono stati condotti \textit{tests} su tre \textit{endorsement graphs} di \textit{Twitter} corrispondenti ad \textit{hashtags} particolarmente controversi (\textit{\#beefban,\#russia\_march,\#indiana}), volutamente scelti da contesti sociali e culturali diversi in modo tale da ottenere un'analisi più attendibile.\\L'algoritmo \textit{greedy} si rivelerà più preciso in quanto ad ogni \textit{step} si limita a proporre uno ed un solo arco, ossia l'arco migliore in termini del decremento del \textit{grado di controversia} che consentirebbe se fosse accettato; inoltre, ad ogni \textit{step} dell'algoritmo la scelta dell'arco migliore viene condotta solo dopo aver aggiunto al grafo tutti gli archi consigliati negli \textit{steps} precedenti.\\Al contrario, l'algoritmo \textit{non-greedy} propone in un solo passo i \textit{k} archi migliori utilizzando come metrica il decremento del \textit{grado di controversia} che ciascuno di essi apporterebbe se fosse aggiunto \textit{individualmente}: poiché viene valutato il loro impatto \textit{individuale} e viene ignorato il fatto che tale impatto potrebbe decrementare rispetto a quanto valutato man mano che essi vengono aggiunti al grafo, quest'algoritmo rappresenta un'approssimazione dell'algoritmo \textit{greedy} e consente, in generale, un decremento minore del \textit{grado di controversia}. D'altra parte l'algoritmo \textit{greedy} richiede di scansionare tutti gli archi considerati \textit{k} volte (una volta per \textit{step})  mentre l'algoritmo \textit{non-greedy} una volta sola: questo si traduce in un sostanziale vantaggio dal punto di vista dei tempi di esecuzione, ottenibile utlilizzando l'algoritmo \textit{non-greedy}.
-\\Per finire, va sottolineato che, in generale, gli archi che vengono scelti dall'\textit{edge-recommendation system} nella realtà non sempre si materializzano (l'utente potrebbe rigettare il consiglio) e per questo è opportuno considerare come metrica anche la \textit{probabilità di accettazione}. Con il proposito di future estensioni, compresa l'introduzione di tale \textit{probabilità}, il \textit{framework} proposto è implementato in modo da prestarsi perfettamente all'aggiunta di altre metriche per la scelta degli archi.
+\\Per finire, va sottolineato che, in generale, gli archi che vengono scelti dall'\textit{edge-recommendation system} nella realtà non sempre si materializzano (l'utente potrebbe rigettare il consiglio) e per questo sarebbe opportuno considerare come metrica anche la \textit{probabilità di accettazione}. Con il proposito di future estensioni, compresa l'introduzione di tale \textit{probabilità}, il \textit{framework} proposto è implementato in modo da prestarsi perfettamente all'aggiunta di altre metriche per la scelta degli archi.
 
 
 
@@ -221,6 +221,7 @@ Nel lavoro di tesi verranno descritte le modalità di implementazione di tali al
 \include{chap_3}
 \include{chap_4}
 \include{chap_5}
+\include{ringraziamenti}
 
 %\appendix
 % INCLUSIONE APPENDICI - - PERSONALIZZARE - TENERE COERENTE CON LISTA IN ALTO
